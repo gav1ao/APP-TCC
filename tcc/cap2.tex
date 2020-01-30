@@ -1,5 +1,9 @@
 \chapter{Tecnologias disponíveis} \label{Tecnologias disponíveis}
 
+\section{QRCode}
+
+\section{Web Scraping}
+
 \section{Linguagens de Programação}
 
 %% TODO: Citar apostila do Edirlei
@@ -32,8 +36,32 @@ A linguagem de programação JavaScript aparece bem colocada em ambos os ranking
 
 \section{Desenvolvimento para dispositivos móveis}
 
-O uso de \textit{smartphones} tornou-se popular com a criação do \textit{iPhone}, desenvolvido pela \textit{Apple}, em 2008. Mais de 10 anos após o lançamento da primeira versão, 
+O uso de \textit{smartphones} tornou-se popular com a criação do \textit{iPhone}, desenvolvido pela \textit{Apple}, em 2008. Mais de 10 anos após o lançamento da primeira versão, os ditos celulares inteligentes estão cada vez mais modernos e mais populares.
 
+%% Acrescentar tabela evolução celulares e consumo, vendas
+
+Os sistemas operacionais para dispositivos móveis mais populares são o IOS e o Android, sendo o primeiro exclusivo de aparelhos fabricados pela Apple, já o segundo é um sistema composto por código aberto sendo que um do seus principais mantedores é o Google e é utilizado por diversas empresas como Samsung, Motorola, LG, Xiaomi, Huawei e outras.
+
+O desenvolvimento para esses sistemas possui certas particularidades, sendo que para o sistema da empresa fundada por Steve Jobs utiliza como linguagem de programação para desenvolvimento nativo o Swift, já o sistema mantido pela empresa Mountain View utiliza a linguagem Java e também a linguagem Kotlin.
+
+De forma a aumentar o alcance de um aplicativo, o programador deve disponibilizar o mesmo nessas duas plataformas. Como é possível observar, não existe uma intersecção de linguagens disponíveis para o desenvolvimento nativo para essas plataformas, logo, o mesmo aplicativo deveria ser programado de duas formas diferentes, isto é, utilizando no mínimo duas linguagens de programação, fazendo com que mais tempo fosse necessário durante o desenvolvimento, pois seria necessário construir a mesma coisa duas vezes. Para contornar esse problema, alternativas foram desenvolvidas para otimizar o tempo de desenvolvimento, ou seja, o programador desenvolveria um código e esse mesmo poderia ser utilizado para os dois sistemas. Essa técnica é denominada de Desenvolvimento Multiplataforma (\textit{Cross-Platform}).
+
+%% FIXME: Referenciar https://blog.cedrotech.com/agilidade-no-desenvolvimento-nativo-flutter-vs-react-native/
+%% Buscar outra fonte
+O Desenvolvimento Multiplataforma pode ser efetuado de duas formas, utilizando um código híbrido ou até mesmo nativo.
+A técnica de desenvolvimento multiplataforma híbrida...
+
+Já o desenvolvimento multiplataforma nativo pode ser feito com as seguintes tecnologias por exemplo:
+
+\begin{itemize}
+
+\item Xamarim;
+\item Flutter;
+\item React Native.
+
+\end{itemize}
+
+O desenvolvimento através do Framework React Native é abordado na secção \ref{React Native}.
 
 \section{JavaScript}\label{JavaScript}
 
@@ -41,19 +69,33 @@ Antes as páginas eram construídas de modo estático, isto é, caso o usuário 
 
 De forma a corrigir esse problema e melhorar a navegação das páginas para tornar a experiência do usuário mais agradável, eis que surge a linguagem de programação JavaScript por volta do fim do ano de 1995, algo que revolucionou as páginas dessa mesma época.\\
 
-Com o JavaScript, uma linguagem interpretada, é possível tornar as páginas da Web dinâmicas. O problema da perda de informação de um formulário poderia ser facilmente corrigido com o uso dessa linguagem. A validação que antes necessitava de uma nova requisição com o servidor, agora poderia ser feita no próprio lado do cliente (Client Side) a partir de um script executando no próprio navegador do usuário que poderia efetuar a mesma verificação de dados com a mesma precisão de antes. Além disso, por estar executando na mesma máquina do cliente, o processo seria muito mais rápido pois poderia ser feito instantaneamente após o usuário terminar de inserir uma determinada informação, não sendo necessário inserir todas as informações desse formulário para assim efetuar a verificação, outra vantagem, é que esse mesmo procedimento é muito mais rápido pois diminui o tempo de processamento pois não seria mais necessário efetuar novas requisições, logo, não teria mais atraso devido a latência da comunicação entre a máquina do cliente com o servidor, além disso, essa latência era muito nesse período pois a conexão com a internet ainda era feita através de internet discada.\\
-
-
+Com o JavaScript, uma linguagem interpretada, é possível tornar as páginas da Web dinâmicas. O problema da perda de informação de um formulário poderia ser facilmente corrigido com o uso dessa linguagem. A validação que antes necessitava de uma nova requisição com o servidor, agora poderia ser feita no próprio lado do cliente (Client Side) a partir de um script executando no próprio navegador do usuário que poderia efetuar a mesma verificação de dados com a mesma precisão de antes. Além disso, por estar executando na mesma máquina do cliente, o processo seria muito mais rápido pois poderia ser feito instantaneamente após o usuário terminar de inserir uma determinada informação, não sendo necessário inserir todas as informações desse formulário para assim efetuar a verificação, outra vantagem, é que esse mesmo procedimento é muito mais rápido pois diminui o tempo de processamento pois não seria mais necessário efetuar novas requisições, logo, não teria mais atraso devido a latência da comunicação entre a máquina do cliente com o servidor, além disso, essa latência era muito nesse período pois a conexão com a internet ainda era feita através de internet discada.
 
 \subsection{O crescimento da linguagem Javascript}
 
+%% FIXME: Referenciar com ranking do StackOverflow
+Como é possível observar no ranking \textbf{(REFERENCIAR)}, a linguagem JavaScript é uma das mais populares ultimamente, pois além do uso do propósito inicial no qual foi criada, isto é, para uso em navegadores, essa linguagem também está sendo utilizado para programação de servidores web, criação de programas para computadores e até mesmo para construção de aplicativos móveis. Essa flexibilidade no uso da linguagem é possível com a utilização de Frameworks.
+
+%% TODO: Colocar ranking framework do StackOverflow
+
+Após uma análise do Ranking divulgado pelo StackOverflow a respeito de "Ferramentas, Bibliotecas e Ferramentas"
+
 \subsection{Node.js}
+
+\subsection{Angular}
+
+\subsection{Vue.js}
 
 \subsection{React}
 
-\subsubsection{React Native}
+\subsubsection{React Native} \label{React Native}
 
 \section{Web Scraping}
+
+O Web Scraping é o nome dado a técnica de obtenção de dados disponíveis em páginas da Web. Esses dados podem ser obtidos através de ferramentas automatizadas ou até mesmo programadas para somente adquirir as informações de interesse não precisando armazenar todas as informações presentes no site.
+Os dados podem ser armazenados tanto em banco de dados ou em arquivos para poderem ser analisados futuramente.
+
+% TODO: Falar das formas em o WebScrapinf pode ser feito? Ex: BeautifulSoap no Python, no Java, e no JS?
 
 \section{Banco de Dados}
 
