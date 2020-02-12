@@ -70,15 +70,15 @@ A \autoref{tab-tiobe} ilustra as 20 linguagens mais populares de acordo com esse
 Uma outra instituição que efetua ranking semelhante é o Stack Overflow, uma empresa fundada em 2008 na qual possui maior comunidade de desenvolvedores para compartilhamento do conhecimento relacionado com programação. Essa comunidade dar-se em torno de um site utilizado para troca de conhecimento de forma colaborativa através da ajuda na resolução de problemas e desmistificação de dúvidas.
 
 % FIXME: Melhorar esse trecho. Generalizar pesquisa. Esmiuçar ranking depois.
-O ranking elaborado por essa empresa é divulgado de forma anual através de uma pesquisa, no próprio site, com programadores de todo mundo. Para versão referente ao ano de 2019, foram entrevistados aproximadamente 90.000 desenvolvedores. Esse mesmo ranking pode ser observado na \autoref{tab-stack-overflow}.
+O ranking elaborado por essa empresa é divulgado de forma anual através de uma pesquisa, no próprio site, com programadores de todo mundo. Para versão referente ao ano de 2019, foram entrevistados aproximadamente 90.000 desenvolvedores. Esse mesmo ranking pode ser observado na \autoref{tab-stack-overflow-linguagens}.
 
 % FIXME: Acrescentar mais detalhes do ranking.
 
 % FIXME: Verificar ABNT se pode centralizar
 \begin{table}[htb]
 \ABNTEXfontereduzida
-\caption[Ranking das Linguages Mais Populares]{Ranking das Linguages Mais Populares.}
-\label{tab-stack-overflow}
+\caption[Ranking das Linguagens Mais Populares]{Ranking das Linguagens Mais Populares.}
+\label{tab-stack-overflow-linguagens}
 \begin{tabular}{p{5cm}|p{4cm}}
   %\hline
    \textbf{Linguagem} & \textbf{Porcentagem de uso}  \\
@@ -137,7 +137,7 @@ O ranking elaborado por essa empresa é divulgado de forma anual através de uma
 \end{table}
 
 \newpage
-Conforme pode ser observado na \autoref{tab-stack-overflow}, existe uma intersecção de linguagens populares entre os dois rankings.
+Conforme pode ser observado na \autoref{tab-stack-overflow-linguagens}, existe uma intersecção de linguagens populares entre os dois rankings.
 
 A linguagem de programação JavaScript aparece bem colocada em ambos os rankings, no índice TIOBE na sexta posição e na liderança do Ranking do StackOverflow. Conforme será destacado na seção \ref{JavaScript}, essa linguagem pode ser utilizada para diversos tipos de aplicação, como por exemplo o seu uso mais comum, isto é, em navegadores, assim como para o uso em servidores e até mesmo para desenvolvimento de aplicativos para dispositivos móveis.
 
@@ -181,9 +181,39 @@ Com o JavaScript, uma linguagem interpretada, é possível tornar as páginas da
 \subsection{O crescimento da linguagem Javascript}
 
 %% FIXME: Referenciar com ranking do StackOverflow
-Como é possível observar no ranking \textbf{(REFERENCIAR)}, a linguagem JavaScript é uma das mais populares ultimamente, pois além do uso do propósito inicial no qual foi criada, isto é, para uso em navegadores, essa linguagem também está sendo utilizado para programação de servidores web, criação de programas para computadores e até mesmo para construção de aplicativos móveis. Essa flexibilidade no uso da linguagem é possível com a utilização de Frameworks.
+Como é possível observar no ranking das linguagens, elaborado pelo StackOverflow, no qual é representado pela \autoref{tab-stack-overflow-linguagens}, a linguagem JavaScript é uma das mais populares ultimamente, pois além do uso do propósito inicial no qual foi criada, isto é, para uso em navegadores, essa linguagem também está sendo utilizado para programação de servidores web, criação de programas para computadores e até mesmo para construção de aplicativos móveis. Essa flexibilidade no uso da linguagem é possível com a utilização de Frameworks.
 
 %% TODO: Colocar ranking framework do StackOverflow
+
+% FIXME: Verificar ABNT se pode centralizar
+\begin{table}[htb]
+\ABNTEXfontereduzida
+\caption[Ranking dos Frameworks para Web Mais Populares]{Ranking dos Frameworks para Web Mais Populares}
+\label{tab-stack-overflow-web-framework}
+\begin{tabular}{p{5cm}|p{4cm}}
+  %\hline
+   \textbf{Linguagem} & \textbf{Porcentagem de uso}  \\
+    \hline
+    JavaScript & 69,7\%  \\
+    
+\end{tabular}
+\legend{Fonte: }
+\end{table}
+
+% FIXME: Verificar ABNT se pode centralizar
+\begin{table}[htb]
+\ABNTEXfontereduzida
+\caption[Ranking dos Frameworks, Bibliotecas e Ferramentas Mais Populares]{Ranking dos Frameworks, Bibliotecas e Ferramentas Mais Populares.}
+\label{tab-stack-overflow-framework-tools}
+\begin{tabular}{p{5cm}|p{4cm}}
+  %\hline
+   \textbf{Linguagem} & \textbf{Porcentagem de uso}  \\
+    \hline
+    JavaScript & 69,7\%  \\
+    
+\end{tabular}
+\legend{Fonte: }
+\end{table}
 
 Após uma análise do Ranking divulgado pelo StackOverflow a respeito de "Ferramentas, Bibliotecas e Ferramentas"
 
@@ -213,3 +243,27 @@ Os dados podem ser armazenados tanto em banco de dados ou em arquivos para poder
 \section{QRCode}
 
 \section{Código CAPTCHA}
+
+\section{A Nota Fiscal de Consumidor Eletrônica}\label{secNfce}
+
+%% FIXME: ReferÊncia http://nfce.encat.org/institucional/o-que-e-nfc-e/
+A Nota Fiscal de Consumidor Eletrônica (NFC-e) visa ser uma alternativa eletrônica aos antigos cupons fiscais emitidos em papel. Tal documento segue um modelo nacional de emissão de documento fiscal com validade jurídica garantida pela assinatura digital do emissor.
+
+Com a publicação do Decreto nº 44.785 em 12 de maio de 2014, a NFC-e foi instituída no Estado do Rio de Janeiro a partir do dia seguinte à publicação. Com isso, todos os estabelecimentos comerciais deveriam estar aptos ao uso da NFC-e até o dia 31 de dezembro de 2017.
+
+% FIXME: Ajustar a imagem
+% FIXME: Adicionar referencia a imagem
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{modelo_nota_fiscal}
+    \caption{Exemplo de uma NFC-e}
+    \label{modeloNfce}
+\end{figure}
+
+Na figura \ref{modeloNfce} é possível observar um exemplo de uma NFC-e, com isso, pode se observar a descrição, a quantidade e o preço unitário de cada produto comprado. Além disso, ainda consta a informação do estabelecimento onde a compra foi efetuada como o endereço, o CNPJ e nome do estabelecimento.
+
+Ainda, nesse documento consta uma chave de acesso que é composta por 44 dígitos e um QR Code, de posse desses dados é possível acessar a versão online da respectiva nota, no qual contém as mesmas informações a respeito da compra assim como existe em sua versão física.
+
+% TODO: Adicionar print imagem nota online?
+
+A verificação de autenticidade pode ser efetuada através de um site disponibilizado e mantido por cada Secretaria de Fazenda dos estados que constituem a União. Sendo assim, não é possível verificar a autenticidade de uma NFC-e emitida no estado de São Paulo na plataforma disponibilizada pelo Secretaria de Fazenda do Estado do Rio de Janeiro.

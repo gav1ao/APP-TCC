@@ -1,37 +1,15 @@
 \chapter{Desenvolvimento}
 
-\section{A Nota Fiscal de Consumidor Eletrônica}
-
-%% FIXME: ReferÊncia http://nfce.encat.org/institucional/o-que-e-nfc-e/
-A Nota Fiscal de Consumidor Eletrônica (NFC-e) visa ser uma alternativa eletrônica aos antigos cupons fiscais emitidos em papel. Tal documento segue um modelo nacional de emissão de documento fiscal com validade jurídica garantida pela assinatura digital do emissor.
-
-Com a publicação do Decreto nº 44.785 em 12 de maio de 2014, a NFC-e foi instituída no Estado do Rio de Janeiro a partir do dia seguinte à publicação. Com isso, todos os estabelecimentos comerciais deveriam estar aptos ao uso da NFC-e até o dia 31 de dezembro de 2017.
-
-% FIXME: Ajustar a imagem
-% FIXME: Adicionar referencia a imagem
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.5]{modelo_nota_fiscal}
-    \caption{Exemplo de uma NFC-e}
-    \label{modeloNfce}
-\end{figure}
-
-Na figura \ref{modeloNfce} é possível observar um exemplo de uma NFC-e, com isso, pode se observar a descrição, a quantidade e o preço unitário de cada produto comprado. Além disso, ainda consta a informação do estabelecimento onde a compra foi efetuada como o endereço, o CNPJ e nome do estabelecimento.
-
-Ainda, nesse documento consta uma chave de acesso que é composta por 44 dígitos e um QR Code, de posse desses dados é possível acessar a versão online da respectiva nota, no qual contém as mesmas informações a respeito da compra assim como existe em sua versão física.
-
-% TODO: Adicionar print imagem nota online?
-
-A verificação de autenticidade pode ser efetuada através de um site disponibilizado e mantido por cada Secretaria de Fazenda dos estados que constituem a União. Sendo assim, não é possível verificar a autenticidade de uma NFC-e emitida no estado de São Paulo na plataforma disponibilizada pelo Secretaria de Fazenda do Estado do Rio de Janeiro.
-
-Essa peculiaridade, faz com que a versão desenvolvida descrita nesse projeto, tenha suporte a somente notas emitidas no estado Fluminense. Todavia, a adição do suporte a outros estados é facilitada, pois a inclusão já foi prevista durante o desenvolvimento.
-
 \section{Obtenção das informações}
 \label{obtencaoInformacoes}
 
-O usuário pode acessar a versão da online da nota fiscal através de duas formas: a partir de um site específico junto de uma chave de acesso ou pelo site contido no QRCode. Após o usuário solicitar a adição de uma nota fiscal no aplicativo é feita uma simulação de uma dessas formas de acesso resultando em uma requisição ao site da Secretaria de Fazenda.
+Conforme abordado no capítulo anterior ao longo da \autoref{secNfce}, cada estado fornece um meio online para acesso da versão eletrônica das notas fiscais, com isso, não existe um sistema único para consulta de diversas notas de estados diferentes. Devido a essa peculiaridade, a versão desenvolvida descrita nesse projeto, possui suporte a somente notas emitidas no estado Fluminense. Todavia, a adição do suporte a outros estados é facilitada, pois a inclusão já foi prevista durante o desenvolvimento.
 
-Independente de que forma foi efetuado o acesso, após o término da solicitação, o usuário é redirecionado para uma página que contém a versão online da nota fiscal. O conteúdo dessa página é analisado e armazenado. A técnica utilizada para a análise desse conteúdo é o Web Scraping.
+A partir do sistema disponibilizado pelas SEFAZ, o usuário poderá acessar a versão da online da nota fiscal através de duas formas: por meio de um site específico junto de uma chave de acesso ou pelo endereço web contido no QRCode.
+
+Independente da forma que foi efetuado o acesso, após o término da solicitação, o usuário é redirecionado para uma página que contém a versão online da nota fiscal. O conteúdo dessa página é analisado e armazenado. A técnica utilizada para a análise desse conteúdo é o Web Scraping.
+
+Portanto, após o usuário solicitar a adição de uma nota fiscal, no aplicativo, será feita uma simulação de uma dessas formas de acesso, o que resultará em uma requisição ao próprio site da Secretaria de Fazenda, consequentemente, será feito o Scraping da página assim que o resultado estiver disponível.
 
 \subsection{Simulação da solicitação}
 
@@ -41,7 +19,7 @@ A solicitação através da chave de acesso é feita de forma a simular o acesso
 
 % FIXME: Melhorar esse trecho.
 
-Caso a nota fiscal já esteja disponível e o código de verificação esteja correto, o conteúdo será disponibilizado, caso contrário, o usuário será notificado que houve um erro durante o cadastro da NFC-e na aplicação.
+Caso a nota fiscal já esteja disponível e o código de verificação esteja correto, o conteúdo será disponibilizado, caso contrário, o usuário será notificado que houve um erro durante o cadastro da NFC-e na própria aplicação.
 
 Já para reprodução com o QRCode, é possível obter o conteúdo diretamente sem a necessidade de inserção de código de verificação, todavia, ainda é necessária a simulação da navegação com o Puppeteer.
 
@@ -152,7 +130,7 @@ O desenvolvimento do aplicativo é feito utilizando uma tecnologia de desenvolvi
 Com isso foi feito o desenvolvimento de único aplicativo que pode ser utilizado nas duas plataformas mencionadas acima. Sendo feito dessa forma, houve uma otimização no tempo de desenvolvimento.
 
 % FIXME: Referenciar o ranking?
-A justificativa para a escolha do uso do React Native, primeiramente é pelo fato de permitir um desenvolvimento multiplataforma com código nativo, em acréscimo, estava melhor colocado no ranking elaborado pelo StackOverflow, \textcolor{red}{\textbf{[presente na seção {TEMP} Devo referenciar o ranking?]}} quando comparado com seus concorrentes diretos. Além disso, caso futuramente seja disponibilizado as mesmas funcionalidades presentes no aplicativo para um website, isso poderá ser feito sem muitas complicações, sendo necessária poucas alterações.
+A justificativa para a escolha do uso do React Native, primeiramente é pelo fato de permitir um desenvolvimento multiplataforma com código nativo, em acréscimo, estava melhor colocado no ranking elaborado pelo StackOverflow, presente na \autoref{tab-stack-overflow-framework-tools}, quando comparado com seus concorrentes diretos. Além disso, caso futuramente seja disponibilizado as mesmas funcionalidades presentes no aplicativo para um website, isso poderá ser feito sem muitas complicações, sendo necessária poucas alterações.
 
 \subsection{Expo}
 
