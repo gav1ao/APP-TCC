@@ -1,36 +1,143 @@
 \chapter{Tecnologias disponíveis} \label{Tecnologias disponíveis}
 
-\section{QRCode}
-
-\section{Web Scraping}
-
 \section{Linguagens de Programação}
 
-%% TODO: Citar apostila do Edirlei
-%% http://edirlei.3dgb.com.br/aulas/clp/CLP_Aula_01_Introducao_2015.pdf
 Uma linguagem de programação é a forma que os programadores utilizam como meio de comunicação com os computadores. A lógica necessária para o funcionamento de um programa é convertida em um conjunto de caracteres seguindo um conjunto de regras sintáticas e semânticas que formará um código ou \textit{script}.
-%% TODO: Citar Fischer, Alice E.; Grodzinsky, Frances (1993). The Anatomy of Programming Languages (em inglês). Englewood Cliffs, New Jersey: Prentice Hall. p. 3. 557 páginas. ISBN 0-13-035155-5
 
 \subsection{As linguagens disponíveis}
 
-Assim como os idiomas falados são muitos, o número de linguagens de programação disponíveis também é alto.
-%% TODO: Falar um pouco sobre a quantidade disponível
+Assim como os idiomas falados são muitos, o número de linguagens de programação disponíveis também é alto, com isso, um desenvolvedor deverá saber escolher qual linguagem utilizar dependendo do tipo do projeto que será desenvolvido. Um critério que poderá ser utilizado para essa escolha é o grau de popularidade que uma linguagem de programação possui entre a comunidade de programadores.
 
-A contabilização da popularidade dessas linguagens é feita por algumas instituições no qual um programador pode utilizar como critério para escolha de qual linguagem utilizar para o desenvolvimento do seu projeto. E caso o desenvolvedor não possua domínio das mais populares poderá utilizar como critério para aprendizado e se reciclar perante ao mercado assim como um médico deve sempre se atualizar a cura de novas doenças antes não disponíveis durante o seu período de estudos acadêmicos.
+A contabilização da popularidade dessas linguagens é feita por algumas instituições no qual um programador poderá se basear para efetuar sua escolha. Caso o mesmo não possua domínio daquelas mais populares poderá utilizar como critério para aprendizado e se reciclar perante ao mercado assim como um médico deve sempre se atualizar a cura de novas doenças antes não disponíveis durante o seu período de estudos acadêmicos.
 
+Através do índice TIOBE é possível obter o grau de popularidade das linguagens de programação. O índice é elaborado através dos resultados dos sites de buscas por essas mesmas linguagens seguindo alguns critérios adotados pela empresa TIOBE Software BV a qual mantém elabora o mesmo. Vale ressaltar que esse índice é divulgado mensalmente, sendo possível obter informações históricas da popularidade das linguagens através de soluções pagas oferecidas por essa mesma empresa.
 
-O índice TIOBE...
-%% FIXME: Acrescentar definição https://www.tiobe.com/tiobe-index//programming-languages-definition/
+A \autoref{tab-tiobe} ilustra as 20 linguagens mais populares de acordo com esse índice. Esses dados foram gerados a partir de um levantamento realizado no início dos anos de 2020 e 2019 e tendo sido divulgados nos meses de fevereiro dos respectivos anos.
 
-A seguinte tabela contém as linguagens mais populares de acordo com esse índice.
-%% TODO: Acrescentar tabela
+% FIXME: Verificar ABNT se pode centralizar
+\begin{table}[htb]
+\ABNTEXfontereduzida
+\caption[Índice TIOBE]{Índice TIOBE.}
+\label{tab-tiobe}
+\begin{tabular}{p{2.6cm}|p{2.6cm}|p{4cm}}
+  %\hline
+   \textbf{Fevereiro/2020} & \textbf{Fevereiro/2019}  & \textbf{Linguagem}  \\
+    \hline
+    1 & 1 & Java \\
+    \hline
+    2 & 2 & C \\
+    \hline
+    3 & 3 & Python \\
+    \hline
+    4 & 4 & C++ \\
+    \hline
+    5 & 7 & C\# \\
+    \hline
+    6 & 5 & Visual Basic .NET \\
+    \hline
+    7 & 6 & JavaScript \\
+    \hline
+    8 & 8 & PHP \\
+    \hline
+    9 & 9 & SQL \\
+    \hline
+    10 & 20 & Swift \\
+    \hline
+    11 & 18 & Go \\
+    \hline
+    12 & 11 & Assembly Language \\
+    \hline
+    13 & 15 & R \\
+    \hline
+    14 & 23 & D \\
+    \hline
+    15 & 16 & Ruby \\
+    \hline
+    16 & 12 & MATLAB \\
+    \hline
+    17 & 21 & PL/SQL \\
+    \hline
+    18 & 14 & Delphi/Object Pascal \\
+    \hline
+    19 & 13 & Perl \\
+    \hline
+    20 & 10 & Objective-C \\
+\end{tabular}
+\legend{Fonte: \citeonline{tiobeDefinition}}
+\end{table}
 
-Uma outra instituição que efetua ranking semelhante é o Stack Overflow...
-%% FIXME: Acrescentar definição https://stackoverflow.com/company
-%% TODO: Acrescentar tabela https://insights.stackoverflow.com/survey/2019#key-results
+\newpage
+Uma outra instituição que efetua ranking semelhante é o Stack Overflow, uma empresa fundada em 2008 na qual possui maior comunidade de desenvolvedores para compartilhamento do conhecimento relacionado com programação. Essa comunidade dar-se em torno de um site utilizado para troca de conhecimento de forma colaborativa através da ajuda na resolução de problemas e desmistificação de dúvidas.
 
-%% FIXME: Referenciar melhor a tabela/gráfico
-Conforme pode ser observado na \textbf{tabela}, existe uma intersecção de linguagens populares entre os dois rankings.
+% FIXME: Melhorar esse trecho. Generalizar pesquisa. Esmiuçar ranking depois.
+O ranking elaborado por essa empresa é divulgado de forma anual através de uma pesquisa, no próprio site, com programadores de todo mundo. Para versão referente ao ano de 2019, foram entrevistados aproximadamente 90.000 desenvolvedores. Esse mesmo ranking pode ser observado na \autoref{tab-stack-overflow}.
+
+% FIXME: Acrescentar mais detalhes do ranking.
+
+% FIXME: Verificar ABNT se pode centralizar
+\begin{table}[htb]
+\ABNTEXfontereduzida
+\caption[Ranking das Linguages Mais Populares]{Ranking das Linguages Mais Populares.}
+\label{tab-stack-overflow}
+\begin{tabular}{p{5cm}|p{4cm}}
+  %\hline
+   \textbf{Linguagem} & \textbf{Porcentagem de uso}  \\
+    \hline
+    JavaScript & 69,7\%  \\
+    \hline
+    HTML/CSS & 63,1\%  \\
+    \hline
+    SQL & 56,5\%  \\
+    \hline
+    Python & 39,4\%  \\
+    \hline
+    Java & 39,2\%  \\
+    \hline
+    Bash/Shell/PowerShell & 37,9\%  \\
+    \hline
+    C\# & 31,9\%  \\
+    \hline
+    PHP & 25,8\%  \\
+    \hline
+    TypeScript & 23,5\%  \\
+    \hline
+    C++ & 20,4\%  \\
+    \hline
+    C & 17,3\%  \\
+    \hline
+    Ruby & 8,9\%  \\
+    \hline
+    Go & 8,8\%  \\
+    \hline
+    Swift & 6,8\%  \\
+    \hline
+    Kotlin & 6,6\%  \\
+    \hline
+    R & 5,6\%  \\
+    \hline
+    VBA & 5,5\%  \\
+    \hline
+    Objective-C & 5,2\%  \\
+    \hline
+    Assembly & 5,0\%  \\
+    \hline
+    Scala & 4,2\%  \\
+    \hline
+    Rust & 3,0\%  \\
+    \hline
+    Dart & 1,8\%  \\
+    \hline
+    Elixir & 1,6\%  \\
+    \hline
+    Clojure & 1,5\%  \\
+    \hline
+    WebAssembly & 1,1\%  \\
+\end{tabular}
+\legend{Fonte: \citeonline{stackOverflowRanking}}
+\end{table}
+
+\newpage
+Conforme pode ser observado na \autoref{tab-stack-overflow}, existe uma intersecção de linguagens populares entre os dois rankings.
 
 A linguagem de programação JavaScript aparece bem colocada em ambos os rankings, no índice TIOBE na sexta posição e na liderança do Ranking do StackOverflow. Conforme será destacado na seção \ref{JavaScript}, essa linguagem pode ser utilizada para diversos tipos de aplicação, como por exemplo o seu uso mais comum, isto é, em navegadores, assim como para o uso em servidores e até mesmo para desenvolvimento de aplicativos para dispositivos móveis.
 
@@ -65,9 +172,9 @@ O desenvolvimento através do Framework React Native é abordado na secção \re
 
 \section{JavaScript}\label{JavaScript}
 
-Antes as páginas eram construídas de modo estático, isto é, caso o usuário inserisse um conjunto de informações em um formulário, e caso dentre esse conjunto contivesse um dado inválido, a validação era feita do lado do servidor (Server Side) e dependendo da forma que o site era feito, toda informação inserida pelo usuário poderia ser perdida, necessitando que o mesmo as inserissem novamente.\\
+Antes as páginas eram construídas de modo estático, isto é, caso o usuário inserisse um conjunto de informações em um formulário, e caso dentre esse conjunto contivesse um dado inválido, a validação era feita do lado do servidor (Server Side) e dependendo da forma que o site era feito, toda informação inserida pelo usuário poderia ser perdida, necessitando que o mesmo as inserissem novamente.
 
-De forma a corrigir esse problema e melhorar a navegação das páginas para tornar a experiência do usuário mais agradável, eis que surge a linguagem de programação JavaScript por volta do fim do ano de 1995, algo que revolucionou as páginas dessa mesma época.\\
+De forma a corrigir esse problema e melhorar a navegação das páginas para tornar a experiência do usuário mais agradável, eis que surge a linguagem de programação JavaScript por volta do fim do ano de 1995, algo que revolucionou as páginas dessa mesma época.
 
 Com o JavaScript, uma linguagem interpretada, é possível tornar as páginas da Web dinâmicas. O problema da perda de informação de um formulário poderia ser facilmente corrigido com o uso dessa linguagem. A validação que antes necessitava de uma nova requisição com o servidor, agora poderia ser feita no próprio lado do cliente (Client Side) a partir de um script executando no próprio navegador do usuário que poderia efetuar a mesma verificação de dados com a mesma precisão de antes. Além disso, por estar executando na mesma máquina do cliente, o processo seria muito mais rápido pois poderia ser feito instantaneamente após o usuário terminar de inserir uma determinada informação, não sendo necessário inserir todas as informações desse formulário para assim efetuar a verificação, outra vantagem, é que esse mesmo procedimento é muito mais rápido pois diminui o tempo de processamento pois não seria mais necessário efetuar novas requisições, logo, não teria mais atraso devido a latência da comunicação entre a máquina do cliente com o servidor, além disso, essa latência era muito nesse período pois a conexão com a internet ainda era feita através de internet discada.
 
@@ -90,6 +197,12 @@ Após uma análise do Ranking divulgado pelo StackOverflow a respeito de "Ferram
 
 \subsubsection{React Native} \label{React Native}
 
+\section{Banco de Dados}
+
+\subsection{Relacionais}
+
+\subsection{Não-Relacionais}
+
 \section{Web Scraping}
 
 O Web Scraping é o nome dado a técnica de obtenção de dados disponíveis em páginas da Web. Esses dados podem ser obtidos através de ferramentas automatizadas ou até mesmo programadas para somente adquirir as informações de interesse não precisando armazenar todas as informações presentes no site.
@@ -97,8 +210,6 @@ Os dados podem ser armazenados tanto em banco de dados ou em arquivos para poder
 
 % TODO: Falar das formas em o WebScrapinf pode ser feito? Ex: BeautifulSoap no Python, no Java, e no JS?
 
-\section{Banco de Dados}
+\section{QRCode}
 
-\subsection{Relacionais}
-
-\subsection{Não-Relacionais}
+\section{Código CAPTCHA}
