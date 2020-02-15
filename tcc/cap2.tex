@@ -172,33 +172,28 @@ O desenvolvimento através do Framework React Native é abordado na secção \re
 
 \section{JavaScript}\label{JavaScript}
 
-Antes as páginas eram construídas de modo estático, isto é, caso o usuário inserisse um conjunto de informações em um formulário, e caso dentre esse conjunto contivesse um dado inválido, a validação era feita do lado do servidor (Server Side) e dependendo da forma que o site era feito, toda informação inserida pelo usuário poderia ser perdida, necessitando que o mesmo as inserissem novamente.
+Antes as páginas eram construídas de modo estático, isto é, caso o usuário inserisse um conjunto de informações em um formulário, e caso, dentre esse conjunto, contivesse um dado inválido, a validação era feita do lado do servidor (Server Side) e dependendo da forma em que o site foi construído, toda informação inserida pelo usuário poderia ser perdida, necessitando que o mesmo as inserissem novamente.
 
 De forma a corrigir esse problema e melhorar a navegação das páginas para tornar a experiência do usuário mais agradável, eis que surge a linguagem de programação JavaScript por volta do fim do ano de 1995, algo que revolucionou as páginas dessa mesma época.
 
-Com o JavaScript, uma linguagem interpretada, é possível tornar as páginas da Web dinâmicas. O problema da perda de informação de um formulário poderia ser facilmente corrigido com o uso dessa linguagem. A validação que antes necessitava de uma nova requisição com o servidor, agora poderia ser feita no próprio lado do cliente (Client Side) a partir de um script executando no próprio navegador do usuário que poderia efetuar a mesma verificação de dados com a mesma precisão de antes. Além disso, por estar executando na mesma máquina do cliente, o processo seria muito mais rápido pois poderia ser feito instantaneamente após o usuário terminar de inserir uma determinada informação, não sendo necessário inserir todas as informações desse formulário para assim efetuar a verificação, outra vantagem, é que esse mesmo procedimento é muito mais rápido pois diminui o tempo de processamento pois não seria mais necessário efetuar novas requisições, logo, não teria mais atraso devido a latência da comunicação entre a máquina do cliente com o servidor, além disso, essa latência era muito nesse período pois a conexão com a internet ainda era feita através de internet discada.
+Com o JavaScript, uma linguagem interpretada, é possível tornar as páginas da Web dinâmicas, além de que o problema da perda de informação de formulários poderia ser facilmente corrigido com o uso dessa linguagem.
 
-\subsection{O crescimento da linguagem Javascript}
+A validação que antes necessitava de uma nova requisição com o servidor, agora poderia ser feito no próprio lado do cliente (Client Side), ou seja, a partir de um script que poderia ser executado no próprio navegador do usuário, o que poderia efetuar a mesma verificação de dados com a mesma precisão de antes.
+
+Além disso, por estar executando na própria máquina do cliente, o processo torna-se muito mais rápido, pois pode ser feito instantaneamente após o usuário terminar de inserir uma determinada informação, não sendo necessário inserir todas as informações necessárias ao formulário para então efetuar a verificação.
+
+Outra vantagem, é que esse procedimento é muito mais rápido em decorrência do tempo de processamento ser diminuído uma vez que não é mais necessário efetuar novas requisições de validações ao servidor, logo, não ocorrerá mais atraso no tempo de execução tendo a latência da comunicação entre a máquina do cliente com o servidor como causa.
+
+Vale destacar a latência desse período era muito maior quando comparada aos dias atuais, pois a conexão com a internet ainda era feita de modo discado, isto é, conectando-se a rede mundial de computadores por meio do telefone.
+
+\subsection{A popularidade do Javascript}
 
 %% FIXME: Referenciar com ranking do StackOverflow
-Como é possível observar no ranking das linguagens, elaborado pelo StackOverflow, no qual é representado pela \autoref{tab-stack-overflow-linguagens}, a linguagem JavaScript é uma das mais populares ultimamente, pois além do uso do propósito inicial no qual foi criada, isto é, para uso em navegadores, essa linguagem também está sendo utilizado para programação de servidores web, criação de programas para computadores e até mesmo para construção de aplicativos móveis. Essa flexibilidade no uso da linguagem é possível com a utilização de Frameworks.
+Como é possível observar no ranking das linguagens, elaborado pelo StackOverflow, no qual é representado pela \autoref{tab-stack-overflow-linguagens}, a linguagem JavaScript foi a mais popular nessa pesquisa. Isso pode ser justificado pois além do uso em seu propósito inicial, isto é, para uso em navegadores, essa linguagem também está sendo utilizado para programação de servidores web, criação de programas para computadores e até mesmo para construção de aplicativos móveis. Essa flexibilidade no uso da linguagem é possível com a utilização de Frameworks.
 
-%% TODO: Colocar ranking framework do StackOverflow
+Esse comportamento fica evidente após uma análise da \autoref{tab-stack-overflow-framework-tools} que representa o ranking a respeito dos "Frameworks, Bibliotecas e Ferramentas Mais Populares". Esse ranking foi elaborado através das respostas de 49.861 desenvolvedores que fazem usufruto desses recursos para o meio profissional. Na liderança, sendo utilizado em 50,4\% dos casos, consta o Framework "Node.js" que é utilizado na criação de servidores com o JavaScript. Outro framework utilizado com essa mesma linguagem também presente no Top 5, é o "React Native" que é utilizado para o desenvolvimento de aplicações móveis.
 
-% FIXME: Verificar ABNT se pode centralizar
-\begin{table}[htb]
-\ABNTEXfontereduzida
-\caption[Ranking dos Frameworks para Web Mais Populares]{Ranking dos Frameworks para Web Mais Populares}
-\label{tab-stack-overflow-web-framework}
-\begin{tabular}{p{5cm}|p{4cm}}
-  %\hline
-   \textbf{Linguagem} & \textbf{Porcentagem de uso}  \\
-    \hline
-    JavaScript & 69,7\%  \\
-    
-\end{tabular}
-\legend{Fonte: }
-\end{table}
+Os outros três frameworks mais populares, isto é, ".Net", ".Net Core" e "Pandas" são utilizados com outras linguagens também populares sendo os dois primeiros utilizados com o "C\#" e o último com o "Python".
 
 % FIXME: Verificar ABNT se pode centralizar
 \begin{table}[htb]
@@ -207,16 +202,90 @@ Como é possível observar no ranking das linguagens, elaborado pelo StackOverfl
 \label{tab-stack-overflow-framework-tools}
 \begin{tabular}{p{5cm}|p{4cm}}
   %\hline
-   \textbf{Linguagem} & \textbf{Porcentagem de uso}  \\
+   \textbf{Frameworks, Bibliotecas e Ferramentas} & \textbf{Porcentagem de uso}  \\
     \hline
-    JavaScript & 69,7\%  \\
+    Node.js & 50,4\%  \\
+    \hline
+    .NET & 38,1\%  \\
+    \hline
+    .NET Core & 24,5\%  \\
+    \hline
+    Pandas & 12,3\%  \\
+    \hline
+    React Native & 10,8\%  \\
+    \hline
+    Ansible & 10,4\%  \\
+    \hline
+    TensorFlow & 9,4\%  \\
+    \hline
+    Unity 3D & 9,1\%  \\
+    \hline
+    Cordova & 7,4\%  \\
+    \hline
+    Xamarin & 6,5\%  \\
+    \hline
+    Apache Spark & 5,9\%  \\
+    \hline
+    Hadoop & 5,0\%  \\
+    \hline
+    Flutter & 3,2\%  \\
+    \hline
+    Torch/PyTorch & 2,9\%  \\
+    \hline
+    Puppet & 2,9\%  \\
+    \hline
+    Chef & 2,7\%  \\
+    \hline
+    Unreal Engine & 2,6\%  \\
+    \hline
+    CryEngine & 0,4\%  \\
     
 \end{tabular}
 \legend{Fonte: }
 \end{table}
 
-Após uma análise do Ranking divulgado pelo StackOverflow a respeito de "Ferramentas, Bibliotecas e Ferramentas"
+% FIXME: Verificar ABNT se pode centralizar
+\begin{table}[htb]
+\ABNTEXfontereduzida
+\caption[Ranking dos Frameworks para Web Mais Populares]{Ranking dos Frameworks para Web Mais Populares}
+\label{tab-stack-overflow-web-framework}
+\begin{tabular}{p{5cm}|p{4cm}}
+  %\hline
+   \textbf{Framework} & \textbf{Porcentagem de uso}  \\
+    \hline
+    jQuery & 48,7\%  \\
+    \hline
+    React.js & 31,3\%  \\
+    \hline
+    Angular/Angular.js & 30,7\%  \\
+    \hline
+    ASP.NET & 26,3\%  \\
+    \hline
+    Express & 19,7\%  \\
+    \hline
+    Spring & 16,2\%  \\
+    \hline
+    Vue.js & 15,2\%  \\
+    \hline
+    Django & 13,0\%  \\
+    \hline
+    Flask & 12,1\%  \\
+    \hline
+    Laravel & 10,5\%  \\
+    \hline
+    Ruby on Rails & 8,2\%  \\
+    \hline
+    Drupal & 3,5\%  \\
+\end{tabular}
+\legend{Fonte: }
+\end{table}
 
+Por fim, ao efetuar uma observação na \autoref{tab-stack-overflow-web-framework}, que é sobre o "Ranking dos Frameworks para Web Mais Populares", fique evidente a soberania do JavaScript pois é possível constatar que metade deles são para utilização com essa mesma linguagem.
+
+\subsection{A Flexibilidade do JavaScript}
+
+% Transformar subseções em textos com breves descrições
+\iffalse
 \subsection{Node.js}
 
 \subsection{Angular}
@@ -226,6 +295,7 @@ Após uma análise do Ranking divulgado pelo StackOverflow a respeito de "Ferram
 \subsection{React}
 
 \subsubsection{React Native} \label{React Native}
+\fi
 
 \section{Banco de Dados}
 
@@ -241,6 +311,20 @@ Os dados podem ser armazenados tanto em banco de dados ou em arquivos para poder
 % TODO: Falar das formas em o WebScrapinf pode ser feito? Ex: BeautifulSoap no Python, no Java, e no JS?
 
 \section{QRCode}
+
+O nome QRCode é uma abreviação para \textit{Quick Response Code}, que em tradução livre significa "Código de Resposta Rápida". Esse código foi inventado em meados dos anos 90 com o propósito de ser utilizado para a indústria automobilística, no entanto, nos últimos anos tem sido adotado por diversos meios, desde em periódicos impressos, com intuito aumentar a iteração com os leitores, em anúncios diversos e até mesmo em meios de pagamentos.
+
+Qualquer informação numérica, e até mesmo alfanumérica, pode ser representada de forma visual através do QRCode, pois trata-se de um código de barras em uma representação bidimensional. Como a informação é transformada em texto, deve-se atentar que existe uma limitação quanto a quantidade de caracteres que poderá ser utilizada que varia de acordo com a versão adotada na construção do código.
+
+% FIXME: Ajustar a imagem
+% FIXME: Adicionar referencia a imagem
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{tcc/figures/exemplo-qrcode.png}
+    \caption{Exemplo de um QRCode}
+    \legend{Fonte: O Autor.}
+    \label{fig-exemplo-qrcode}
+\end{figure}
 
 \section{Código CAPTCHA}
 
