@@ -31,7 +31,7 @@ Comparar os tipos de BDs: relacionais e não-relacionais;
 
 Conforme apresentado na seção \ref{desenvApp}, o aplicativo foi desenvolvido utilizando o React Native e tendo utilizado alguns pacotes de estilização. O aplicativo é funcional, ou seja, é possível efetuar a instalação do mesmo em um smartphone e utilizar todos os seus recursos, no entanto, o mesmo não se encontra disponível para download através das lojas de aplicativos AppStore e PlayStore, respectivamente dos sistemas iOS e Android.
 
-Embora não seja possível instalar a aplicação através das lojas oficiais das plataformas, para o sistema Android é possível efetuar a instalação de aplicativos por outros meios. \textbf{\textcolor{red}{[FALAR UM POUCO MAIS]}}
+Embora não seja possível ainda instalar essa aplicação através das lojas oficiais das plataformas, para o sistema Android é factível efetuar a instalação de aplicativos por outros meios, através do download do arquivo referente do aplicativo. Tal procedimento necessita de algumas alterações nas configurações padrões do aparelho para que possa permitir a instalação de outras fontes. Caso não se tenha confiança na procedência da aplicação baixada, não é recomendado o prosseguimento da instalação.
 
 \subsection{Apresentação do Aplicativo}
 
@@ -69,7 +69,7 @@ Dependendo da forma de adição desejada pelo usuário, o mesmo será redirecion
 
 O meio mais rápido de adicionar é aquele que utiliza o QRCode, pois basta apontar a câmera do smartphone para o código que a leitura do mesmo será feita instantaneamente.
 
-Caso ocorra problemas na leitura desse código, o usuário poderá tentar adicionar através do código de acesso. Esse meio é um pouco mais lento, pois além de inserir esse código de 44 dígitos, será necessário adicionar um código de verificação da solicitação, isto é, o código captcha.
+Caso ocorra problemas na leitura desse código, o usuário poderá tentar adicionar através do código de acesso. Esse meio é um pouco mais lento, pois além de inserir esse código de 44 dígitos, será necessário adicionar um código de verificação da solicitação, isto é, o CAPTCHA.
 
 \subsubsection{Através do QRCode}
 
@@ -184,9 +184,9 @@ A figura \ref{appCodigoAcessoInicialFig} representa a tela inicial de cadastro e
 \end{figure}
 
 \newpage
-Após a inserção do código de acesso e o usuário ter pressionado o botão de adicionar, será mostrado um código captcha para validação da requisição. Esse código é necessário para comprovação que a solicitação é proveniente de interação humana e não foi feita por sistemas automáticos. Essa validação pertence ao sistema da SEFAZ e o aplicativo simplesmente replica a mesma imagem utilizada por esse sistema para que a solicitação efetuada no site possa ser simulada. Como essa imagem precisa ser transferida para o aplicativo, uma barra de progresso é exibida até que a imagem seja baixada em sua totalidade conforme é explicitado pela Figura \ref{appCodigoAcessoCarregamentoCaptchaFig}. Além da imagem representativa desse código de validação, um campo destinado a inserção do texto referente a essa mesma imagem são acrescentados à tela anterior. A figura \ref{appCodigoAcessoCaptchaFig} exemplifica esse fluxo descrito.
+Após a inserção do código de acesso e o usuário ter pressionado o botão de adicionar, será mostrado CAPTCHA para validação da requisição. Esse código é necessário para comprovação que a solicitação é proveniente de interação humana e não foi feita por sistemas automáticos. Essa validação pertence ao sistema da SEFAZ e o aplicativo simplesmente replica a mesma imagem utilizada por esse sistema para que a solicitação efetuada no site possa ser simulada. Como essa imagem precisa ser transferida para o aplicativo, uma barra de progresso é exibida até que a imagem seja baixada em sua totalidade conforme é explicitado pela Figura \ref{appCodigoAcessoCarregamentoCaptchaFig}. Além da imagem representativa desse código de validação, um campo destinado a inserção do texto referente a essa mesma imagem são acrescentados à tela anterior. A figura \ref{appCodigoAcessoCaptchaFig} exemplifica esse fluxo descrito.
 
-Vale destacar, que os mesmos botões disponíveis na tela anterior (Figura \ref{appCodigoAcessoComCodigoFig}) ainda estão presentes, todavia, o botão de adicionar deverá ser utilizado após a inserção do texto referente ao código captcha, já o botão limpar serve para limpeza do campo destinado a inserção desse mesmo texto.
+Vale destacar, que os mesmos botões disponíveis na tela anterior (Figura \ref{appCodigoAcessoComCodigoFig}) ainda estão presentes, todavia, o botão de adicionar deverá ser utilizado após a inserção do texto referente ao CAPTCHA, já o botão limpar serve para limpeza do campo destinado a inserção desse mesmo texto.
 
 \newpage
 % FIXME: Ajustar a imagem
@@ -194,7 +194,7 @@ Vale destacar, que os mesmos botões disponíveis na tela anterior (Figura \ref{
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.15]{tcc/figures/app/app_codigo_acesso_captcha.png}
-    \caption{Tela de cadastro solicitando código captcha para validação da requisição}
+    \caption{Tela de cadastro solicitando CAPTCHA para validação da requisição}
     \label{appCodigoAcessoCaptchaFig}
 \end{figure}
 
@@ -258,12 +258,12 @@ Ao receber a resposta, o aplicativo irá mostrar diferentes telas dependendo do 
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.15]{tcc/figures/app/app_codigo_acesso_erro_captcha.png}
-    \caption{Tela de cadastramento via código de acesso após inserção de código captcha inválido}
+    \caption{Tela de cadastramento via código de acesso após inserção falha no teste do CAPTCHA}
     \label{appCodigoAcessoErroCaptchaFig}
 \end{figure}
 
 \newpage
-Existe uma tela diferente das demais quando comparado aos resultados do cadastro via QRCode, é que devido a presença do campo para inserção do código captcha deverá ter um tratamento para o erro caso o usuário tenha inserido um texto diferente daquele presente na imagem.
+Existe uma tela diferente das demais quando comparado aos resultados do cadastro via QRCode, é que devido a presença do campo para inserção do CAPTCHA deverá ter um tratamento para o erro caso o usuário tenha inserido um texto diferente daquele presente na imagem devido a falha no teste de validação.
 
 \subsection{Busca de Produtos}
 

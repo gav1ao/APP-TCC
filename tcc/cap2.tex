@@ -142,6 +142,7 @@ Conforme pode ser observado na \autoref{tab-stack-overflow-linguagens}, existe u
 A linguagem de programação JavaScript aparece bem colocada em ambos os rankings, no índice TIOBE na sexta posição e na liderança do Ranking do StackOverflow. Conforme será destacado na seção \ref{JavaScript}, essa linguagem pode ser utilizada para diversos tipos de aplicação, como por exemplo o seu uso mais comum, isto é, em navegadores, assim como para o uso em servidores e até mesmo para desenvolvimento de aplicativos para dispositivos móveis.
 
 \section{Desenvolvimento para dispositivos móveis}
+\label{sec-desenvolvimento-apps}
 
 O uso de \textit{smartphones} tornou-se popular com a criação do \textit{iPhone}, desenvolvido pela \textit{Apple}, em 2008. Mais de 10 anos após o lançamento da primeira versão, os ditos celulares inteligentes estão cada vez mais modernos e mais populares.
 
@@ -149,26 +150,19 @@ O uso de \textit{smartphones} tornou-se popular com a criação do \textit{iPhon
 
 Os sistemas operacionais para dispositivos móveis mais populares são o IOS e o Android, sendo o primeiro exclusivo de aparelhos fabricados pela Apple, já o segundo é um sistema composto por código aberto sendo que um do seus principais mantedores é o Google e é utilizado por diversas empresas como Samsung, Motorola, LG, Xiaomi, Huawei e outras.
 
-O desenvolvimento para esses sistemas possui certas particularidades, sendo que para o sistema da empresa fundada por Steve Jobs utiliza como linguagem de programação para desenvolvimento nativo o Swift, já o sistema mantido pela empresa Mountain View utiliza a linguagem Java e também a linguagem Kotlin.
+O desenvolvimento para esses sistemas possui certas particularidades, sendo que para o sistema da empresa fundada por Steve Jobs utiliza como linguagens de programação para desenvolvimento nativo o Swift e o Objective-C, já o sistema mantido pela empresa de Mountain View utiliza a linguagens Java e Kotlin.
 
 De forma a aumentar o alcance de um aplicativo, o programador deve disponibilizar o mesmo nessas duas plataformas. Como é possível observar, não existe uma intersecção de linguagens disponíveis para o desenvolvimento nativo para essas plataformas, logo, o mesmo aplicativo deveria ser programado de duas formas diferentes, isto é, utilizando no mínimo duas linguagens de programação, fazendo com que mais tempo fosse necessário durante o desenvolvimento, pois seria necessário construir a mesma coisa duas vezes. Para contornar esse problema, alternativas foram desenvolvidas para otimizar o tempo de desenvolvimento, ou seja, o programador desenvolveria um código e esse mesmo poderia ser utilizado para os dois sistemas. Essa técnica é denominada de Desenvolvimento Multiplataforma (\textit{Cross-Platform}).
 
-%% FIXME: Referenciar https://blog.cedrotech.com/agilidade-no-desenvolvimento-nativo-flutter-vs-react-native/
-%% Buscar outra fonte
-O Desenvolvimento Multiplataforma pode ser efetuado de duas formas, utilizando um código híbrido ou até mesmo nativo.
-A técnica de desenvolvimento multiplataforma híbrida...
+O Desenvolvimento Multiplataforma pode ser efetuado de duas formas, "Hybrid" e "Native". O primeiro utiliza recursos de desenvolvimento Web, como HTML, JS e CSS para a construção da aplicação pois a mesma será executada a partir de um navegador, já o segundo faz o usufruto de Frameworks que iram gerar arquivo compilado como se fosse nativo para cada plataforma, sendo que a linguagem utilizada varia com o Framework escolhido. Além disso, para essa última solução é possível mesclar código nativo com o desenvolvido pelo Framework.
 
-Já o desenvolvimento multiplataforma nativo pode ser feito com as seguintes tecnologias por exemplo:
+Alguns exemplos de Frameworks utilizados em soluções de desenvolvimento "Hybrid" são o Cordova, Ionic e PhoneGap, já para as soluções do tipo "Native" podem serem citados como exemplo o Flutter, React Native e o Xamarim.
 
-\begin{itemize}
+As aplicações quando desenvolvidas utilizando esses três últimos Frameworks descritos anteriormente fornecem uma performance melhor quando comparadas àquelas aplicações desenvolvidas com os três primeiros.
 
-\item Xamarim;
-\item Flutter;
-\item React Native.
+Vale ressaltar que há uma preferência no mercado para o uso dos Frameworks dessa última solução apresentada. Essa afirmação pode ser observada após uma breve análise da \autoref{tab-stack-overflow-framework-tools}, pois o React Native possui uma parcela maior do mercado quando comparado ao Cordova também presente na mesma tabela. Além desses, também está presente o Framework Flutter, tendo sido lançado a menos tempo quando comparado a esses outros dois.
 
-\end{itemize}
-
-O desenvolvimento através do Framework React Native é abordado na secção \ref{React Native}.
+Portanto, deve ser observado que as linguagens utilizadas por esses Frameworks de Desenvolvimento Multiplataforma "Native" são Dart, JavaScript e C\#, respectivamente para, Flutter, React Native e Xamarim.
 
 \section{JavaScript}\label{JavaScript}
 
@@ -186,9 +180,9 @@ Outra vantagem, é que esse procedimento é muito mais rápido em decorrência d
 
 Vale destacar a latência desse período era muito maior quando comparada aos dias atuais, pois a conexão com a internet ainda era feita de modo discado, isto é, conectando-se a rede mundial de computadores por meio do telefone.
 
-\subsection{A popularidade do Javascript}
+\subsection{A Popularidade do JavaScript}
+\label{secao-javascript-popularidade}
 
-%% FIXME: Referenciar com ranking do StackOverflow
 Como é possível observar no ranking das linguagens, elaborado pelo StackOverflow, no qual é representado pela \autoref{tab-stack-overflow-linguagens}, a linguagem JavaScript foi a mais popular nessa pesquisa. Isso pode ser justificado pois além do uso em seu propósito inicial, isto é, para uso em navegadores, essa linguagem também está sendo utilizado para programação de servidores web, criação de programas para computadores e até mesmo para construção de aplicativos móveis. Essa flexibilidade no uso da linguagem é possível com a utilização de Frameworks.
 
 Esse comportamento fica evidente após uma análise da \autoref{tab-stack-overflow-framework-tools} que representa o ranking a respeito dos "Frameworks, Bibliotecas e Ferramentas Mais Populares". Esse ranking foi elaborado através das respostas de 49.861 desenvolvedores que fazem usufruto desses recursos para o meio profissional. Na liderança, sendo utilizado em 50,4\% dos casos, consta o Framework "Node.js" que é utilizado na criação de servidores com o JavaScript. Outro framework utilizado com essa mesma linguagem também presente no Top 5, é o "React Native" que é utilizado para o desenvolvimento de aplicações móveis.
@@ -283,19 +277,15 @@ Os outros três frameworks mais populares, isto é, ".Net", ".Net Core" e "Panda
 Por fim, ao efetuar uma observação na \autoref{tab-stack-overflow-web-framework}, que é sobre o "Ranking dos Frameworks para Web Mais Populares", fique evidente a soberania do JavaScript pois é possível constatar que metade deles são para utilização com essa mesma linguagem.
 
 \subsection{A Flexibilidade do JavaScript}
+\label{sec-javascript-flexibilidade}
 
-% Transformar subseções em textos com breves descrições
-\iffalse
-\subsection{Node.js}
+Conforme foi apresentado na \autoref{secao-javascript-popularidade}, a popularidade é resultante da flexibilidade na qual é proporcionada à linguagem através de bibliotecas e Frameworks. Um exemplo dessa flexibilidade é a utilização dessa linguagem no lado dos servidores, para isso, o Framework \textit{Node.js} poderá ser utilizado, pois o mesmo provem uma forma de se desenvolver utilizando o script dessa linguagem sem que esse seja executado em um navegador, com isso, torna-se possível que sua execução seja multiplataforma como um servidor convencional.
 
-\subsection{Angular}
+Combinado com o Express, outro Framework, torna-se possível efetuar o controle de requisições de diferentes rotas e URLs, como também, a interceptação das mesmas para pré-processamento ou processamento e efetuar um tratamento caso necessário.
 
-\subsection{Vue.js}
+Existem também aqueles Frameworks que são utilizados na construção de interfaces de usuários, isto é, no Frontend, com isso são executados do lado do cliente em contraposição ao Node.js. Além disso, é possível efetuar a construção de aplicativos mais modernos, como os sites SPA ("Single Page Application") que são as aplicações de uma única página. Alguns Frameworks que permitem desenvolver tais aplicativos são o Angular, Vue.js e o React, sendo esse último o mais popular conforme pode ser observado na \autoref{tab-stack-overflow-web-framework}.
 
-\subsection{React}
-
-\subsubsection{React Native} \label{React Native}
-\fi
+Por fim, conforme já destacado na \autoref{sec-desenvolvimento-apps}, um outro campo de desenvolvimento que o JavaScript pode ser utilizado é com o FrameWork React Native, sendo que os princípios são semelhantes ao do React, no entanto, enquanto o último interage com o HTML, o primeiro é somente com JavaScript puro junto a sintaxe JSX.
 
 \section{Banco de Dados}
 
@@ -308,7 +298,7 @@ Por fim, ao efetuar uma observação na \autoref{tab-stack-overflow-web-framewor
 O Web Scraping é o nome dado a técnica de obtenção de dados disponíveis em páginas da Web. Esses dados podem ser obtidos através de ferramentas automatizadas ou até mesmo programadas para somente adquirir as informações de interesse não precisando armazenar todas as informações presentes no site.
 Os dados podem ser armazenados tanto em banco de dados ou em arquivos para poderem ser analisados futuramente.
 
-% TODO: Falar das formas em o WebScrapinf pode ser feito? Ex: BeautifulSoap no Python, no Java, e no JS?
+As bibliotecas mais populares para o desenvolvimento de ferramentas que efetuam o Web Scraping são BeautifulSoap, JSoup e Cheerio, respectivamente para as linguagens: Python, Java e JavaScript.
 
 \section{QRCode}
 
@@ -326,11 +316,45 @@ Qualquer informação numérica, e até mesmo alfanumérica, pode ser representa
     \label{fig-exemplo-qrcode}
 \end{figure}
 
-\section{Código CAPTCHA}
+\section{O que é CAPTCHA?}
+
+O CAPTCHA é um acrônimo, em inglês, para "Completely Automated Public Turing Test to Tell Computers and Humans Apart", que pode ser traduzido como "Teste de Turing público completamente automatizado para distinção entre computadores e humanos", que nada mais é do que um desafio cognitivo para o impedimento de uso de ferramentas automáticas em sistemas. O uso de algumas dessas ferramentas podem fazer que em determinados casos, quando utilizados com abuso e/ou má-fé, levem a um consumo elevado dos recursos de alguns serviços, consequentemente, podem prejudicar a experiência de outros usuários desses mesmos serviços.
+
+As versões mais simples do CAPTCHA consiste em uma imagem com uma frase (podendo ter sentido ou não) ou um conjunto de caracteres alfanuméricos, e um campo de entrada de texto para que o usuário digitasse o conteúdo contido nessa imagem, caso o mesmo digitasse corretamente, o teste estaria concluído com êxito, fazendo com que a funcionalidade requisita, na qual foi protegida por esse teste, fosse liberada.
+
+% FIXME: Ajustar a imagem
+% FIXME: Adicionar referencia a imagem
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{tcc/figures/captcha/captcha-frase.jpg}
+    \caption{Exemplo de um CAPTCHA simples}
+    \label{fig-exemplo-captcha-simples}
+\end{figure}
+
+% FIXME: Ajustar a imagem
+% FIXME: Adicionar referencia a imagem
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{tcc/figures/captcha/captcha-alfanumerico.png}
+    \caption{Exemplo de um CAPTCHA simples com texto alfanumérico}
+    \label{fig-exemplo-captcha-alfanumerico}
+\end{figure}
+
+Esse tipo de teste pode ser burlado por algumas ferramentas automáticas uma vez que existe a possibilidade de efetuar a detecção de texto em uma imagem, tal técnica é conhecida como OCR ("Optical Character Recognition", em português: "Reconhecedor Ótico de Caracteres").
+
+Atualmente, existe versões mais modernas desses testes que exigem que o usuário clique em uma imagem aleatória o que dificulta o trabalho de ferramentas fraudadoras desses testes.
+
+% FIXME: Ajustar a imagem
+% FIXME: Adicionar referencia a imagem
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.15]{tcc/figures/captcha/recaptcha-post-g1.jpg}
+    \caption{Exemplo de um CAPTCHA moderno}
+    \label{fig-exemplo-captcha-alfanumerico}
+\end{figure}
 
 \section{A Nota Fiscal de Consumidor Eletrônica}\label{secNfce}
 
-%% FIXME: ReferÊncia http://nfce.encat.org/institucional/o-que-e-nfc-e/
 A Nota Fiscal de Consumidor Eletrônica (NFC-e) visa ser uma alternativa eletrônica aos antigos cupons fiscais emitidos em papel. Tal documento segue um modelo nacional de emissão de documento fiscal com validade jurídica garantida pela assinatura digital do emissor.
 
 Com a publicação do Decreto nº 44.785 em 12 de maio de 2014, a NFC-e foi instituída no Estado do Rio de Janeiro a partir do dia seguinte à publicação. Com isso, todos os estabelecimentos comerciais deveriam estar aptos ao uso da NFC-e até o dia 31 de dezembro de 2017.
@@ -346,7 +370,7 @@ Com a publicação do Decreto nº 44.785 em 12 de maio de 2014, a NFC-e foi inst
 
 Na figura \ref{modeloNfce} é possível observar um exemplo de uma NFC-e, com isso, pode se observar a descrição, a quantidade e o preço unitário de cada produto comprado. Além disso, ainda consta a informação do estabelecimento onde a compra foi efetuada como o endereço, o CNPJ e nome do estabelecimento.
 
-Ainda, nesse documento consta uma chave de acesso que é composta por 44 dígitos e um QR Code, de posse desses dados é possível acessar a versão online da respectiva nota, no qual contém as mesmas informações a respeito da compra assim como existe em sua versão física.
+Ainda, nesse documento consta uma chave de acesso que é composta por 44 dígitos e um QRCode, de posse desses dados é possível acessar a versão online da respectiva nota, no qual contém as mesmas informações a respeito da compra assim como existe em sua versão física.
 
 % TODO: Adicionar print imagem nota online?
 
