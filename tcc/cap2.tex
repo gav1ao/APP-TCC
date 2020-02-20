@@ -289,9 +289,15 @@ Por fim, conforme já destacado na \autoref{sec-desenvolvimento-apps}, um outro 
 
 \section{Banco de Dados}
 
-\subsection{Relacionais}
+Conforme é dito em \cite{silberschatz2016sistema}, um banco de dados nada mais é do que "uma coleção de dados inter-relacionados, representando informações sobre um domínio específico", isto é um conjunto de informações relacionadas e que podem ser agrupadas de alguma forma, poderá constituir um banco de dados.
 
-\subsection{Não-Relacionais}
+As ferramentas utilizadas para o armazenamento e gerenciamento dos dados são os Sistemas de Gerenciamento de Banco de Dados (SGBD), que provem uma forma de manipulação e recuperação desses mesmo dados.
+
+Além disso, existem dois tipos de banco de dados, e esses se diferem principalmente pela forma na qual os dados são armazenados, isto é, a estrutura do armazenamento. Os banco de dados mais tradicionais são os do tipo Relacional, em que os dados são estruturadas em formato de tabela, onde cada registro é armazenado em uma linha e os dados desse registro são separados por colunas.
+
+Um exemplo de linguagem para consulta de dados em bases relacionais é o SQL ("Structured Query Language", que uma tradução livre significa "Linguagem de Consulta Estruturada"), e com essa linguagem é possível efetuar a inserção, atualização e a exclusão dos dados. Alguns tipos de banco de dados que fazem o uso dessa linguagem são: MySQL, SQL Server, PostgreSQL, SQLite e outros.
+
+Já os banco de dados do tipo não-relacional, são aqueles também conhecidos como NoSQL ("Not Only SQL"), ou seja, onde a linguagem SQL não é aplicada. Esse tipo de banco, foi criado para prover recursos nos quais os banco relacionais não são tão eficazes. A estrutura utilizada varia de acordo com o banco utilizado, podendo ser no formato de chave-valor, colunas, grafos e documentos. Esse último é o utilizado por banco do tipo MongoDB, onde os dados são armazenados no formato de objetos do JavaScritp, isto é, no formato Json.
 
 \section{Web Scraping}
 

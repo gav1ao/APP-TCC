@@ -319,22 +319,25 @@ como é possível ocupar a maior parte do espaço disponível em tela, será pos
     \label{appBuscaProdutosProdutoAmpliadoFig}
 \end{figure}
 
-% TODO: Vincular com seção de dados compartilhados?
-
 \section{Prós e Contras do Desenvolvimento}
 
-% TODO: Falar dos bugs encontrados
-% Dificuldades encontradas. Utilizar slide das reuniões.
+Uma vantagem durante o desenvolvimento, foi que tanto o aplicativo quanto o código do servidor do servidor, isto é, a API, foram desenvolvidos utilizando a mesma linguagem de programação, logo, houve uma melhor integração entre as partes.
+
+Alguns problemas ocorreram durante o desenvolvimento da aplicação e da API, como exemplo, pode ser citado que ao efetuar a busca por produtos, todo os os produtos contidos na nota fiscal eram retornados. Além disso, durante a busca, a partir do produto não estava sendo possível retornar o local onde o mesmo foi comprado e também, não estava sendo retornado o último registro por mercado, pois estava sempre retornando os registros em que tiveram os menores preços registrados.
+
+Ainda ocorreram problemas durante o desenvolvimento das interfaces da aplicação, pois alguns botões estavam apresentando problemas nas funções que deveriam desempenhar como também o posicionamento dos elementos da tela.
 
 \section{Limitações do aplicativo e das tecnologias utilizadas}
-\subsection{Desvantagens do tipo de Banco de Dados Utilizado}
-%Desvantagens da tecnologia utilizada pelo BD:
-%Comparar os tipos de BDs: relacionais e não-relacionais;
 
-\section{O Banco de Dados Centralizado}
-% Deve ter essa secção?
-% Discutir sobre o BD no celular do usuário vs um BD central;
-% Já foi falado no Cap3
+Assim como já foi dito em outros trechos desse trabalho, uma limitação existente na versão atual do aplicativo é que não é possível efetuar a instalação do mesmo a partir das lojas oficias das plataformas suportadas, isto é, a Play Store e a App Store.
+
+Além disso, só é suportado o cadastro de notas fiscais emitidas no Estado do Rio de Janeiro. Ainda relacionado com as notas, o aplicativo apresenta dificuldades de leitura de QRCodes que tiveram problemas durante a impressão.
+
+Por fim, vale observar que o cadastro de notas e a recuperação das informações somente podem ser feitas caso o dispositivo que estiver executando a aplicação esteja conectado à internet.
+
+\subsection{Desvantagem do tipo de banco de dados utilizado}
+
+Uma desvantagem do tipo de banco de dados não-relacional, o qual foi utilizado nesse projeto, é que não foi possuí a mesma consistência presente em bancos do tipo relacional, porém, como a informação mais relevante durante a busca dos dados é sempre o último registro efetuado para um produto, logo isso não torna-se um problema para o projeto, pois o último registro é sempre garantido.
 
 \section{Obtenção do aplicativo e atualizações}
 
