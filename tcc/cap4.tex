@@ -76,7 +76,7 @@ A latência gerada durante esse período de processamento, faz com seja necessá
 \newpage
 Após o processamento ter terminado, podendo ter sido com sucesso ou não, será enviado para o aplicativo uma resposta contendo o status da solicitação de adição realizada.
 
-Se o código tiver sido lido corretamente e se não houver nenhuma problema durante a solicitação da nota ao site da SEFAZ assim como também no processamento da nota, será mostrado uma mensagem de sucesso conforme pode ser observado na figura abaixo.
+Se o código tiver sido lido corretamente e se não houver nenhum problema durante a solicitação da nota ao site da SEFAZ assim como também no processamento da nota, será mostrado uma mensagem de sucesso conforme pode ser observado na figura abaixo.
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
@@ -88,7 +88,7 @@ Se o código tiver sido lido corretamente e se não houver nenhuma problema dura
 \end{figure}
 
 \newpage
-Todavia, durante o processo de adição, pode ser que a nota ainda não esteja disponível no sistema da SEFAZ, com isso, é feito um tratamento de forma a detectar essa caso, com isso, o usuário será informado que a sua solicitação não foi concluída devido a indisponibilidade em sua versão digital. A figura \ref{appQRCodeNaoDisponivelFig} representa esse caso.
+Todavia, durante o processo de adição, pode ser que a nota ainda não esteja disponível no sistema da SEFAZ, com isso, é feito um tratamento de forma a detectar essa caso, com isso, o usuário será informado que a sua solicitação não foi concluída devido à indisponibilidade em sua versão digital. A figura \ref{appQRCodeNaoDisponivelFig} representa esse caso.
 
 % FIXME: Ajustar a imagem
 % FIXME: Trocar por img equivalente do QRCODE
@@ -101,7 +101,7 @@ Todavia, durante o processo de adição, pode ser que a nota ainda não esteja d
 \end{figure}
 
 \newpage
-Uma outra situação que poderá ocorrer, é caso o usuário tente adicionar uma nota que já foi adicionada previamente. A solicitação ao sistema da SEFAZ será feita normalmente até a obtenção do código de acesso da NFC-e, que é um código único. Após a aquisição desse código, é feita uma pesquisa no banco de dados de forma a verificar a existência dessa nota nos registros. Caso a nota seja encontrada, será enviado ao aplicativo um código de erro indicando a existência dessa nota, com isso o usuário poderá visualizar a tela da figura \ref{appQRCodeJaCadastradaFig}. Para o caso contrário, isto é, que a nota não é encontrada, seguirá com o fluxo normal.
+Outra situação que poderá ocorrer, é caso o usuário tente adicionar uma nota que já foi adicionada previamente. A solicitação ao sistema da SEFAZ será feita normalmente até a obtenção do código de acesso da NFC-e, que é um código único. Após a aquisição desse código, é feita uma pesquisa no banco de dados de forma a verificar a existência dessa nota nos registros. Caso a nota seja encontrada, será enviado ao aplicativo um código de erro indicando a existência dessa nota, com isso o usuário poderá visualizar a tela da figura \ref{appQRCodeJaCadastradaFig}. Para o caso contrário, isto é, que a nota não é encontrada, seguirá com o fluxo normal.
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
@@ -125,11 +125,11 @@ Durante a solicitação, está suscetível a ocorrência de erros, que pode se d
 \end{figure}
 
 \newpage
-Em suma, vale destacar que, independente do caso, é apresentado ao usuário três opções, através de botões, após o término do processamento da solicitação. A primeira opção, representada pelo botão azul, permite ao usuário adicionar uma outra nota fiscal através do uso do QRCode ou até mesmo tentar adicionar a mesma nota novamente caso tenha ocorrido erros. A opção do meio, isto é, pelo botão amarelo, permite que o usuário retorne para a tela inicial. Por fim, o último botão, representa um atalho para adição através do uso do código de acesso.
+Em suma, vale destacar que, independente do caso, é apresentado ao usuário três opções, através de botões, após o término do processamento da solicitação. A primeira opção, representada pelo botão azul, permite ao usuário adicionar outra nota fiscal através do uso do QRCode ou até mesmo tentar adicionar a mesma nota novamente caso tenha ocorrido erros. A opção do meio, isto é, pelo botão amarelo, permite que o usuário retorne para a tela inicial. Por fim, o último botão, representa um atalho para adição através do uso do código de acesso.
 
 \subsubsection{Através de código de acesso}
 
-Se durante o processo de impressão da NFC-e ocorrer problemas e o QRCode não ficar nítido ou apresentar falhas, o aplicativo estará propenso a não conseguir efetuar a leitura correta da informação presente nesse código. Para contornar esse problema, é oferecida uma outra forma de adição de notas através de uma outra informação também presente na mesma, isto é, através do código de acesso.
+Se durante o processo de impressão da NFC-e ocorrer problemas e o QRCode não ficar nítido ou apresentar falhas, o aplicativo estará propenso a não conseguir efetuar a leitura correta da informação presente nesse código. Para contornar esse problema, é oferecida outra forma de adição de notas através de outra informação também presente na mesma, isto é, através do código de acesso.
 
 \newpage
 % FIXME: Ajustar a imagem
@@ -165,7 +165,7 @@ A figura \ref{appCodigoAcessoInicialFig} representa a tela inicial de cadastro e
 \newpage
 Após a inserção do código de acesso e o usuário ter pressionado o botão de adicionar, será mostrado o CAPTCHA para validação da requisição. Esse código é necessário para comprovação que a solicitação é proveniente de interação humana e não foi feita por sistemas automáticos. Essa validação pertence ao sistema da SEFAZ e o aplicativo simplesmente replica a mesma imagem utilizada por esse sistema para que a solicitação efetuada no site possa ser simulada. Como essa imagem precisa ser transferida para o aplicativo, uma barra de progresso é exibida até que a imagem seja baixada em sua totalidade conforme é explicitado pela Figura \ref{appCodigoAcessoCarregamentoCaptchaFig}. Além da imagem representativa desse código de validação, um campo destinado a inserção do texto referente a essa mesma imagem são acrescentados à tela anterior. A figura \ref{appCodigoAcessoCaptchaFig} exemplifica esse fluxo descrito.
 
-Vale destacar, que os mesmos botões disponíveis na tela anterior (Figura \ref{appCodigoAcessoComCodigoFig}) ainda estão presentes, todavia, o botão de adicionar deverá ser utilizado após a inserção do texto referente ao CAPTCHA, já o botão limpar serve para limpeza do campo destinado a inserção desse mesmo texto.
+Vale destacar, que os mesmos botões disponíveis na tela anterior (Figura \ref{appCodigoAcessoComCodigoFig}) ainda estão presentes, todavia, o botão de adicionar deverá ser utilizado após a inserção do texto referente ao CAPTCHA, já o botão limpar serve para limpeza do campo destinado à inserção desse mesmo texto.
 
 \newpage
 % FIXME: Ajustar a imagem
@@ -241,7 +241,7 @@ Ao receber a resposta, o aplicativo irá mostrar diferentes telas dependendo do 
     \label{appCodigoAcessoErroCaptchaFig}
 \end{figure}
 
-Existe uma tela diferente das demais quando comparado aos resultados do cadastro via QRCode. Isso ocorre devido a presença do campo para inserção do CAPTCHA, com isso deverá ter um tratamento para o erro do caso em que o usuário tenha inserido um texto diferente daquele presente na imagem. Esse erro resulta em uma falha no teste de validação, o que impede o término do processo de cadastro via esse meio.
+Existe uma tela diferente das demais quando comparado aos resultados do cadastro via QRCode. Isso ocorre devido à presença do campo para inserção do CAPTCHA, com isso deverá ter um tratamento para o erro do caso em que o usuário tenha inserido um texto diferente daquele presente na imagem. Esse erro resulta em uma falha no teste de validação, o que impede o término do processo de cadastro via esse meio.
 
 \subsection{Busca de produtos}
 
@@ -285,9 +285,9 @@ Após a escolha da cidade em que será efetuada a busca, o usuário deverá inse
     \label{appBuscaProdutosBuscaResultadoFig}
 \end{figure}
 
-Um exemplo de uma busca pelo produto "Leite" é mostrada na figura \ref{appBuscaProdutosBuscaResultadoFig}. Como pode ser observado foram retornados dois registros para esse mesmo produto. Nessa busca, foram encontrados o mesmo produto no entanto de marcas diferentes, além disso, é possível efetuar uma comparação de preços, como também em que dia foi efetuada a compra dos mesmos.
+Um exemplo de uma busca pelo produto "Leite" é mostrada na figura \ref{appBuscaProdutosBuscaResultadoFig}. Como pode ser observado foram retornados dois registros para esse mesmo produto. Nessa busca, foram encontrados o mesmo produto, no entanto de marcas diferentes, além disso, é possível efetuar uma comparação de preços, como também em que dia foi efetuada a compra dos mesmos.
 
-Vale destacar que ambos os produtos foram comprados no mesmo supermercado, no entanto, o nome aparece cortado devido a uma limitação da largura do dispositivo utilizado para efetuar a captura da tela. No entanto, como o nome do mercado pode ser uma cadeia longa de caracteres, esse problema pode ser contornado pois é fornecida uma opção do usuário visualizar as informações completas referentes ao registros individuais dos produtos, para isso, basta efetuar um toque no campo referente ao produto que uma pop-up surgirá em tela contendo as mesmas informações fornecidas anteriormente, no entanto, 
+Vale destacar que ambos os produtos foram comprados no mesmo supermercado, no entanto, o nome aparece cortado devido a uma limitação da largura do dispositivo utilizado para efetuar a captura da tela. No entanto, como o nome do mercado pode ser uma cadeia longa de caracteres, esse problema pode ser contornado pois é fornecida uma opção do usuário visualizar as informações completas referentes aos registros individuais dos produtos, para isso, basta efetuar um toque no campo referente ao produto que uma pop-up surgirá em tela contendo as mesmas informações fornecidas anteriormente, no entanto, 
 como é possível ocupar a maior parte do espaço disponível em tela, será possível visualizar todas as informações que foram ocultadas anteriormente. Além do nome do local da compra, o próprio nome do produto poderá ser cortado caso esse também seja extenso. Por fim, um exemplo dessa solução descrita anteriormente pode ser observada na figura \ref{appBuscaProdutosProdutoAmpliadoFig}.
 
 % FIXME: Ajustar a imagem
@@ -323,7 +323,7 @@ Uma desvantagem do tipo de banco de dados não-relacional, o qual foi utilizado 
 
 O autor desse trabalho possui a intenção de efetuar a publicação do aplicativo nas lojas oficias das plataformas suportadas pela aplicação. Conforme, discutido na \autoref{sec-app-desenvolvido}, é possível instalar uma versão funcional do aplicativo, semelhante a que será publicada, em dispositivos que rodam o sistema Android. Vale ressaltar que a prática de instalar aplicativos fora das lojas oficias não é recomendada devido a brechas de segurança. Com isso, o autor se compromete em fornecer um aplicativo seguro que não causará danos ao sistema operacional dos usuários nessa versão prévia do projeto.
 
-Sobre as atualizações com melhorias e correções, poderão ser obtidas de duas formas diferentes, primeiramente dar-se-a através das próprias lojas de aplicativos, após a publicação nas mesmas, já a segunda forma é através do uso de atualizações \textit{Over-the-air} (OTA, em tradução livre: "Por via aérea"), que é um tipo de atualização que o próprio aplicativo efetua o download e realiza a instalação da mesma. Esse recurso é fornecido pela ferramenta Expo e permite que o usuário possua a versão mais atualizada do aplicativo sempre que possível. Por padrão, é efetuada uma verificação por novas atualizações a cada 30 dias. Por fim, por meio dessa última forma é possível ter acesso a versões mais atualizadas do aplicativo sem ser através dos lojas das plataformas.
+Sobre as atualizações com melhorias e correções, poderão ser obtidas de duas formas diferentes, primeiramente dar-se-a através das próprias lojas de aplicativos, após a publicação nas mesmas, já a segunda forma é através do uso de atualizações \textit{Over-the-air} (OTA, em tradução livre: "Por via aérea"), que é um tipo de atualização que o próprio aplicativo efetua o download e realiza a instalação da mesma. Esse recurso é fornecido pela ferramenta Expo e permite que o usuário possua a versão mais atualizada do aplicativo sempre que possível. Por padrão, é efetuada uma verificação por novas atualizações a cada 30 dias. Por fim, por meio dessa última forma é possível ter acesso a versões mais atualizadas do aplicativo sem ser através das lojas das plataformas.
 
 \section{Disponibilização do código-fonte}
 

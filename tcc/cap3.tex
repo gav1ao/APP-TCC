@@ -13,7 +13,7 @@ Independente da forma que foi efetuado o acesso, após o término da solicitaç�
 
 Portanto, após o usuário solicitar a adição de uma nota fiscal, no aplicativo, será feita uma simulação de uma dessas formas de acesso, o que resultará em uma requisição ao próprio site da Secretaria de Fazenda, consequentemente, será feito o Scraping da página assim que o resultado estiver disponível.
 
-Ainda, vale destacar que o conteúdo da nota fiscal pode ser obtido de uma outra forma que se dá através do uso de técnicas de processamento de imagem. Para isso, a NFC-e deverá ser escaneada e por meio da imagem resultante poderá ser feito o reconhecimento dos caracteres e assim obter a informação necessária para análise. A técnica de reconhecimento de texto OCR, que foi brevemente apresentada na \autoref{secao-captcha-definicao}, também poderá ser utilizada nesse caso, no entanto, será necessário que efetue a aquisição de uma imagem em alta qualidade, o que restringe uso nos modelos de entrada de celulares por possuírem câmeras com qualidade inferior.
+Ainda, vale destacar que o conteúdo da nota fiscal pode ser obtido de outra forma que se dá através do uso de técnicas de processamento de imagem. Para isso, a NFC-e deverá ser escaneada e por meio da imagem resultante poderá ser feito o reconhecimento dos caracteres e assim obter a informação necessária para análise. A técnica de reconhecimento de texto OCR, que foi brevemente apresentada na \autoref{secao-captcha-definicao}, também poderá ser utilizada nesse caso, no entanto, será necessário que efetue a aquisição de uma imagem em alta qualidade, o que restringe uso nos modelos de entrada de celulares por possuírem câmeras com qualidade inferior.
 
 \subsection{Simulação da solicitação}
 
@@ -23,7 +23,7 @@ A solicitação através da chave de acesso é feita de forma a simular o acesso
 
 Caso a nota fiscal já esteja disponível no sistema da SEFAZ e a informação necessária ao desafio esteja correta, o conteúdo será disponibilizado, caso contrário, o usuário será notificado que houve um erro durante o cadastro da NFC-e na própria aplicação. Caso seja identificado o motivo desse erro, será mostrada uma breve mensagem da causa do problema, mas caso não seja possível efetuar a identificação do problema, uma mensagem genérica será mostrada.
 
-Já para reprodução com o QRCode, é possível obter o conteúdo diretamente sem a necessidade da solução de um desafio cognitivo, todavia, ainda é necessária a simulação da navegação com o Puppeteer. Assim como no forma anterior, caso a NFC-e não seja encontrada no sistema da SEFAZ, o usuário também será notificado que a mesma não se encontra disponível. Vale destacar que para a adição da NFC-e com o QRCode, é necessário que o usuário possua um smartphone com câmera. Caso qualquer erro não previsto durante o processamento da requisição ocorra ou o sistema da SEFAZ esteja inoperante, o usuário também será notificado sobre a impossibilidade da adição com uma mensagem de erro genérica. Tal situação poderá ocorrer independente da forma em que a solicitação foi efetuada.
+Já para reprodução com o QRCode, é possível obter o conteúdo diretamente sem a necessidade da solução de um desafio cognitivo, todavia, ainda é necessária a simulação da navegação com o Puppeteer. Assim como na forma anterior, caso a NFC-e não seja encontrada no sistema da SEFAZ, o usuário também será notificado que a mesma não se encontra disponível. Vale destacar que para a adição da NFC-e com o QRCode, é necessário que o usuário possua um smartphone com câmera. Caso qualquer erro não previsto durante o processamento da requisição ocorra ou o sistema da SEFAZ esteja inoperante, o usuário também será notificado sobre a impossibilidade da adição com uma mensagem de erro genérica. Tal situação poderá ocorrer independente da forma em que a solicitação foi efetuada.
 
 \subsection{Análise dos dados}
 
@@ -42,7 +42,7 @@ A recuperação da informação contida página é possível pois o conteúdo é
 % https://www.monografias.ufop.br/bitstream/35400000/1963/6/MONOGRAFIA_An%C3%A1liseProjetosBanco.pdf
 Com os dados provenientes da NFC-e já processados, ou seja, analisados e separados, esse conteúdo resultante é armazenado em um banco de dados para que a informação seja disponibilizada posteriormente para consultas a partir da aplicação.
 
-Esse conteúdo é armazenado em um banco de dados e o tipo utilizado pela aplicação é o MongoDB, que é um banco de dados não-relacional onde os dados são armazenados em formato de documento. Como a aplicação está sendo feita em JavaScript, foi optado em utilizar essa banco devido a conveniência resultante do uso junto ao Json.
+Esse conteúdo é armazenado em um banco de dados e o tipo utilizado pela aplicação é o MongoDB, que é um banco de dados não-relacional onde os dados são armazenados em formato de documento. Como a aplicação está sendo feita em JavaScript, foi optado em utilizar esse banco devido à conveniência resultante do uso junto ao Json.
 
 Além disso, esse tipo de banco é altamente escalável, isto é, caso seja necessário mais espaço para o armazenamento dos dados, o conteúdo pode ser distribuído em diversas máquinas sem afetar o desempenho geral da aplicação.
 
@@ -52,7 +52,7 @@ Os dados provenientes do processamento das notas fiscais poderiam ser armazenado
 
 Apesar da implementação dessa rotina ser simples, restringiria uma possível melhoria ao produto, por exemplo, a disponibilização da série histórica de preços dos produtos a longo prazo.
 
-Um outro ponto que pode ser destacado, é que com os dados concentrados no dispositivo de um indivíduo, os mesmos estão propensos a exclusão, que pode ser causada por diversas situações, por exemplo, a eliminação decorrente da remoção do aplicativo, a formatação do aparelho devido a restauração ao modo de fábrica ou até mesmo uma pane no aparelho em certos casos.
+Outro ponto que pode ser destacado, é que com os dados concentrados no dispositivo de um indivíduo, os mesmos estão propensos a exclusão, que pode ser causada por diversas situações, por exemplo, a eliminação decorrente da remoção do aplicativo, a formatação do aparelho devido à restauração ao modo de fábrica ou até mesmo uma pane no aparelho em certos casos.
 
 Após a observação dos pontos acima, a utilização de uma solução que envolva o armazenamento da informação em um meio externo torna-se viável, pois a segurança da informação é melhor garantida, uma vez que a cópia de segurança é garantida do lado do servidor desonerando o cliente dessa responsabilidade.
 
@@ -79,7 +79,7 @@ Os dados são disponibilizados com o auxílio do servidor principal da aplicaç�
 
 A consulta é feita através do nome do produto, e esse nome pode estar acentuado corretamento, erroneamente ou até mesmo sem acentos, que os mesmos dados serão retornados.
 
-Os dados retornados contém o nome do produto da forma que consta na nota fiscal, o nome do estabelecimento no qual a compra foi efetuada e a data e a hora da compra. Para cada produto compatível com a consulta, é retornado o último registro salvo para cada estabelecimento para que o usuário sempre possa ter o preço mais recente.
+Os dados retornados contêm o nome do produto da forma que consta na nota fiscal, o nome do estabelecimento no qual a compra foi efetuada, a data e a hora da compra. Para cada produto compatível com a consulta, é retornado o último registro salvo para cada estabelecimento para que o usuário sempre possa ter o preço mais recente.
 
 Vale ressaltar que é possível refinar a cidade em que a consulta deverá ser feita, assim como retornar os registros de todas as cidades disponíveis.
 
@@ -105,7 +105,7 @@ Uma das principais vantagens do uso de serviços de hospedagem é que o serviço
 
 Um dos serviços mais populares que oferecem tais recursos de hospedagem é o Heroku\cite{heroku}, que fornece desde uma máquina simples gratuita até serviços mais robustos focados para o uso de alto fluxo de dados como ocorre em grandes corporações.
 
-Durante os primeiros meses de desenvolvimento, foi feito o uso do plano gratuito para testes, no entanto caso não houvesse nenhuma iteração com a API desenvolvida durante um período de 30 minutos, a mesma ficaria inativa. Diante desse fato, a solicitação de adição de notas tornava-se mais lenta pois além do tempo de processamento dos dados, o tempo de inicialização aumentava a latência em que a resposta era retornada ao usuário. Todavia, a iteração ainda poderia ser feita normalmente.
+Durante os primeiros meses de desenvolvimento, foi feito o uso do plano gratuito para testes, no entanto, caso não houvesse nenhuma iteração com a API desenvolvida durante um período de 30 minutos, a mesma ficaria inativa. Diante desse fato, a solicitação de adição de notas tornava-se mais lenta pois além do tempo de processamento dos dados, o tempo de inicialização aumentava a latência em que a resposta era retornada ao usuário. Todavia, a iteração ainda poderia ser feita normalmente.
 
 % TODO: Add ref https://education.github.com/pack
 A empresa GitHub, que permite que desenvolvedores e empresas armazenem e divulguem seus códigos, possui um programa para estudantes que permite que os mesmos acessem e usufruem de recursos pagos sem gerar nenhum ônus. Esse programa é conhecido como GitHub Student Developer Pack\cite{githubStudentPack} que é feito em parceria com outras empresas do ramo da tecnologia.
@@ -137,7 +137,7 @@ O Expo é um Framework e uma plataforma para aplicações de React. Com isso, ac
 
 Além disso, o Expo proporciona uma abstração dos recursos de aparelhos móveis sem a necessidade de implementação de código nativo. Os recursos são tais como os contatos telefônicos, a câmera, acesso ao GPS do celular e outros. Com isso, é possível recuperar a informação proveniente desses recursos através do próprio código em JavaScript. Sendo assim, foi optado em utilizar essa ferramenta de forma a acelerar o desenvolvimento do aplicativo.
 
-Como também é necessário o acesso a câmera para a leitura de QRCodes, tal ferramenta tornou-se indispensável, pois, por ser uma abstração de código nativo, é possível disponibilizar essa funcionalidade para ambas as plataformas sem complicações.
+Como também é necessário o acesso à câmera para a leitura de QRCodes, tal ferramenta tornou-se indispensável, pois, por ser uma abstração de código nativo, é possível disponibilizar essa funcionalidade para ambas as plataformas sem complicações.
 
 % Explicar a facilidade que o Expo proporciona
 % Port para as aplicações
