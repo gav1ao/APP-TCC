@@ -2,7 +2,7 @@
 
 \section{Linguagens de programação}
 
-Uma linguagem de programação é a forma na qual os programadores utilizam como meio de comunicação com os computadores. A lógica necessária para o funcionamento de um programa é convertida em um conjunto de caracteres seguindo um conjunto de regras sintáticas e semânticas que formará um código ou \textit{script}.
+Uma linguagem de programação é a forma na qual os programadores utilizam como meio de comunicação com os computadores\cite{edirlei2015}. A lógica necessária para o funcionamento de um programa é convertida em um conjunto de caracteres seguindo um conjunto de regras sintáticas e semânticas que formará um código ou \textit{script}.\cite{fischerGrodzinsky1993}
 
 \subsection{As linguagens disponíveis}
 
@@ -10,7 +10,7 @@ Assim como os idiomas falados são muitos, o número de linguagens de programaç
 
 A contabilização da popularidade dessas linguagens é feita por algumas instituições no qual um programador poderá se basear para efetuar sua escolha. Caso o mesmo não possua domínio daquelas mais populares poderá utilizar como critério para aprendizado e se reciclar perante ao mercado assim como um médico deve sempre se atualizar sobre o surgimento de novas curas para algumas doenças que antes não eram existentes durante o seu período de estudos acadêmicos.
 
-Através do índice TIOBE é possível obter o grau de popularidade das linguagens de programação. O índice é elaborado através dos resultados das pesquisas, por essas mesmas linguagens, em sites de buscas seguindo alguns critérios adotados pela empresa TIOBE Software BV, a qual mantém e elabora o mesmo. Vale ressaltar que esse índice é divulgado mensalmente, sendo possível obter informações históricas da popularidade das linguagens através de soluções pagas oferecidas por essa mesma empresa.
+Através do índice TIOBE\cite{tiobeDefinition} é possível obter o grau de popularidade das linguagens de programação. O índice é elaborado através dos resultados das pesquisas, por essas mesmas linguagens, em sites de buscas seguindo alguns critérios adotados pela empresa TIOBE Software BV\cite{tiobeAbout}, a qual mantém e elabora o mesmo. Vale ressaltar que esse índice é divulgado mensalmente, sendo possível obter informações históricas da popularidade das linguagens através de soluções pagas oferecidas por essa mesma empresa.
 
 A \autoref{tab-tiobe} ilustra as 20 linguagens mais populares de acordo com esse índice. Esses dados foram gerados a partir de um levantamento realizado no início dos anos de 2020 e 2019 e tendo sido divulgados nos meses de fevereiro dos respectivos anos.
 
@@ -63,11 +63,11 @@ A \autoref{tab-tiobe} ilustra as 20 linguagens mais populares de acordo com esse
     \hline
     20 & 10 & Objective-C \\
 \end{tabular}
-\legend{Fonte: \citeonline{tiobeDefinition}}
+\legend{Fonte: \citeauthor{tiobeDefinition}}
 \end{table}
 
 \newpage
-Uma outra instituição que efetua um ranking semelhante é o Stack Overflow, uma empresa fundada em 2008 na qual possui a maior comunidade de desenvolvedores e que tem como foco principal o compartilhamento de conhecimentos relacionados com a programação. Essa comunidade dar-se em torno de um site utilizado para troca de conhecimento de forma colaborativa através da ajuda na resolução de problemas e desmistificação de dúvidas.
+Uma outra instituição que efetua um ranking semelhante é o Stack Overflow\cite{stackOverflowAbout}, uma empresa fundada em 2008 na qual possui a maior comunidade de desenvolvedores e que tem como foco principal o compartilhamento de conhecimentos relacionados com a programação. Essa comunidade dar-se em torno de um site utilizado para troca de conhecimento de forma colaborativa através da ajuda na resolução de problemas e desmistificação de dúvidas.
 
 % FIXME: Melhorar esse trecho. Generalizar pesquisa. Esmiuçar ranking depois.
 O ranking elaborado por essa empresa é divulgado de forma anual e é construído através de pesquisas realizadas no próprio site com programadores de todo mundo. Para versão referente ao ano de 2019, foram entrevistados aproximadamente 90.000 desenvolvedores e esse mesmo ranking pode ser observado na \autoref{tab-stack-overflow-linguagens}.
@@ -133,18 +133,20 @@ O ranking elaborado por essa empresa é divulgado de forma anual e é construíd
     \hline
     WebAssembly & 1,1\%  \\
 \end{tabular}
-\legend{Fonte: \citeonline{stackOverflowRanking}}
+\legend{Fonte: \citeauthor{stackOverflowRanking}
+(\citeyear{stackOverflowRanking})
+}
 \end{table}
 
 \newpage
 Conforme pode ser observado na \autoref{tab-stack-overflow-linguagens}, existe uma intersecção de linguagens populares entre os dois rankings, isto é, é possível confirmar a popularidade de algumas linguagens através de ambos.
 
-A linguagem de programação JavaScript aparece bem colocada em ambos os rankings, no índice TIOBE na sexta posição e na liderança do Ranking do StackOverflow. Conforme será destacado na seção \ref{JavaScript}, essa linguagem pode ser utilizada para diversos tipos de aplicação, como por exemplo o seu uso mais comum, isto é, em navegadores, assim como para o uso em servidores e até mesmo para desenvolvimento de aplicativos para dispositivos móveis.
+A linguagem de programação JavaScript aparece bem colocada em ambos os rankings, no índice TIOBE\cite{tiobeDefinition} na sexta posição e na liderança do Ranking do StackOverflow\cite{stackOverflowRanking}. Conforme será destacado na seção \ref{JavaScript}, essa linguagem pode ser utilizada para diversos tipos de aplicação, como por exemplo o seu uso mais comum, isto é, em navegadores, assim como para o uso em servidores e até mesmo para desenvolvimento de aplicativos para dispositivos móveis.
 
 \section{Desenvolvimento para dispositivos móveis}
 \label{sec-desenvolvimento-apps}
 
-O uso de \textit{smartphones} tornou-se popular com a criação do \textit{iPhone}, desenvolvido pela \textit{Apple}, e apresentado ao mundo pela primeira vez em 2008. Mais de 10 anos após o lançamento da primeira versão, os ditos celulares inteligentes estão cada vez mais modernos e mais populares.
+O uso de \textit{smartphones} tornou-se popular com a criação do \textit{iPhone}, desenvolvido pela \textit{Apple}, e apresentado ao mundo pela primeira vez em 2007. Mais de 10 anos após o lançamento da primeira versão, os ditos celulares inteligentes estão cada vez mais modernos e mais populares.\cite{iphoneApple}
 
 %% Acrescentar tabela evolução celulares e consumo, vendas
 
@@ -152,7 +154,7 @@ Os sistemas operacionais para dispositivos móveis mais populares atualmente sã
 
 O desenvolvimento de aplicativos para esses sistemas possui certas particularidades, sendo que para o sistema da empresa fundada por Steve Jobs tem como linguagens de programação para o desenvolvimento nativo o Swift e o Objective-C, já o sistema mantido pela empresa de Mountain View são utilizadas as linguagens Java e Kotlin.
 
-De forma a aumentar o alcance de um aplicativo, o programador deve disponibilizar o mesmo nessas duas plataformas. Como é possível observar, não existe uma intersecção de linguagens disponíveis para o desenvolvimento nativo para essas plataformas, logo, o mesmo aplicativo deveria ser programado de duas formas diferentes, isto é, utilizando no mínimo duas linguagens de programação, fazendo com que mais tempo fosse necessário durante o desenvolvimento, pois seria necessário construir a mesma aplicação duas vezes. Para contornar esse problema, alternativas foram desenvolvidas para otimizar o tempo de desenvolvimento, ou seja, o programador desenvolveria um código e esse mesmo poderia ser utilizado para os dois sistemas. Essa técnica é denominada como Desenvolvimento Multiplataforma (\textit{Cross-Platform}).
+De forma a aumentar o alcance de um aplicativo, o programador deve disponibilizar o mesmo nessas duas plataformas. Como é possível observar, não existe uma intersecção de linguagens disponíveis para o desenvolvimento nativo para essas plataformas. Portanto, o mesmo aplicativo deveria ser programado de duas formas diferentes, isto é, utilizando no mínimo duas linguagens de programação, fazendo com que mais tempo fosse necessário durante o desenvolvimento, pois seria necessário construir a mesma aplicação duas vezes. Para contornar esse problema, alternativas foram desenvolvidas para otimizar o tempo de desenvolvimento, ou seja, o programador desenvolveria um código e esse mesmo poderia ser utilizado para os dois sistemas. Essa técnica é denominada como Desenvolvimento Multiplataforma (\textit{Cross-Platform}).\cite{desenvolvimentoMobile}
 
 O Desenvolvimento Multiplataforma pode ser efetuado de duas formas, "Hybrid" e "Native". O primeiro utiliza recursos de desenvolvimento Web, como HTML, JS e CSS para a construção da aplicação e a mesma será executada a partir de um navegador, já o segundo, faz o usufruto de Frameworks que irão gerar um arquivo compilado como se fosse proveniente de um código nativo para cada plataforma, sendo que a linguagem utilizada varia de acordo com o Framework escolhido. Além disso, para essa última solução é possível mesclar código nativo com o código utilizado pelo Framework.
 
@@ -235,7 +237,8 @@ Os outros três frameworks mais populares, isto é, ".Net", ".Net Core" e "Panda
     CryEngine & 0,4\%  \\
     
 \end{tabular}
-\legend{Fonte: }
+\legend{Fonte: \citeauthor{stackOverflowRanking}(\citeyear{stackOverflowRanking})
+}
 \end{table}
 
 % FIXME: Verificar ABNT se pode centralizar
@@ -271,7 +274,8 @@ Os outros três frameworks mais populares, isto é, ".Net", ".Net Core" e "Panda
     \hline
     Drupal & 3,5\%  \\
 \end{tabular}
-\legend{Fonte: }
+\legend{Fonte: \citeauthor{stackOverflowRanking}(\citeyear{stackOverflowRanking})
+}
 \end{table}
 
 \newpage
@@ -290,7 +294,7 @@ Por fim, conforme já destacado na \autoref{sec-desenvolvimento-apps}, um outro 
 
 \section{Banco de dados}
 
-Conforme é dito em \cite{silberschatz2016sistema}, um banco de dados nada mais é do que "uma coleção de dados inter-relacionados, representando informações sobre um domínio específico", isto é, um conjunto de informações relacionadas e que podem ser agrupadas de alguma forma, poderá constituir um banco de dados.
+Conforme é dito em (\citeauthor{silberschatz2016sistema}, \citeyear{silberschatz2016sistema}), um banco de dados nada mais é do que "uma coleção de dados inter-relacionados, representando informações sobre um domínio específico", isto é, um conjunto de informações relacionadas e que podem ser agrupadas de alguma forma, poderá constituir um banco de dados.
 
 As ferramentas utilizadas para o armazenamento e gerenciamento dos dados são os Sistemas de Gerenciamento de Banco de Dados (SGBD), que provem uma forma de manipulação e recuperação desses mesmo dados.
 
@@ -300,18 +304,26 @@ Um exemplo de linguagem para consulta de dados em bases relacionais é o SQL ("S
 
 Já os banco de dados do tipo não-relacional, são aqueles também conhecidos como NoSQL ("Not Only SQL"), ou seja, onde a linguagem SQL não é aplicada. Esse tipo de banco, foi criado para prover recursos nos quais os banco relacionais não são tão eficazes. A estrutura utilizada varia de acordo com o banco utilizado, podendo ser no formato de chave-valor, colunas, grafos e documentos. Esse último é o utilizado por bancos do tipo MongoDB, onde os dados são armazenados no formato de objetos do JavaScript, isto é, no formato Json.
 
+É possível utilizar esses mesmos banco de dados em aplicações móveis, no entanto, como existem diversos modelos de aparelhos e alguns possuem recursos limitados, existem uma preferência para a utilização de bancos que exigem menos recursos, assim como é o caso SQLite. Além disso, esse mesmo banco consta entre os cinco mais utilizados pelos desenvolvedores na pesquisa a respeito dos banco de dados também elaborada pelo StackOverflow.\cite{stackOverflowRanking} Esse tipo de solução é mais utilizado quando uma conexão à internet não é necessária ao total funcionamento da aplicação.\cite{mobileDatabase}
+
 \section{Web Scraping}
 
-O Web Scraping é o nome dado a técnica de obtenção de dados disponíveis em páginas da Web. Esses dados podem ser obtidos através de ferramentas automatizadas ou até mesmo programadas para somente adquirir as informações de interesse não precisando armazenar todas as informações presentes no site.
+O Web Scraping\cite{webscrapingRockContent} é o nome dado a técnica de obtenção de dados disponíveis em páginas da Web. Esses dados podem ser obtidos através de ferramentas automatizadas ou até mesmo programadas para somente adquirir as informações de interesse não precisando armazenar todas as informações presentes no site.
 Os dados podem ser armazenados tanto em bancos de dados ou em arquivos para poderem ser analisados futuramente.
 
 As bibliotecas mais populares para o desenvolvimento de ferramentas que efetuam o Web Scraping são BeautifulSoap, JSoup e Cheerio, respectivamente para as linguagens: Python, Java e JavaScript.
 
+Para o uso através de aplicativos móveis, tomando como o exemplo o desenvolvidos em Java para os dispositivos do sistema Android, é possível efetuar o uso da biblioteca JSoup assim como é feito em aplicações tradicionais para computadores. Porém, dependendo da finalidade em que tal coleta de dados necessita ser feita, a quantidade de dados e a quantidade de páginas que precisam ser visitadas, talvez não seja uma solução viável a ser implementada no próprio aplicativo a ser executado no celular do usuário pois todo processo da coleta desses dados irá consumir uma fatia da franquia de internet móvel, fazendo com que o processamento em um meio externo ao celular seja um procedimento mais viável.
+
 \section{QRCode}
 
-O nome QRCode é uma abreviação para \textit{Quick Response Code}, que em tradução livre significa "Código de Resposta Rápida". Esse código foi inventado em meados dos anos 90 com o propósito de ser utilizado pela indústria automobilística, no entanto, nos últimos anos tem sido adotado por diversos meios, desde em periódicos impressos, com intuito aumentar a iteração com os leitores, como em anúncios diversos e até mesmo em meios de pagamentos.
+O nome QRCode\cite{qrCodeOlharDigital} é uma abreviação para \textit{Quick Response Code}, que em tradução livre significa "Código de Resposta Rápida". Esse código foi inventado em meados dos anos 90 com o propósito de ser utilizado pela indústria automobilística, no entanto, nos últimos anos tem sido adotado por diversos meios, desde em periódicos impressos, com intuito aumentar a iteração com os leitores, como em anúncios diversos e até mesmo em meios de pagamentos.\cite{qrCodeCanalTech}
 
 Qualquer informação numérica, e até mesmo alfanumérica, pode ser representada de forma visual através do QRCode, pois trata-se de um código de barras em uma representação bidimensional. Como a informação é transformada em texto, deve-se atentar que existe uma limitação quanto a quantidade de caracteres que poderá ser utilizada que irá variar de acordo com a versão adotada na construção do código.
+
+Ademais, tal código tem sido utilizado também para a comprovação da autenticidade de documentos, pois ao serem escaneados, é possível obter um endereço online onde qualquer indivíduo com acesso à internet poderá comprovar que tal documento é autêntico. Um exemplo de uso, são aqueles presentes nas notas fiscais que são emitidas para cada compra realizada.\cite{nfceDefinicao}
+
+Um novo tipo de transferência monetária está sendo desenvolvido pelo Banco Central e visa ser uma alternativa aos meios já existentes DOC e TED. Uma das formas de transferir recursos monetários por esse novo método poderá ser feita através do uso do QRCode. Ainda, tal método será chamado de PIX e é um meio de pagamento instantâneo onde uma transferência poderá sem feita em tempo real e estará disponível para uso em qualquer momento do dia em contrapartida aos outros dois meios existentes.\cite{pixDefinicao}
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
@@ -324,10 +336,11 @@ Qualquer informação numérica, e até mesmo alfanumérica, pode ser representa
 \end{figure}
 
 \section{O que é CAPTCHA?}
+\label{secao-captcha-definicao}
 
-O CAPTCHA é um acrônimo, em inglês, para "Completely Automated Public Turing Test to Tell Computers and Humans Apart", que pode ser traduzido como "Teste de Turing público completamente automatizado para distinção entre computadores e humanos", que nada mais é do que um desafio cognitivo para o impedimento de uso de ferramentas automáticas em sistemas. O uso de algumas dessas ferramentas podem fazer que em determinados casos, quando utilizados com abuso e/ou má-fé, levem a um consumo elevado dos recursos de alguns serviços, consequentemente, podem prejudicar a experiência de outros usuários desses mesmos serviços.
+O CAPTCHA\cite{captchaWikipedia} é um acrônimo, em inglês, para "Completely Automated Public Turing Test to Tell Computers and Humans Apart", que pode ser traduzido como "Teste de Turing público completamente automatizado para distinção entre computadores e humanos", que nada mais é do que um desafio cognitivo para o impedimento de uso de ferramentas automáticas em sistemas. O uso de algumas dessas ferramentas podem fazer que em determinados casos, quando utilizados com abuso e/ou má-fé, levem a um consumo elevado dos recursos de alguns serviços, consequentemente, podem prejudicar a experiência de outros usuários desses mesmos serviços.
 
-As versões mais simples do CAPTCHA consiste em uma imagem com uma frase (podendo ter sentido ou não) ou um conjunto de caracteres alfanuméricos, e um campo de entrada de texto para que o usuário digitasse o conteúdo contido nessa imagem, caso o mesmo digitasse corretamente, o teste estaria concluído com êxito, fazendo com que a funcionalidade requisitada, protegida por esse teste, fosse liberada.
+As versões mais simples do CAPTCHA consiste em uma imagem com uma frase (podendo ter sentido ou não) ou um conjunto de caracteres alfanuméricos\cite{captchaTecmundo}, e um campo de entrada de texto para que o usuário digitasse o conteúdo contido nessa imagem, caso o mesmo digitasse corretamente, o teste estaria concluído com êxito, fazendo com que a funcionalidade requisitada, protegida por esse teste, fosse liberada.
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
@@ -335,6 +348,7 @@ As versões mais simples do CAPTCHA consiste em uma imagem com uma frase (podend
     \centering
     \includegraphics[scale=0.5]{tcc/figures/captcha/captcha-frase.jpg}
     \caption{Exemplo de um CAPTCHA simples}
+    \legend{Fonte: Wikipedia\cite{captchaWikipedia}}
     \label{fig-exemplo-captcha-simples}
 \end{figure}
 
@@ -344,12 +358,13 @@ As versões mais simples do CAPTCHA consiste em uma imagem com uma frase (podend
     \centering
     \includegraphics[scale=0.5]{tcc/figures/captcha/captcha-alfanumerico.png}
     \caption{Exemplo de um CAPTCHA simples com texto alfanumérico}
+    \legend{Fonte: Wikipedia\cite{captchaWikipedia}}
     \label{fig-exemplo-captcha-alfanumerico}
 \end{figure}
 
-Esse tipo de teste pode ser burlado por algumas ferramentas automáticas uma vez que existe a possibilidade de efetuar a detecção de texto em uma imagem, tal técnica é conhecida como OCR ("Optical Character Recognition", em português: "Reconhecedor Ótico de Caracteres").
+Esse tipo de teste pode ser burlado por algumas ferramentas automáticas uma vez que existe a possibilidade de efetuar a detecção de texto em uma imagem, tal técnica é conhecida como OCR ("Optical Character Recognition", em português: "Reconhecedor Ótico de Caracteres").\cite{captchaExame}
 
-Atualmente, existe versões mais modernas desses testes que exigem que o usuário clique em uma imagem aleatória, o que dificulta o trabalho de ferramentas fraudadoras desses testes.
+Atualmente, existe versões mais modernas desses testes que exigem que o usuário clique em uma imagem aleatória, o que dificulta o trabalho de ferramentas fraudadoras desses testes.\cite{captchaExame}
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
@@ -357,6 +372,7 @@ Atualmente, existe versões mais modernas desses testes que exigem que o usuári
     \centering
     \includegraphics[scale=0.15]{tcc/figures/captcha/recaptcha-post-g1.jpg}
     \caption{Exemplo de um CAPTCHA moderno}
+    \legend{Fonte: G1\cite{captchaG1}}
     \label{fig-exemplo-captcha-alfanumerico}
 \end{figure}
 
@@ -364,7 +380,7 @@ Atualmente, existe versões mais modernas desses testes que exigem que o usuári
 
 A Nota Fiscal de Consumidor Eletrônica (NFC-e) visa ser uma alternativa eletrônica aos antigos cupons fiscais emitidos em papel. Tal documento segue um modelo nacional de emissão de documento fiscal com validade jurídica garantida pela assinatura digital do emissor.
 
-Com a publicação do Decreto nº 44.785 em 12 de maio de 2014, a NFC-e foi instituída no Estado do Rio de Janeiro a partir do dia seguinte à publicação. Com isso, todos os estabelecimentos comerciais deveriam estar aptos ao uso da NFC-e até o dia 31 de dezembro de 2017.
+Com a publicação do Decreto nº 44.785 em 12 de maio de 2014, a NFC-e foi instituída no Estado do Rio de Janeiro a partir do dia seguinte à publicação. Com isso, todos os estabelecimentos comerciais deveriam estar aptos ao uso da NFC-e até o dia 31 de dezembro de 2017.\cite{nfceDefinicao}
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
@@ -372,6 +388,7 @@ Com a publicação do Decreto nº 44.785 em 12 de maio de 2014, a NFC-e foi inst
     \centering
     \includegraphics[scale=0.5]{modelo_nota_fiscal}
     \caption{Exemplo de uma NFC-e}
+    \legend{Fonte: Secretaria de Fazenda - RJ}
     \label{modeloNfce}
 \end{figure}
 
@@ -382,3 +399,9 @@ Ainda, nesse documento consta uma chave de acesso que é composta por 44 dígito
 % TODO: Adicionar print imagem nota online?
 
 A verificação de autenticidade pode ser efetuada através de um site disponibilizado e mantido por cada Secretaria de Fazenda dos estados que constituem a União. Sendo assim, não é possível verificar a autenticidade de uma NFC-e emitida no estado de São Paulo na plataforma disponibilizada pelo Secretaria de Fazenda do Estado do Rio de Janeiro.
+
+\section{Aplicativos semelhantes}
+
+Existem aplicativos disponíveis para download nas lojas das plataformas IOS e Android com uma proposta semelhante ao trabalho desenvolvido. Como exemplo, pode ser citado o \textbf{Menor Preço}\cite{menorPrecoApp}, que é desenvolvido e mantido pelo Governo do Estado do Paraná. Através desse aplicativo, é possível consultar os preços de qualquer estabelecimento dos estados do Paraná, Espirito Santo e Pernambuco, no entanto, as informações das compras são obtidas diretamente das secretarias de fazenda de cada estado, não sendo necessário o usuário efetuar o cadastro de suas notas. Existem ainda outros aplicativos com esse mesmo funcionamento para outros locais como o \textbf{Melhor Preço Amazonas}\cite{melhorPrecoAmazonasApp} e o \textbf{Meus Preços (São Paulo)}\cite{meusPrecosApp}.
+
+Um outro aplicativo que possui abrangência nacional e que o funcionamento se assemelha ao desenvolvido nesse projeto é o \textbf{Pinngo}\cite{pinngoApp}, onde sua base de dados é feita através da contribuição dos usuários.

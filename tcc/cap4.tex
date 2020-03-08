@@ -1,5 +1,7 @@
 \chapter{Resultados}
 
+ Neste capítulo será apresentado o aplicativo desenvolvido e suas interfaces com o usuário onde terá a explicação de cada recurso disponível assim como efetuar sua utilização. Ainda, serão apresentadas algumas limitações existentes para essa versão da aplicação como também das tecnologias utilizadas.
+ 
 \section{O aplicativo desenvolvido}
 \label{sec-app-desenvolvido}
 
@@ -19,7 +21,7 @@ Embora não seja possível ainda instalar essa aplicação através das lojas of
     \label{appLoadingFig}
 \end{figure}
 
-A figura \ref{appLoadingFig} representa a primeira tela que o usuário obtém ao efetuar a abertura da aplicação, além disso, essa tela é mostrada para que os recursos mínimos necessários ao aplicativo possam ser carregados em segundo plano. Com isso, sempre que o app for inicializado mostrará essa tela. Caso o usuário saia e vá para outro aplicativo, essa tela não será mostrada pois os recursos ainda estão em memória, mas caso o usuário encerre a aplicação, na próxima vez que houver a abertura, será necessário novamente efetuar o carregamento, logo, a tela de carregamento inicial será exibida outra vez.
+A figura \ref{appLoadingFig} representa a primeira tela que o usuário obtém ao efetuar a abertura da aplicação, além disso, essa tela é mostrada para que os recursos mínimos necessários ao aplicativo possam ser carregados em segundo plano. Com isso, sempre que o aplicativo for inicializado mostrará essa tela. Caso o usuário saia e vá para outro aplicativo, essa tela não será mostrada pois os recursos ainda estão em memória, mas caso o usuário encerre a aplicação, na próxima vez que houver a abertura, será necessário novamente efetuar o carregamento, logo, a tela de carregamento inicial será exibida outra vez.
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
@@ -323,12 +325,32 @@ O autor desse trabalho possui a intenção de efetuar a publicação do aplicati
 
 Sobre as atualizações com melhorias e correções, poderão ser obtidas de duas formas diferentes, primeiramente dar-se-a através das próprias lojas de aplicativos, após a publicação nas mesmas, já a segunda forma é através do uso de atualizações \textit{Over-the-air} (OTA, em tradução livre: "Por via aérea"), que é um tipo de atualização que o próprio aplicativo efetua o download e realiza a instalação da mesma. Esse recurso é fornecido pela ferramenta Expo e permite que o usuário possua a versão mais atualizada do aplicativo sempre que possível. Por padrão, é efetuada uma verificação por novas atualizações a cada 30 dias. Por fim, por meio dessa última forma é possível ter acesso a versões mais atualizadas do aplicativo sem ser através dos lojas das plataformas.
 
-\section{Trabalhos futuros}
+\section{Disponibilização do código-fonte}
 
-Embora o aplicativo tenha atingido o objetivo principal, que era o cadastro das notas fiscais e a recuperação dos preços dos produtos contidos nas mesmas, novas funcionalidades podem ser incluídas de forma a melhorar ainda mais a experiência do usuário e facilitar mais ainda o cotidiano dos cidadãos. Como por exemplo, pode ser adicionado o suporte ao sistema de outros estados fazendo com que mais brasileiros possam utilizar o aplicativo não ficando limitado somente à população do Estado do Rio de Janeiro.
+Todo código-fonte desenvolvido para esse trabalho está disponível para acesso através do perfil do autor na plataforma GitHub. Os códigos foram divididos em dois repositórios, um para o desenvolvimento do código a ser executado em servidores e outro para o código referente ao aplicativo.
 
-Além disso, melhorias poderão ser realizadas durante o processo de leitura do QRCode, isto é, uma vez que possa ser impresso em uma qualidade ruim poderá ocasionar problemas durante a leitura, fazendo com que a mesma não seja realizada com sucesso. De forma a contornar esse problema, poderá ser efetuado um pós-processamento da imagem após um tempo gasto estipulado anteriormente, com isso, ainda será possível efetuar a adição da nota sem a necessidade de digitação de textos.
+Através desses repositórios, novas funcionalidades poderão ser adicionadas pela comunidade de desenvolvedores como também o desenvolvimento de novos projetos tendo como base esse trabalho aqui desenvolvido. Os repositórios podem ser acessados através dos seguintes endereços:
+\begin{itemize}
+\item Servidor: https://github.com/gav1ao/market-api;
+\item Aplicativo: https://github.com/gav1ao/market-mobile;
+\end{itemize}
 
-Ainda durante o processo de leitura do QRCode, se após o processamento da imagem não for possível concluir a leitura e a obtenção da informação, poderá ser oferecido ao usuário a opção de adição através do código de acesso automaticamente caso o aplicativo detecte que há uma demora para efetuar a leitura.
+Esses mesmos endereços também podem ser acessados através dos seguintes QRCodes disponibilizados logo abaixo:
 
-Por fim, uma outra melhoria que poderá ser implementada, é uma outra forma de notificação ao usuário que sua nota foi processada fazendo com que o mesmo possa utilizar outros aplicativos não sendo mais necessário permanecer com uma das telas de cadastro abertas aguardando a resposta. Com isso, poderá ser adicionada mais de uma nota por vez, o que melhorá ainda mais a serventia do projeto.
+% FIXME: Ajustar a imagem
+% FIXME: Adicionar referencia a imagem
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{tcc/figures/repo_qrcode/repo_github_market_api.png}
+    \caption{Link para o repositório do servidor}
+    \label{fig-repo-qrcode-api}
+\end{figure}
+
+% FIXME: Ajustar a imagem
+% FIXME: Adicionar referencia a imagem
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{tcc/figures/repo_qrcode/repo_github_market_app.png}
+    \caption{Link para o repositório do servidor}
+    \label{fig-repo-qrcode-app}
+\end{figure}

@@ -52,11 +52,15 @@
 
 %% Citações
 \usepackage[hyphenbreaks]{breakurl}
-\usepackage[alf,abnt-emphasize=em]{abntex2cite}
+\usepackage[num,overcite,'-emphasize=em]{abntex2cite}
+
+%% Para impressão do Json
+\usepackage{minted}
 
 \include{config}		%Define as configurações do arquivo
 
 \begin{document}
+    
 	%Capa
 	\include{capa}
 	
@@ -97,6 +101,7 @@
 	%\include{glossario}
 	%\include{apendices}
 	%\include{anexos}
+	
 	\include{nocite}
 	\bibliography{tcc}
 \end{document}

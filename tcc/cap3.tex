@@ -1,15 +1,19 @@
 \chapter{Desenvolvimento}
 
+Este capítulo tem o objetivo de descrever o aplicativo desenvolvido neste trabalho para dar suporte à compra de produtos em mercados locais. Será inicialmente descrito o acesso às informações referentes a compra de produtos, assim como os aspectos envolvendo o tratamento e o armazenamento desses dados, como também o mecanismo de busca e visualização das consultas aos produtos. Além disso, serão apresentados alguns recursos e serviços utilizados durante o período de desenvolvimento.
+
 \section{Obtenção das informações}
 \label{obtencaoInformacoes}
 
 Conforme abordado no capítulo anterior ao longo da \autoref{secNfce}, cada estado fornece um meio online para acesso da versão eletrônica das notas fiscais, com isso, não existe um sistema único para consulta de diversas notas de estados diferentes. Devido a essa peculiaridade, a versão desenvolvida descrita nesse projeto, possui suporte a somente notas emitidas no estado Fluminense. Todavia, a adição do suporte a outros estados é facilitada, pois a inclusão já foi prevista durante o desenvolvimento.
 
-A partir do sistema disponibilizado pelas SEFAZ, o usuário poderá acessar a versão online da nota fiscal através de duas formas: por meio de um site específico junto de uma chave de acesso ou pelo endereço web contido no QRCode.
+A partir do sistema disponibilizado pelas secretarias de fazenda, o usuário poderá acessar a versão online da nota fiscal através de duas formas: por meio de um site específico junto de uma chave de acesso ou pelo endereço web contido no QRCode.
 
 Independente da forma que foi efetuado o acesso, após o término da solicitação, o usuário é redirecionado para uma página que contém a versão online da nota fiscal. O conteúdo dessa página é analisado e armazenado. A técnica utilizada para a análise desse conteúdo é o Web Scraping.
 
 Portanto, após o usuário solicitar a adição de uma nota fiscal, no aplicativo, será feita uma simulação de uma dessas formas de acesso, o que resultará em uma requisição ao próprio site da Secretaria de Fazenda, consequentemente, será feito o Scraping da página assim que o resultado estiver disponível.
+
+Ainda, vale destacar que o conteúdo da nota fiscal pode ser obtido de uma outra forma que se dá através do uso de técnicas de processamento de imagem. Para isso, a NFC-e deverá ser escaneada e por meio da imagem resultante poderá ser feito o reconhecimento dos caracteres e assim obter a informação necessária para análise. A técnica de reconhecimento de texto OCR, que foi brevemente apresentada na \autoref{secao-captcha-definicao}, também poderá ser utilizada nesse caso, no entanto, será necessário que efetue a aquisição de uma imagem em alta qualidade, o que restringe uso nos modelos de entrada de celulares por possuírem câmeras com qualidade inferior.
 
 \subsection{Simulação da solicitação}
 
@@ -19,17 +23,11 @@ A solicitação através da chave de acesso é feita de forma a simular o acesso
 
 Caso a nota fiscal já esteja disponível no sistema da SEFAZ e a informação necessária ao desafio esteja correta, o conteúdo será disponibilizado, caso contrário, o usuário será notificado que houve um erro durante o cadastro da NFC-e na própria aplicação. Caso seja identificado o motivo desse erro, será mostrada uma breve mensagem da causa do problema, mas caso não seja possível efetuar a identificação do problema, uma mensagem genérica será mostrada.
 
-Já para reprodução com o QRCode, é possível obter o conteúdo diretamente sem a necessidade da solução de um desafio cognitivo, todavia, ainda é necessária a simulação da navegação com o Puppeteer.
-
-Assim como no forma anterior, caso a NFC-e não seja encontrada no sistema da SEFAZ, o usuário também será notificado que a mesma não se encontra disponível.
-
-Vale destacar que para a adição da NFC-e com o QRCode, é necessário que o usuário possua um smartphone com câmera.
-
-Caso qualquer erro não previsto durante o processamento da requisição ocorra ou o sistema da SEFAZ esteja inoperante, o usuário também será notificado sobre a impossibilidade da adição com uma mensagem de erro genérica. Tal situação poderá ocorrer independente da forma em que a solicitação foi efetuada.
+Já para reprodução com o QRCode, é possível obter o conteúdo diretamente sem a necessidade da solução de um desafio cognitivo, todavia, ainda é necessária a simulação da navegação com o Puppeteer. Assim como no forma anterior, caso a NFC-e não seja encontrada no sistema da SEFAZ, o usuário também será notificado que a mesma não se encontra disponível. Vale destacar que para a adição da NFC-e com o QRCode, é necessário que o usuário possua um smartphone com câmera. Caso qualquer erro não previsto durante o processamento da requisição ocorra ou o sistema da SEFAZ esteja inoperante, o usuário também será notificado sobre a impossibilidade da adição com uma mensagem de erro genérica. Tal situação poderá ocorrer independente da forma em que a solicitação foi efetuada.
 
 \subsection{Análise dos dados}
 
-A análise dos dados é feita com o auxílio da ferramenta Cheerio, que é um módulo baseado no jQuery, um Framework Web bastante popular do JavaScript \footnote{Conforme pode ser visto em \cite{stackOverflowRanking}}, para utilização com o Node.js. Com o conteúdo da página, é possível obter cada informação individualmente, logo é possível saber quais produtos foram comprados como também o preço unitário e a quantidade comprada de cada produto. Além disso, também é possível armazenar os dados do local da compra como o nome do estabelecimento e o seu endereço. Por fim, dados gerais da compra também podem ser recuperados como a data e a hora em que foi realizada.
+A análise dos dados é feita com o auxílio da ferramenta Cheerio\cite{cheerio}, que é um módulo baseado no jQuery, um Framework Web bastante popular do JavaScript\cite{stackOverflowRanking}, para utilização com o Node.js. Com o conteúdo da página, é possível obter cada informação individualmente, logo é possível saber quais produtos foram comprados como também o preço unitário e a quantidade comprada de cada produto. Além disso, também é possível armazenar os dados do local da compra como o nome do estabelecimento e o seu endereço. Por fim, dados gerais da compra também podem ser recuperados como a data e a hora em que foi realizada.
 
 A recuperação da informação contida página é possível pois o conteúdo é construído com a linguagem HTML e através dos elementos que compõe a página, é possível identificá-los e efetuar a separação da informação.
 
@@ -62,6 +60,12 @@ Uma vantagem garantida ao preservar os dados dessa forma, é que uma base maior 
 
 Vale destacar que, apesar da utilização de uma base compartilhada, não há como um usuário ter acesso ao valor gasto em uma compra de outro usuário, uma vez que as notas são adicionadas sem a necessidade de um cadastro e somente é possível obter a informação de produtos, e não de uma compra como um todo.
 
+Abaixo, temos um exemplo de uma nota fiscal real no formato que se encontra armazenada no banco de dados. Vale destacar que está sendo salvo no formato Json que é um tipo de documento.
+
+\usemintedstyle{manni}
+\inputminted{octave}{exemplo-nfce.json}
+
+\newpage
 % TODO: Melhorar seção
 \section{Disponibilização dos dados}
 
@@ -71,10 +75,7 @@ Vale destacar que, apesar da utilização de uma base compartilhada, não há co
 % Processamento no proprio aparelho
 % Usar do processador / bateria/internet de qualidade /
 
-Os dados são disponibilizados com o auxílio do servidor principal da aplicação no qual possui uma conexão com o servidor em que se encontra o banco de dados.
-
-% FIXME: Deve-se referenciar o Framework?
-Através do Framework Express é possível criar de uma forma flexível uma API, que permite a comunicação com outras aplicações. Com isso, é disponibilizada uma URL que permite a consulta dos produtos salvos na base de dados.
+Os dados são disponibilizados com o auxílio do servidor principal da aplicação no qual possui uma conexão com o servidor em que se encontra o banco de dados. Através do Framework Express é possível criar de uma forma flexível uma API, que permite a comunicação com outras aplicações. Com isso, é disponibilizada uma URL que permite a consulta dos produtos salvos na base de dados.
 
 A consulta é feita através do nome do produto, e esse nome pode estar acentuado corretamento, erroneamente ou até mesmo sem acentos, que os mesmos dados serão retornados.
 
@@ -102,12 +103,12 @@ O uso de uma máquina física para esses propósitos é uma solução viável, n
 
 Uma das principais vantagens do uso de serviços de hospedagem é que o serviço não será interrompido caso haja queda de energia ou até mesmo ficar sem conexão com a internet.
 
-Um dos serviços mais populares que oferecem tais recursos de hospedagem é o Heroku, que fornece desde uma máquina simples gratuita até serviços mais robustos focados para o uso de alto fluxo de dados como ocorre em grandes corporações.
+Um dos serviços mais populares que oferecem tais recursos de hospedagem é o Heroku\cite{heroku}, que fornece desde uma máquina simples gratuita até serviços mais robustos focados para o uso de alto fluxo de dados como ocorre em grandes corporações.
 
 Durante os primeiros meses de desenvolvimento, foi feito o uso do plano gratuito para testes, no entanto caso não houvesse nenhuma iteração com a API desenvolvida durante um período de 30 minutos, a mesma ficaria inativa. Diante desse fato, a solicitação de adição de notas tornava-se mais lenta pois além do tempo de processamento dos dados, o tempo de inicialização aumentava a latência em que a resposta era retornada ao usuário. Todavia, a iteração ainda poderia ser feita normalmente.
 
 % TODO: Add ref https://education.github.com/pack
-A empresa GitHub, que permite que desenvolvedores e empresas armazenem e divulguem seus códigos, possui um programa para estudantes que permite que os mesmos acessem e usufruem de recursos pagos sem gerar nenhum ônus. Esse programa é conhecido como GitHub Student Developer Pack que é feito em parceria com outras empresas do ramo da tecnologia.
+A empresa GitHub, que permite que desenvolvedores e empresas armazenem e divulguem seus códigos, possui um programa para estudantes que permite que os mesmos acessem e usufruem de recursos pagos sem gerar nenhum ônus. Esse programa é conhecido como GitHub Student Developer Pack\cite{githubStudentPack} que é feito em parceria com outras empresas do ramo da tecnologia.
 
 O Heroku é um serviço que está incluso nessa parceria fornecendo uma máquina paga com muitos recursos sem nenhum custo ao estudante participante desse programa por um período limitado. Como o autor é elegível, o uso dessa máquina paga está sendo feito para os testes simulando o uso real de um servidor que pode ser utilizado em produção, isto é, recebendo altas cargas de requisições.
 

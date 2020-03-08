@@ -1,0 +1,45 @@
+{
+    "_id": "5e617d4f4bad6d0017ab3c16",
+    "market": {
+        "address": {
+            "street": "RUA DO CATETE",
+            "number": "112",
+            "addressLine2": "LOJA",
+            "neighbourhood": "CATETE",
+            "municipality": "RIO DE JANEIRO",
+            "state": "RJ"
+        },
+        "name": "SUPER. E PADARIA PALACIO DO CATETE LTDA.",
+        "cnpj": "01.001.950/0001-01"
+    },
+    "accessCode": "33200301001950000101650340002988841004566339",
+    "products": [{
+        "_id": "5e617d4f4bad6d0017ab3c1a",
+        "name": "PAO PANCO SOVADO",
+        "code": "9003555",
+        "amount": 1,
+        "price": 10.4
+    }, {
+        "_id": "5e617d4f4bad6d0017ab3c19",
+        "name": "LEITE UHT PIRACANJUB",
+        "code": "9033265",
+        "amount": 1,
+        "price": 3.69
+    }, {
+        "_id": "5e617d4f4bad6d0017ab3c18",
+        "name": "LEITE ELEGE INTEGRAL",
+        "code": "9006690",
+        "amount": 1,
+        "price": 3.79
+    }, {
+        "_id": "5e617d4f4bad6d0017ab3c17",
+        "name": "BISC PACHECO BRINQUI",
+        "code": "9040368",
+        "amount": 0.212,
+        "price": 57.9
+    }],
+    "purchaseDate": "2020-03-05T18:58:44.000Z",
+    "createdAt": "2020-03-05T22:29:35.397Z",
+    "updatedAt": "2020-03-05T22:29:35.397Z",
+    "__v": 0
+}
