@@ -1,5 +1,7 @@
 \chapter{Tecnologias disponíveis} \label{Tecnologias disponíveis}
 
+Este capítulo apresenta as tecnologias disponíveis para desenvolvimento de aplicações, assim como suas vantagens e desvantagens no que tange o uso em aplicativos para dispositivos móveis.
+
 \section{Linguagens de programação}
 
 Uma linguagem de programação é a forma na qual os programadores utilizam como meio de comunicação com os computadores\cite{edirlei2015}. A lógica necessária para o funcionamento de um programa é convertida em um conjunto de caracteres seguindo um conjunto de regras sintáticas e semânticas que formará um código ou \textit{script}.\cite{fischerGrodzinsky1993}
@@ -141,7 +143,7 @@ O ranking elaborado por essa empresa é divulgado de forma anual e é construíd
 \newpage
 Conforme pode ser observado na \autoref{tab-stack-overflow-linguagens}, existe uma intersecção de linguagens populares entre os dois rankings, isto é, é possível confirmar a popularidade de algumas linguagens através de ambos.
 
-A linguagem de programação JavaScript aparece bem colocada em ambos os rankings, no índice TIOBE\cite{tiobeDefinition} na sexta posição e na liderança do Ranking do StackOverflow\cite{stackOverflowRanking}. Conforme será destacado na seção \ref{JavaScript}, essa linguagem pode ser utilizada para diversos tipos de aplicação, como por exemplo o seu uso mais comum, isto é, em navegadores, assim como para o uso em servidores e até mesmo para desenvolvimento de aplicativos para dispositivos móveis.
+A linguagem de programação JavaScript aparece bem colocada em ambos os rankings, no índice TIOBE\cite{tiobeDefinition} na sexta posição e na liderança do Ranking do StackOverflow\cite{stackOverflowRanking}. Conforme será destacado na Seção \ref{JavaScript}, essa linguagem pode ser utilizada para diversos tipos de aplicação, como por exemplo o seu uso mais comum, isto é, em navegadores, assim como para o uso em servidores e até mesmo para desenvolvimento de aplicativos para dispositivos móveis.
 
 \section{Desenvolvimento para dispositivos móveis}
 \label{sec-desenvolvimento-apps}
@@ -158,9 +160,7 @@ De forma a aumentar o alcance de um aplicativo, o programador deve disponibiliza
 
 O Desenvolvimento Multiplataforma pode ser efetuado de duas formas, "Hybrid" e "Native". O primeiro utiliza recursos de desenvolvimento Web, como HTML, JS e CSS para a construção da aplicação e a mesma será executada a partir de um navegador, já o segundo, faz o usufruto de Frameworks que irão gerar um arquivo compilado como se fosse proveniente de um código nativo para cada plataforma, sendo que a linguagem utilizada varia de acordo com o Framework escolhido. Além disso, para essa última solução é possível mesclar código nativo com o código utilizado pelo Framework.
 
-Alguns exemplos de Frameworks utilizados em soluções de desenvolvimento "Hybrid" são o Cordova, Ionic e PhoneGap, já para as soluções do tipo "Native" podem ser citados como exemplo o Flutter, o React Native e o Xamarim.
-
-As aplicações quando desenvolvidas utilizando esses três últimos Frameworks, descritos anteriormente, fornecem uma performance melhor quando comparadas àquelas aplicações desenvolvidas com os três primeiros.
+Alguns exemplos de Frameworks utilizados em soluções de desenvolvimento "Hybrid" são o Cordova, Ionic e PhoneGap, já para as soluções do tipo "Native" podem ser citados como exemplo o Flutter, o React Native e o Xamarim. As aplicações quando desenvolvidas utilizando esses três últimos Frameworks, descritos anteriormente, fornecem uma performance melhor quando comparadas àquelas aplicações desenvolvidas com os três primeiros.
 
 Vale ressaltar que há uma preferência no mercado para o uso dos Frameworks dessa última solução apresentada. Essa afirmação pode ser observada após uma breve análise da \autoref{tab-stack-overflow-framework-tools}, além do mais, o React Native possui uma parcela maior do mercado quando comparado ao Cordova, algo que também pode ser constado na mesma tabela. Além desses, também está presente o Framework Flutter, tendo sido lançado há menos tempo quando comparado ao outros dois.
 
@@ -172,15 +172,11 @@ Antes, as páginas eram construídas de modo estático, isto é, caso o usuário
 
 De forma a corrigir esse problema e melhorar a navegação nessas páginas para tornar a experiência do usuário mais agradável, eis que surge a linguagem de programação JavaScript por volta do fim do ano de 1995, algo que revolucionou as páginas dessa mesma época.
 
-Com o JavaScript, uma linguagem interpretada, é possível tornar as páginas da Web dinâmicas, além de que o problema da perda de informação de formulários poderia ser facilmente corrigido com o uso dessa linguagem.
-
-A validação que antes necessitava de uma nova requisição com o servidor, agora poderia ser feito no próprio lado do cliente (Client Side), ou seja, a partir de um script que poderia ser executado no próprio navegador do usuário, o que poderia efetuar a mesma verificação de dados com a mesma precisão de antes.
+Com o JavaScript, uma linguagem interpretada, é possível tornar as páginas da Web dinâmicas, além de que o problema da perda de informação de formulários poderia ser facilmente corrigido com o uso dessa linguagem. A validação que antes necessitava de uma nova requisição com o servidor, agora poderia ser feito no próprio lado do cliente (Client Side), ou seja, a partir de um script que poderia ser executado no próprio navegador do usuário, o que poderia efetuar a mesma verificação de dados com a mesma precisão de antes.
 
 Além disso, por estar executando na própria máquina do cliente, o processo torna-se muito mais rápido, pois pode ser feito instantaneamente após o usuário terminar de inserir uma determinada informação, não sendo necessário inserir todas as informações necessárias ao formulário para então efetuar a verificação.
 
-Outra vantagem, é que esse procedimento é muito mais rápido em decorrência do tempo de processamento ter diminuído, uma vez que não é mais necessário efetuar novas requisições de validações ao servidor, logo, não ocorrerá mais atraso no tempo de execução tendo a latência da comunicação entre a máquina do cliente com o servidor como causa.
-
-Ainda, vale destacar que a latência desse período era muito maior quando comparada aos dias atuais, pois a conexão com a internet ainda era feita de modo discado, isto é, conectando-se a rede mundial de computadores por meio do telefone.
+Outra vantagem, é que esse procedimento é muito mais rápido em decorrência do tempo de processamento ter diminuído, uma vez que não é mais necessário efetuar novas requisições de validações ao servidor, logo, não ocorrerá mais atraso no tempo de execução tendo a latência da comunicação entre a máquina do cliente com o servidor como causa. Ainda, vale destacar que a latência desse período era muito maior quando comparada aos dias atuais, pois a conexão com a internet ainda era feita de modo discado, isto é, conectando-se a rede mundial de computadores por meio do telefone.
 
 \subsection{A popularidade do JavaScript}
 \label{secao-javascript-popularidade}
@@ -294,7 +290,7 @@ Por fim, conforme já destacado na \autoref{sec-desenvolvimento-apps}, outro cam
 
 \section{Banco de dados}
 
-Conforme é dito em (\citeauthor{silberschatz2016sistema}, \citeyear{silberschatz2016sistema}), um banco de dados nada mais é do que "uma coleção de dados inter-relacionados, representando informações sobre um domínio específico", isto é, um conjunto de informações relacionadas e que podem ser agrupadas de alguma forma, poderá constituir um banco de dados.
+Conforme é dito em (\citeauthor{silberschatz2016sistema}, \citeyear{silberschatz2016sistema}), um banco de dados é "uma coleção de dados inter-relacionados, representando informações sobre um domínio específico", isto é, um conjunto de informações relacionadas e que podem ser agrupadas de alguma forma, poderá constituir um banco de dados.
 
 As ferramentas utilizadas para o armazenamento e gerenciamento dos dados são os Sistemas de Gerenciamento de Banco de Dados (SGBD), que provem uma forma de manipulação e recuperação desses mesmo dados.
 
@@ -380,7 +376,7 @@ Atualmente, existem versões mais modernas desses testes que exigem que o usuár
 
 A Nota Fiscal de Consumidor Eletrônica (NFC-e) visa ser uma alternativa eletrônica aos antigos cupons fiscais emitidos em papel. Tal documento segue um modelo nacional de emissão de documento fiscal com validade jurídica garantida pela assinatura digital do emissor.
 
-Com a publicação do Decreto nº 44.785 em 12 de maio de 2014, a NFC-e foi instituída no Estado do Rio de Janeiro a partir do dia seguinte à publicação. Com isso, todos os estabelecimentos comerciais deveriam estar aptos ao uso da NFC-e até o dia 31 de dezembro de 2017.\cite{nfceDefinicao}
+Com a publicação do Decreto nº 44.785 em 12 de maio de 2014, a NFC-e foi instituída no Estado do Rio de Janeiro a partir do dia seguinte à publicação. Com isso, todos os estabelecimentos comerciais deveriam estar aptos ao uso da NFC-e até o dia 31 de dezembro de 2017\cite{nfceDefinicao}. Na \autoref{modeloNfce} é possível observar um exemplo de uma NFC-e, com isso, pode se observar a descrição, a quantidade e o preço unitário de cada produto comprado. Além disso, ainda consta a informação do estabelecimento onde a compra foi efetuada como o endereço, o CNPJ e nome do estabelecimento.
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
@@ -391,8 +387,6 @@ Com a publicação do Decreto nº 44.785 em 12 de maio de 2014, a NFC-e foi inst
     \legend{Fonte: Secretaria de Fazenda - RJ}
     \label{modeloNfce}
 \end{figure}
-
-Na \autoref{modeloNfce} é possível observar um exemplo de uma NFC-e, com isso, pode se observar a descrição, a quantidade e o preço unitário de cada produto comprado. Além disso, ainda consta a informação do estabelecimento onde a compra foi efetuada como o endereço, o CNPJ e nome do estabelecimento.
 
 Ainda, nesse documento consta uma chave de acesso que é composta por 44 dígitos e um QRCode. De posse desses dados, é possível acessar a versão online da respectiva nota, na qual contém as mesmas informações a respeito da compra assim como existe em sua versão física.
 

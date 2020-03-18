@@ -77,9 +77,7 @@ Abaixo, temos um exemplo de uma nota fiscal real no formato que se encontra arma
 
 Os dados são disponibilizados com o auxílio do servidor principal da aplicação no qual possui uma conexão com o servidor em que se encontra o banco de dados. Através do Framework Express é possível criar de uma forma flexível uma API, que permite a comunicação com outras aplicações. Com isso, é disponibilizada uma URL que permite a consulta dos produtos salvos na base de dados.
 
-A consulta é feita através do nome do produto, e esse nome pode estar acentuado corretamento, erroneamente ou até mesmo sem acentos, que os mesmos dados serão retornados.
-
-Os dados retornados contêm o nome do produto da forma que consta na nota fiscal, o nome do estabelecimento no qual a compra foi efetuada, a data e a hora da compra. Para cada produto compatível com a consulta, é retornado o último registro salvo para cada estabelecimento para que o usuário sempre possa ter o preço mais recente.
+A consulta é feita através do nome do produto, e esse nome pode estar acentuado corretamento, erroneamente ou até mesmo sem acentos, que os mesmos dados serão retornados. Os dados retornados contêm o nome do produto da forma que consta na nota fiscal, o nome do estabelecimento no qual a compra foi efetuada, a data e a hora da compra. Para cada produto compatível com a consulta, é retornado o último registro salvo para cada estabelecimento para que o usuário sempre possa ter o preço mais recente.
 
 Vale ressaltar que é possível refinar a cidade em que a consulta deverá ser feita, assim como retornar os registros de todas as cidades disponíveis.
 
@@ -101,9 +99,7 @@ Como todo processamento dos dados é feito em meio externo ao telefone móvel do
 
 O uso de uma máquina física para esses propósitos é uma solução viável, no entanto, existem serviços que fornecem recursos de hospedagem a um custo acessível e caso elegível, e em alguns casos até mesmo de forma gratuita.
 
-Uma das principais vantagens do uso de serviços de hospedagem é que o serviço não será interrompido caso haja queda de energia ou até mesmo ficar sem conexão com a internet.
-
-Um dos serviços mais populares que oferecem tais recursos de hospedagem é o Heroku\cite{heroku}, que fornece desde uma máquina simples gratuita até serviços mais robustos focados para o uso de alto fluxo de dados como ocorre em grandes corporações.
+Uma das principais vantagens do uso de serviços de hospedagem é que o serviço não será interrompido caso haja queda de energia ou até mesmo ficar sem conexão com a internet. Um dos serviços mais populares que oferecem tais recursos de hospedagem é o Heroku\cite{heroku}, que fornece desde uma máquina simples gratuita até serviços mais robustos focados para o uso de alto fluxo de dados como ocorre em grandes corporações.
 
 Durante os primeiros meses de desenvolvimento, foi feito o uso do plano gratuito para testes, no entanto, caso não houvesse nenhuma iteração com a API desenvolvida durante um período de 30 minutos, a mesma ficaria inativa. Diante desse fato, a solicitação de adição de notas tornava-se mais lenta pois além do tempo de processamento dos dados, o tempo de inicialização aumentava a latência em que a resposta era retornada ao usuário. Todavia, a iteração ainda poderia ser feita normalmente.
 

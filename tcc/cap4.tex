@@ -21,7 +21,7 @@ Embora não seja possível ainda instalar essa aplicação através das lojas of
     \label{appLoadingFig}
 \end{figure}
 
-A figura \ref{appLoadingFig} representa a primeira tela que o usuário obtém ao efetuar a abertura da aplicação, além disso, essa tela é mostrada para que os recursos mínimos necessários ao aplicativo possam ser carregados em segundo plano. Com isso, sempre que o aplicativo for inicializado mostrará essa tela. Caso o usuário saia e vá para outro aplicativo, essa tela não será mostrada pois os recursos ainda estão em memória, mas caso o usuário encerre a aplicação, na próxima vez que houver a abertura, será necessário novamente efetuar o carregamento, logo, a tela de carregamento inicial será exibida outra vez.
+A Figura \ref{appLoadingFig} representa a primeira tela que o usuário obtém ao efetuar a abertura da aplicação, além disso, essa tela é mostrada para que os recursos mínimos necessários ao aplicativo possam ser carregados em segundo plano. Com isso, sempre que o aplicativo for inicializado mostrará essa tela. Caso o usuário saia e vá para outro aplicativo, essa tela não será mostrada pois os recursos ainda estão em memória, mas caso o usuário encerre a aplicação, na próxima vez que houver a abertura, será necessário novamente efetuar o carregamento, logo, a tela de carregamento inicial será exibida outra vez.
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
@@ -43,9 +43,7 @@ No segundo botão, o usuário poderá efetuar a adição através do código de 
 
 O usuário poderá efetuar a adição das notas através de duas formas, a primeira que é através do QRCode presente nas versões impressas das mesmas bem como através do código de acesso também disponível na versão física da nota.
 
-Dependendo da forma de adição desejada pelo usuário, o mesmo será redirecionado para outras telas que serão apresentadas logo abaixo.
-
-O meio mais rápido de adicionar é aquele que utiliza o QRCode, pois basta apontar a câmera do smartphone para o código que a leitura do mesmo será feita instantaneamente.
+Dependendo da forma de adição desejada pelo usuário, o mesmo será redirecionado para outras telas que serão apresentadas logo abaixo. O meio mais rápido de adicionar é aquele que utiliza o QRCode, pois basta apontar a câmera do smartphone para o código que a leitura do mesmo será feita instantaneamente.
 
 Caso ocorra problemas na leitura desse código, o usuário poderá tentar adicionar através do código de acesso. Esse meio é um pouco mais lento, pois além de inserir esse código de 44 dígitos, será necessário adicionar um código de verificação da solicitação, isto é, o CAPTCHA.
 
@@ -60,7 +58,7 @@ Caso ocorra problemas na leitura desse código, o usuário poderá tentar adicio
     \label{appQRCodeSolicitacaoFig}
 \end{figure}
 
-Um caso real de adição de uma nota fiscal é representando pela captura da tela do aplicativo no qual é demonstrado pela figura \ref{appQRCodeSolicitacaoFig}. Caso seja feita a detecção do QRCode, o conteúdo contido nesse código será processado e uma solicitação de adição será feita ao servidor.
+Um caso real de adição de uma nota fiscal é representando pela captura da tela do aplicativo no qual é demonstrado pela Figura~\ref{appQRCodeSolicitacaoFig}. Caso seja feita a detecção do QRCode, o conteúdo contido nesse código será processado e uma solicitação de adição será feita ao servidor.
 
 A latência gerada durante esse período de processamento, faz com seja necessário o uso de uma tela de carregamento. Com isso, é mostrado para o usuário uma barra de progresso que indica que a sua solicitação está sendo processada e o aplicativo continua executando normalmente.
 
@@ -88,7 +86,7 @@ Se o código tiver sido lido corretamente e se não houver nenhum problema duran
 \end{figure}
 
 \newpage
-Todavia, durante o processo de adição, pode ser que a nota ainda não esteja disponível no sistema da SEFAZ, com isso, é feito um tratamento de forma a detectar essa caso, com isso, o usuário será informado que a sua solicitação não foi concluída devido à indisponibilidade em sua versão digital. A figura \ref{appQRCodeNaoDisponivelFig} representa esse caso.
+Todavia, durante o processo de adição, pode ser que a nota ainda não esteja disponível no sistema da SEFAZ, com isso, é feito um tratamento de forma a detectar essa caso, com isso, o usuário será informado que a sua solicitação não foi concluída devido à indisponibilidade em sua versão digital. A Figura~\ref{appQRCodeNaoDisponivelFig} representa esse caso.
 
 % FIXME: Ajustar a imagem
 % FIXME: Trocar por img equivalente do QRCODE
@@ -101,7 +99,7 @@ Todavia, durante o processo de adição, pode ser que a nota ainda não esteja d
 \end{figure}
 
 \newpage
-Outra situação que poderá ocorrer, é caso o usuário tente adicionar uma nota que já foi adicionada previamente. A solicitação ao sistema da SEFAZ será feita normalmente até a obtenção do código de acesso da NFC-e, que é um código único. Após a aquisição desse código, é feita uma pesquisa no banco de dados de forma a verificar a existência dessa nota nos registros. Caso a nota seja encontrada, será enviado ao aplicativo um código de erro indicando a existência dessa nota, com isso o usuário poderá visualizar a tela da figura \ref{appQRCodeJaCadastradaFig}. Para o caso contrário, isto é, que a nota não é encontrada, seguirá com o fluxo normal.
+Outra situação que poderá ocorrer, é caso o usuário tente adicionar uma nota que já foi adicionada previamente. A solicitação ao sistema da SEFAZ será feita normalmente até a obtenção do código de acesso da NFC-e, que é um código único. Após a aquisição desse código, é feita uma pesquisa no banco de dados de forma a verificar a existência dessa nota nos registros. Caso a nota seja encontrada, será enviado ao aplicativo um código de erro indicando a existência dessa nota, com isso o usuário poderá visualizar a tela da Figura~\ref{appQRCodeJaCadastradaFig}. Para o caso contrário, isto é, que a nota não é encontrada, seguirá com o fluxo normal.
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
@@ -141,7 +139,7 @@ Se durante o processo de impressão da NFC-e ocorrer problemas e o QRCode não f
     \label{appCodigoAcessoInicialFig}
 \end{figure}
 
-A figura \ref{appCodigoAcessoInicialFig} representa a tela inicial de cadastro efetuado através do uso do código de acesso. O primeiro campo é para a inserção do código que é necessário para solicitação. Abaixo desse campo, encontram-se os botões para a interação do usuário. O primeiro botão, em azul, é para a inicialização do processo de adição. Caso o usuário não insira a quantidade necessária de dígitos, o sistema irá notificar o usuário sobre esse problema. O botão do meio, em branco, permite a limpeza total do texto inserido. Por último, o botão mais à direita serve como atalho para o usuário retornar à tela inicial.
+A Figura \ref{appCodigoAcessoInicialFig} representa a tela inicial de cadastro efetuado através do uso do código de acesso. O primeiro campo é para a inserção do código que é necessário para solicitação. Abaixo desse campo, encontram-se os botões para a interação do usuário. O primeiro botão, em azul, é para a inicialização do processo de adição. Caso o usuário não insira a quantidade necessária de dígitos, o sistema irá notificar o usuário sobre esse problema. O botão do meio, em branco, permite a limpeza total do texto inserido. Por último, o botão mais à direita serve como atalho para o usuário retornar à tela inicial.
 
 \newpage
 % FIXME: Ajustar a imagem
@@ -245,7 +243,7 @@ Existe uma tela diferente das demais quando comparado aos resultados do cadastro
 
 \subsection{Busca de produtos}
 
-Ao clicar no último botão da tela inicial, conforme visto na figura \ref{appHomeFig}, o usuário será encaminhado para a tela de busca de produtos. É através dessa tela que os usuários poderão consultar a informação referente aos produtos desejados cadastrados previamente. A tela em questão é apresentada pela figura \ref{appBuscaProdutosInicialFig}.
+Ao clicar no último botão da tela inicial, conforme visto na Figura~\ref{appHomeFig}, o usuário será encaminhado para a tela de busca de produtos. É através dessa tela que os usuários poderão consultar a informação referente aos produtos desejados cadastrados previamente. A tela em questão é apresentada pela Figura~\ref{appBuscaProdutosInicialFig}.
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
@@ -259,7 +257,7 @@ Ao clicar no último botão da tela inicial, conforme visto na figura \ref{appHo
 
 Logo no início da tela, consta o campo que será utilizado para a inserção do texto referente aos nomes dos produtos. Ao lado esquerdo do campo, existe um ícone no formato de uma lupa que permitirá que o usuário toque para a realização da busca.
 
-Abaixo do campo de texto, existe uma caixa de seleção para que o usuário consulte as cidades disponíveis para busca. Os nomes das cidades são recuperados a partir das notas que foram cadastradas previamente. Além disso, é permitido ao usuário escolher a opção de efetuar a busca em todas as cidades. A figura \ref{appBuscaProdutosCidadesFig} demonstra um exemplo de cidades disponíveis na caixa de seleção para a busca dos produtos.
+Abaixo do campo de texto, existe uma caixa de seleção para que o usuário consulte as cidades disponíveis para busca. Os nomes das cidades são recuperados a partir das notas que foram cadastradas previamente. Além disso, é permitido ao usuário escolher a opção de efetuar a busca em todas as cidades. A Figura~\ref{appBuscaProdutosCidadesFig} demonstra um exemplo de cidades disponíveis na caixa de seleção para a busca dos produtos.
 
 No meio da tela, constará informações para auxílio ao usuário dependendo da situação em que a tela se encontra. Como pode ser observado na figura \ref{appBuscaProdutosInicialFig}, consta uma breve instrução de como o usuário deve efetuar sua busca. Ademais, caso o produto buscado não seja encontrado na base de dados, nessa mesma área será mostrada a mensagem que os produtos não foram localizados.
 
@@ -288,7 +286,7 @@ Após a escolha da cidade em que será efetuada a busca, o usuário deverá inse
 Um exemplo de uma busca pelo produto "Leite" é mostrada na figura \ref{appBuscaProdutosBuscaResultadoFig}. Como pode ser observado foram retornados dois registros para esse mesmo produto. Nessa busca, foram encontrados o mesmo produto, no entanto de marcas diferentes, além disso, é possível efetuar uma comparação de preços, como também em que dia foi efetuada a compra dos mesmos.
 
 Vale destacar que ambos os produtos foram comprados no mesmo supermercado, no entanto, o nome aparece cortado devido a uma limitação da largura do dispositivo utilizado para efetuar a captura da tela. No entanto, como o nome do mercado pode ser uma cadeia longa de caracteres, esse problema pode ser contornado pois é fornecida uma opção do usuário visualizar as informações completas referentes aos registros individuais dos produtos, para isso, basta efetuar um toque no campo referente ao produto que uma pop-up surgirá em tela contendo as mesmas informações fornecidas anteriormente, no entanto, 
-como é possível ocupar a maior parte do espaço disponível em tela, será possível visualizar todas as informações que foram ocultadas anteriormente. Além do nome do local da compra, o próprio nome do produto poderá ser cortado caso esse também seja extenso. Por fim, um exemplo dessa solução descrita anteriormente pode ser observada na figura \ref{appBuscaProdutosProdutoAmpliadoFig}.
+como é possível ocupar a maior parte do espaço disponível em tela, será possível visualizar todas as informações que foram ocultadas anteriormente. Além do nome do local da compra, o próprio nome do produto poderá ser cortado caso esse também seja extenso. Por fim, um exemplo dessa solução descrita anteriormente pode ser observada na figura~\ref{appBuscaProdutosProdutoAmpliadoFig}.
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
