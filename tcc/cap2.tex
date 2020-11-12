@@ -1,6 +1,6 @@
 \chapter{Tecnologias disponíveis} \label{Tecnologias disponíveis}
 
-Este capítulo apresenta as tecnologias disponíveis para desenvolvimento de aplicações, assim como suas vantagens e desvantagens no que tange o uso em aplicativos para dispositivos móveis.
+Este capítulo apresenta as tecnologias disponíveis para desenvolvimento de aplicações, assim como suas vantagens e desvantagens no que tange ao uso em aplicativos para dispositivos móveis.
 
 \section{Linguagens de programação}
 
@@ -69,7 +69,7 @@ A \autoref{tab-tiobe} ilustra as 20 linguagens mais populares de acordo com esse
 \end{table}
 
 \newpage
-Uma outra instituição que efetua um ranking semelhante é o Stack Overflow\cite{stackOverflowAbout}, uma empresa fundada em 2008 na qual possui a maior comunidade de desenvolvedores e que tem como foco principal o compartilhamento de conhecimentos relacionados com a programação. Essa comunidade dar-se em torno de um site utilizado para troca de conhecimento de forma colaborativa através da ajuda na resolução de problemas e desmistificação de dúvidas.
+Uma outra instituição que efetua um ranking semelhante é o Stack Overflow\cite{stackOverflowAbout}, uma empresa fundada em 2008 na qual possui a maior comunidade de desenvolvedores e que tem como foco principal o compartilhamento de conhecimentos relacionados com a programação. Essa comunidade se dá em torno de um site utilizado para troca de conhecimento de forma colaborativa através da ajuda na resolução de problemas e desmistificação de dúvidas.
 
 % FIXME: Melhorar esse trecho. Generalizar pesquisa. Esmiuçar ranking depois.
 O ranking elaborado por essa empresa é divulgado de forma anual e é construído através de pesquisas realizadas no próprio site com programadores de todo mundo. Para versão referente ao ano de 2019, foram entrevistados aproximadamente 90.000 desenvolvedores e esse mesmo ranking pode ser observado na \autoref{tab-stack-overflow-linguagens}.
@@ -152,40 +152,42 @@ O uso de \textit{smartphones} tornou-se popular com a criação do \textit{iPhon
 
 %% Acrescentar tabela evolução celulares e consumo, vendas
 
-Os sistemas operacionais para dispositivos móveis mais populares atualmente são o IOS e o Android, sendo o primeiro exclusivo de aparelhos fabricados pela Apple, já o segundo é um sistema composto por código aberto sendo que um dos seus principais mantedores é o Google e é utilizado como sistema operacional nos aparelhos fabricados por diversas empresas como Samsung, Motorola, LG, Xiaomi e Huawei.
+Os sistemas operacionais para dispositivos móveis mais populares atualmente são o iOS e o Android, sendo o primeiro exclusivo de aparelhos fabricados pela Apple, já o segundo é um sistema composto por código aberto sendo que um dos seus principais mantedores é o Google e é utilizado como sistema operacional nos aparelhos fabricados por diversas empresas como Samsung, Motorola, LG, Xiaomi e Lenovo.\cite{androidPhonesTablets}.
 
-O desenvolvimento de aplicativos para esses sistemas possui certas particularidades, sendo que para o sistema da empresa fundada por Steve Jobs tem como linguagens de programação para o desenvolvimento nativo o Swift e o Objective-C, já o sistema mantido pela empresa de Mountain View são utilizadas as linguagens Java e Kotlin.
+O desenvolvimento de aplicativos para esses sistemas possui certas particularidades, sendo que para o sistema da empresa fundada por Steve Jobs tem como linguagens de programação para o desenvolvimento nativo o Swift e o Objective-C, já o sistema mantido pela empresa de Mountain View são utilizadas as linguagens Java e Kotlin.\cite{desenvolvimentoMobile}
 
 De forma a aumentar o alcance de um aplicativo, o programador deve disponibilizar o mesmo nessas duas plataformas. Como é possível observar, não existe uma intersecção de linguagens disponíveis para o desenvolvimento nativo para essas plataformas. Portanto, o mesmo aplicativo deveria ser programado de duas formas diferentes, isto é, utilizando no mínimo duas linguagens de programação, fazendo com que mais tempo fosse necessário durante o desenvolvimento, pois seria necessário construir a mesma aplicação duas vezes. Para contornar esse problema, alternativas foram desenvolvidas para otimizar o tempo de desenvolvimento, ou seja, o programador desenvolveria um código e esse mesmo poderia ser utilizado para os dois sistemas. Essa técnica é denominada como Desenvolvimento Multiplataforma (\textit{Cross-Platform}).\cite{desenvolvimentoMobile}
 
-O Desenvolvimento Multiplataforma pode ser efetuado de duas formas, "Hybrid" e "Native". O primeiro utiliza recursos de desenvolvimento Web, como HTML, JS e CSS para a construção da aplicação e a mesma será executada a partir de um navegador, já o segundo, faz o usufruto de Frameworks que irão gerar um arquivo compilado como se fosse proveniente de um código nativo para cada plataforma, sendo que a linguagem utilizada varia de acordo com o Framework escolhido. Além disso, para essa última solução é possível mesclar código nativo com o código utilizado pelo Framework.
+O Desenvolvimento Multiplataforma pode ser efetuado de duas formas, ``Hybrid'' e ``Native''. O primeiro utiliza recursos de desenvolvimento Web, como HTML, JS e CSS para a construção da aplicação e a mesma será executada a partir de um navegador, já o segundo, faz o usufruto de Frameworks que irão gerar um arquivo compilado como se fosse proveniente de um código nativo para cada plataforma, sendo que a linguagem utilizada varia de acordo com o Framework escolhido. Além disso, para essa última solução é possível mesclar código nativo com o código utilizado pelo Framework.
 
-Alguns exemplos de Frameworks utilizados em soluções de desenvolvimento "Hybrid" são o Cordova, Ionic e PhoneGap, já para as soluções do tipo "Native" podem ser citados como exemplo o Flutter, o React Native e o Xamarim. As aplicações quando desenvolvidas utilizando esses três últimos Frameworks, descritos anteriormente, fornecem uma performance melhor quando comparadas àquelas aplicações desenvolvidas com os três primeiros.
+Alguns exemplos de Frameworks utilizados em soluções de desenvolvimento ``Hybrid'' são o Cordova, Ionic e PhoneGap, já para as soluções do tipo ``Native'' podem ser citados como exemplo o Flutter, o React Native e o Xamarim. As aplicações quando desenvolvidas utilizando esses três últimos Frameworks, descritos anteriormente, fornecem uma performance melhor quando comparadas àquelas aplicações desenvolvidas com os três primeiros.\cite{desenvolvimentoMobile}
+%FIXME: Adicionar ref
 
-Vale ressaltar que há uma preferência no mercado para o uso dos Frameworks dessa última solução apresentada. Essa afirmação pode ser observada após uma breve análise da \autoref{tab-stack-overflow-framework-tools}, além do mais, o React Native possui uma parcela maior do mercado quando comparado ao Cordova, algo que também pode ser constado na mesma tabela. Além desses, também está presente o Framework Flutter, tendo sido lançado há menos tempo quando comparado ao outros dois.
+Vale ressaltar que há uma preferência no mercado para o uso dos Frameworks dessa última solução apresentada. Essa afirmação pode ser observada após uma breve análise da \autoref{tab-stack-overflow-framework-tools}, além do mais, o React Native possui uma parcela maior do mercado quando comparado ao Cordova, algo que também pode ser na mesma tabela. Além desses, também está presente o Framework Flutter, tendo sido lançado há menos tempo quando comparado ao outros dois.
 
-Portanto, ainda deve ser observado que as linguagens utilizadas por esses Frameworks de Desenvolvimento Multiplataforma "Native" são Dart, JavaScript e C\#, respectivamente para, Flutter, React Native e Xamarim.
+Portanto, ainda deve ser observado que as linguagens utilizadas por esses Frameworks de Desenvolvimento Multiplataforma ``Native'' são Dart, JavaScript e C\#, respectivamente para, Flutter, React Native e Xamarim.\cite{flutterDefinition} \cite{reactNativeAbout} \cite{xamarimDefinicao}
 
 \section{JavaScript}\label{JavaScript}
 
-Antes, as páginas eram construídas de modo estático, isto é, caso o usuário inserisse um conjunto de informações em um formulário, e caso, dentre esse conjunto, contivesse um dado inválido, a validação era feita do lado do servidor (Server Side) e dependendo da forma em que o site foi construído, toda informação inserida pelo usuário poderia ser perdida, necessitando que o mesmo as inserissem novamente.
+%FIXME: Adicionar ref
+No início da Internet, as páginas eram construídas de modo estático, isto é, caso o usuário inserisse um conjunto de informações em um formulário, e caso, dentre esse conjunto, contivesse um dado inválido, a validação era feita do lado do servidor (Server Side) e dependendo da forma em que o site foi construído, toda informação inserida pelo usuário poderia ser perdida, necessitando que o mesmo as inserisse novamente.
 
-De forma a corrigir esse problema e melhorar a navegação nessas páginas para tornar a experiência do usuário mais agradável, eis que surge a linguagem de programação JavaScript por volta do fim do ano de 1995, algo que revolucionou as páginas dessa mesma época.
+De forma a corrigir esse problema e melhorar a navegação nessas páginas para tornar a experiência do usuário mais agradável, eis que surge a linguagem de programação JavaScript por volta do fim do ano de 1995, algo que revolucionou as páginas dessa mesma época.\cite{javascriptHistoria}
 
-Com o JavaScript, uma linguagem interpretada, é possível tornar as páginas da Web dinâmicas, além de que o problema da perda de informação de formulários poderia ser facilmente corrigido com o uso dessa linguagem. A validação que antes necessitava de uma nova requisição com o servidor, agora poderia ser feito no próprio lado do cliente (Client Side), ou seja, a partir de um script que poderia ser executado no próprio navegador do usuário, o que poderia efetuar a mesma verificação de dados com a mesma precisão de antes.
+Com o JavaScript, uma linguagem interpretada, é possível tornar as páginas da Web dinâmicas, além de que o problema da perda de informação de formulários poderia ser facilmente corrigido com o uso dessa linguagem. A validação que antes necessitava de uma nova requisição com o servidor, agora poderia ser feita no próprio lado do cliente (Client Side), ou seja, a partir de um script que poderia ser executado no próprio navegador do usuário, o que poderia efetuar a mesma verificação de dados com a mesma precisão de antes.\cite{javascriptHistoria} \cite{javascriptWikipedia}
 
-Além disso, por estar executando na própria máquina do cliente, o processo torna-se muito mais rápido, pois pode ser feito instantaneamente após o usuário terminar de inserir uma determinada informação, não sendo necessário inserir todas as informações necessárias ao formulário para então efetuar a verificação.
+Além disso, por estar executando na própria máquina do cliente, o processo torna-se muito mais rápido, pois pode ser feito instantaneamente após o usuário terminar de inserir uma determinada informação, não sendo necessário inserir todas as informações necessárias ao formulário para então efetuar a verificação.\cite{formValidation}
 
-Outra vantagem, é que esse procedimento é muito mais rápido em decorrência do tempo de processamento ter diminuído, uma vez que não é mais necessário efetuar novas requisições de validações ao servidor, logo, não ocorrerá mais atraso no tempo de execução tendo a latência da comunicação entre a máquina do cliente com o servidor como causa. Ainda, vale destacar que a latência desse período era muito maior quando comparada aos dias atuais, pois a conexão com a internet ainda era feita de modo discado, isto é, conectando-se a rede mundial de computadores por meio do telefone.
+Outra vantagem, é que esse procedimento é muito mais rápido em decorrência do tempo de processamento ter diminuído, uma vez que não é mais necessário efetuar novas requisições de validações ao servidor, logo, não ocorrerá mais atraso no tempo de execução tendo a latência da comunicação entre a máquina do cliente com o servidor como causa\cite{formValidation}. Ainda, vale destacar que a latência desse período era muito maior quando comparada aos dias atuais, pois a conexão com a internet ainda era feita de modo discado, isto é, conectando-se a rede mundial de computadores por meio do telefone.
 
 \subsection{A popularidade do JavaScript}
 \label{secao-javascript-popularidade}
 
-Como é possível observar no ranking das linguagens elaborado pelo StackOverflow, no qual é representado pela \autoref{tab-stack-overflow-linguagens}, a linguagem JavaScript foi a mais popular nessa pesquisa. Isso pode ser justificado devido ao fato de que além do uso em seu propósito inicial, isto é, em navegadores, essa mesma linguagem também está sendo utilizado para programação de servidores web, criação de programas de computadores e até mesmo para construção de aplicativos móveis. Essa flexibilidade no uso da linguagem é possível com a utilização de Frameworks.
+Como é possível observar no ranking das linguagens elaborado pelo StackOverflow, no qual é representado pela \autoref{tab-stack-overflow-linguagens}, a linguagem JavaScript foi a mais popular nessa pesquisa. Isso pode ser justificado devido ao fato de que além do uso em seu propósito inicial, isto é, em navegadores, essa mesma linguagem também está sendo utilizada para programação de servidores web, criação de programas de computadores e até mesmo para construção de aplicativos móveis. Essa flexibilidade no uso da linguagem é possível com a utilização de Frameworks.
 
-Esse comportamento fica evidente após uma análise da \autoref{tab-stack-overflow-framework-tools} que representa o ranking a respeito dos "Frameworks, Bibliotecas e Ferramentas Mais Populares". Esse ranking foi elaborado através das respostas de 49.861 desenvolvedores que fazem usufruto desses recursos para o meio profissional. Na liderança, sendo utilizado em 50,4\% dos casos, consta o Framework "Node.js" que é utilizado na criação de servidores com o JavaScript. Outro Framework para essa mesma linguagem também presente nas cinco primeiras posições é o "React Native", que é utilizado para o desenvolvimento de aplicações móveis.
+Esse comportamento fica evidente após uma análise da \autoref{tab-stack-overflow-framework-tools} que representa o ranking a respeito dos ``Frameworks, Bibliotecas e Ferramentas Mais Populares''. Esse ranking foi elaborado através das respostas de 49.861 desenvolvedores que fazem usufruto desses recursos para o meio profissional. Na liderança, sendo utilizado em 50,4\% dos casos, consta o Framework ``Node.js'' que é utilizado na criação de servidores com o JavaScript. Outro Framework para essa mesma linguagem também presente nas cinco primeiras posições é o ``React Native'', que é utilizado para o desenvolvimento de aplicações móveis.
 
-Os outros três frameworks mais populares, isto é, ".Net", ".Net Core" e "Pandas" são utilizados com outras linguagens, também populares, sendo os dois primeiros utilizados com o "C\#" e o último com o "Python".
+Os outros três frameworks mais populares, isto é, ``.Net'', ``.Net Core'' e ``Panda'' são utilizados com outras linguagens, também populares, sendo os dois primeiros utilizados com o ``C\#'' e o último com o ``Python''.
 
 % FIXME: Verificar ABNT se pode centralizar
 \begin{table}[htb]
@@ -275,45 +277,45 @@ Os outros três frameworks mais populares, isto é, ".Net", ".Net Core" e "Panda
 \end{table}
 
 \newpage
-Por fim, ao efetuar uma observação na \autoref{tab-stack-overflow-web-framework}, que é sobre o "Ranking dos Frameworks para Web Mais Populares", fique evidente a soberania do JavaScript, pois é possível constatar que metade deles são para utilização com essa mesma linguagem.
+Por fim, ao efetuar uma observação na \autoref{tab-stack-overflow-web-framework}, que é sobre o ``Ranking dos Frameworks para Web Mais Populares'', fique evidente a soberania do JavaScript, pois é possível constatar que metade deles são para utilização com essa mesma linguagem.
 
 \subsection{A flexibilidade do JavaScript}
 \label{sec-javascript-flexibilidade}
 
-Conforme foi apresentado na \autoref{secao-javascript-popularidade}, a popularidade é resultante da flexibilidade na qual é proporcionada à linguagem através de bibliotecas e Frameworks. Um exemplo dessa flexibilidade é a utilização dessa linguagem no lado dos servidores, para isso, o Framework \textit{Node.js} poderá ser utilizado, pois o mesmo provem uma forma de se desenvolver utilizando o script dessa linguagem sem que esse seja executado em um navegador, com isso, torna-se possível que sua execução seja multiplataforma como um servidor convencional.
+Conforme apresentado na \autoref{secao-javascript-popularidade}, a popularidade é resultante da flexibilidade na qual é proporcionada à linguagem através de bibliotecas e Frameworks. Um exemplo dessa flexibilidade é a utilização dessa linguagem no lado dos servidores, para isso, o Framework \textit{Node.js} poderá ser utilizado\cite{nodeJsSobre}. Esse mesmo Framework disponibiliza uma forma de se desenvolver utilizando o script dessa linguagem sem que esse seja executado em um navegador, com isso, torna-se possível que sua execução seja multiplataforma como um servidor convencional\cite{nodeJsMDN}.
 
-Combinado com o Express, outro Framework, torna-se possível efetuar o controle de requisições de diferentes rotas e URLs, como também, a interceptação das mesmas para pré-processamento ou processamento e efetuar um tratamento caso necessário.
+Combinado com o Express, outro Framework, torna-se possível efetuar o controle de requisições de diferentes rotas e URLs, como também, a interceptação das mesmas para pré-processamento ou processamento e efetuar um tratamento caso necessário\cite{nodeJsMDN}.
 
-Existem também aqueles Frameworks que são utilizados na construção de interfaces de usuários, isto é, no Frontend, com isso são executados do lado do cliente em contraposição ao Node.js. Além disso, é possível efetuar a construção de aplicativos mais modernos, como os sites SPA ("Single Page Application") que são as aplicações de uma única página. Alguns Frameworks que permitem desenvolver tais aplicativos são o Angular, Vue.js e o React, sendo esse último o mais popular conforme pode ser observado na \autoref{tab-stack-overflow-web-framework}.
+Existem também aqueles Frameworks que são utilizados na construção de interfaces de usuários, isto é, no Frontend, com isso são executados do lado do cliente em contraposição ao Node.js. Além disso, é possível efetuar a construção de aplicativos mais modernos, como os sites SPA (``Single Page Application'') que são as aplicações de uma única página. Alguns Frameworks que permitem desenvolver tais aplicativos são o Angular, Vue.js e o React, sendo esse último o mais popular conforme pode ser observado na \autoref{tab-stack-overflow-web-framework}\cite{angularIntroduction} \cite{angularWiki} \cite{vueJsAbout} \cite{vueJsWiki} \cite{reactAbout} \cite{reactWiki}.
 
-Por fim, conforme já destacado na \autoref{sec-desenvolvimento-apps}, outro campo de desenvolvimento que o JavaScript pode ser utilizado é com o Framework React Native, sendo que os princípios são semelhantes ao do React, no entanto, enquanto o último interage com o HTML, o primeiro é somente com JavaScript puro junto a sintaxe JSX.
+Por fim, conforme já destacado na \autoref{sec-desenvolvimento-apps}, outro campo de desenvolvimento que o JavaScript pode ser utilizado é com o Framework React Native, sendo que os princípios são semelhantes ao do React, no entanto, enquanto o último interage com o HTML, o primeiro é somente com JavaScript puro junto a sintaxe JSX\cite{reactNativeAbout}\cite{reactNativeWiki}.
 
 \section{Banco de dados}
 
-Conforme é dito em (\citeauthor{silberschatz2016sistema}, \citeyear{silberschatz2016sistema}), um banco de dados é "uma coleção de dados inter-relacionados, representando informações sobre um domínio específico", isto é, um conjunto de informações relacionadas e que podem ser agrupadas de alguma forma, poderá constituir um banco de dados.
+Conforme é dito em (\citeauthor{silberschatz2016sistema}, \citeyear{silberschatz2016sistema}), um banco de dados é ``uma coleção de dados inter-relacionados, representando informações sobre um domínio específico'', isto é, um conjunto de informações relacionadas e que podem ser agrupadas de alguma forma, poderá constituir um banco de dados.
 
 As ferramentas utilizadas para o armazenamento e gerenciamento dos dados são os Sistemas de Gerenciamento de Banco de Dados (SGBD), que provem uma forma de manipulação e recuperação desses mesmo dados.
 
-Além disso, existem dois tipos de banco de dados, e esses se diferem principalmente pela forma na qual os dados são armazenados, isto é, a estrutura do armazenamento. Os banco de dados mais tradicionais são os do tipo Relacional, em que os dados são estruturadas em formato de tabela, onde cada registro é armazenado em uma linha e os dados desse registro são separados por colunas.
+Além disso, existem dois tipos de banco de dados, e esses se diferem principalmente pela forma na qual os dados são armazenados, isto é, a estrutura do armazenamento. Os banco de dados mais tradicionais são os do tipo Relacional, em que os dados são estruturados em formato de tabela, onde cada registro é armazenado em uma linha e os dados desse registro são separados por colunas.
 
-Um exemplo de linguagem para consulta de dados em bases relacionais é o SQL ("Structured Query Language", que uma tradução livre significa "Linguagem de Consulta Estruturada"), e com essa linguagem é possível efetuar a inserção, atualização e a exclusão dos dados. Alguns tipos de banco de dados que fazem o uso dessa linguagem são: MySQL, SQL Server, PostgreSQL, SQLite e outros.
+Um exemplo de linguagem para consulta de dados em bases relacionais é o SQL (``Structured Query Language'', que em uma tradução livre significa ``Linguagem de Consulta Estruturada''), e com essa linguagem é possível efetuar a inserção, atualização e a exclusão dos dados. Alguns tipos de banco de dados que fazem o uso dessa linguagem são: MySQL, SQL Server, PostgreSQL, SQLite e outros.\cite{tiposBancoDeDados} \cite{sqLite}
 
-Já os bancos de dados do tipo não-relacional, são aqueles também conhecidos como NoSQL ("Not Only SQL"), ou seja, onde a linguagem SQL não é aplicada. Esse tipo de banco, foi criado para prover recursos nos quais os bancos relacionais não são tão eficazes. A estrutura utilizada varia de acordo com o banco utilizado, podendo ser no formato de chave-valor, colunas, grafos e documentos. Esse último é o utilizado por bancos do tipo MongoDB, onde os dados são armazenados no formato de objetos do JavaScript, isto é, no formato Json.
+Já os bancos de dados do tipo não-relacional, são aqueles também conhecidos como NoSQL (``Not Only SQL''), ou seja, onde a linguagem SQL não é aplicada. Esse tipo de banco, foi criado para prover recursos nos quais os bancos relacionais não são tão eficazes. A estrutura utilizada varia de acordo com o banco utilizado, podendo ser no formato de chave-valor, colunas, grafos e documentos. Esse último é o utilizado por bancos do tipo MongoDB, onde os dados são armazenados no formato de objetos do JavaScript, isto é, no formato Json.\cite{mongoDBDefinition}
 
-É possível utilizar esses mesmos bancos de dados em aplicações móveis, no entanto, como existem diversos modelos de aparelhos e alguns possuem recursos limitados, existem uma preferência para a utilização de bancos que exigem menos recursos, assim como é o caso SQLite. Além disso, esse mesmo banco consta entre os cinco mais utilizados pelos desenvolvedores na pesquisa a respeito dos bancos de dados também elaborada pelo StackOverflow.\cite{stackOverflowRanking} Esse tipo de solução é mais utilizado quando uma conexão à internet não é necessária ao total funcionamento da aplicação.\cite{mobileDatabase}
+É possível utilizar esses mesmos bancos de dados em aplicações móveis, no entanto, como existem diversos modelos de aparelhos e alguns possuem recursos limitados, existe uma preferência para a utilização de bancos que exigem menos recursos, assim como é o caso SQLite. Além disso, esse mesmo banco consta entre os cinco mais utilizados pelos desenvolvedores na pesquisa a respeito dos bancos de dados também elaborada pelo StackOverflow.\cite{stackOverflowRanking} Esse tipo de solução é mais utilizado quando uma conexão à internet não é necessária ao total funcionamento da aplicação.\cite{mobileDatabase}
 
 \section{Web Scraping}
 
 O Web Scraping\cite{webscrapingRockContent} é o nome dado a técnica de obtenção de dados disponíveis em páginas da Web. Esses dados podem ser obtidos através de ferramentas automatizadas ou até mesmo programadas para somente adquirir as informações de interesse não precisando armazenar todas as informações presentes no site.
 Os dados podem ser armazenados tanto em bancos de dados ou em arquivos para poderem ser analisados futuramente.
 
-As bibliotecas mais populares para o desenvolvimento de ferramentas que efetuam o Web Scraping são BeautifulSoap, JSoup e Cheerio, respectivamente para as linguagens: Python, Java e JavaScript.
+As bibliotecas mais populares para o desenvolvimento de ferramentas que efetuam o Web Scraping são BeautifulSoap, JSoup e Cheerio, respectivamente para as linguagens: Python, Java e JavaScript.\cite{cheerio} \cite{beautifulSoupDefinition} \cite{jSoupDefinition}
 
-Para o uso através de aplicativos móveis, tomando como o exemplo os desenvolvidos em Java para os dispositivos do sistema Android, é possível efetuar o uso da biblioteca JSoup assim como é feito em aplicações tradicionais para computadores. Porém, dependendo da finalidade em que tal coleta de dados necessita ser feita, a quantidade de dados e a quantidade de páginas que precisam ser visitadas, talvez não seja uma solução viável a ser implementada no próprio aplicativo a ser executado no celular do usuário, pois todo processo da coleta desses dados irá consumir uma fatia da franquia de internet móvel, fazendo com que o processamento em um meio externo ao celular seja um procedimento mais viável.
+Para o uso através de aplicativos móveis, tomando como o exemplo os desenvolvidos em Java para os dispositivos do sistema Android, é possível efetuar o uso da biblioteca JSoup assim como é feito em aplicações tradicionais para computadores\cite{jSoupAndroid}. Porém, dependendo da finalidade em que tal coleta de dados necessita ser feita, a quantidade de dados e a quantidade de páginas que precisam ser visitadas, talvez não seja uma solução viável a ser implementada no próprio aplicativo a ser executado no celular do usuário, pois todo processo da coleta desses dados irá consumir uma fatia da franquia de internet móvel, fazendo com que o processamento em um meio externo ao celular seja um procedimento mais viável.
 
 \section{QRCode}
 
-O nome QRCode\cite{qrCodeOlharDigital} é uma abreviação para \textit{Quick Response Code}, que em tradução livre significa "Código de Resposta Rápida". Esse código foi inventado em meados dos anos 90 com o propósito de ser utilizado pela indústria automobilística, no entanto, nos últimos anos tem sido adotado por diversos meios, desde periódicos impressos, com intuito de aumentar a iteração com os leitores, como em anúncios diversos e até mesmo em meios de pagamentos.\cite{qrCodeCanalTech}
+O nome QRCode\cite{qrCodeOlharDigital} é uma abreviação para \textit{Quick Response Code}, que em tradução livre significa ``Código de Resposta Rápida''. Esse código foi inventado em meados dos anos 90 com o propósito de ser utilizado pela indústria automobilística, no entanto, nos últimos anos tem sido adotado por diversos meios, desde periódicos impressos, com intuito de aumentar a iteração com os leitores, como em anúncios diversos e até mesmo em meios de pagamentos\cite{qrCodeCanalTech}. Um exemplo de um QRCode pode ser observado na \autoref{fig-exemplo-qrcode}.
 
 Qualquer informação numérica, e até mesmo alfanumérica, pode ser representada de forma visual através do QRCode, pois se trata de um código de barras em uma representação bidimensional. Como a informação é transformada em texto, deve-se atentar que existe uma limitação quanto a quantidade de caracteres que poderá ser utilizada que irá variar de acordo com a versão adotada na construção do código.
 
@@ -325,25 +327,25 @@ Um novo tipo de transferência monetária está sendo desenvolvido pelo Banco Ce
 % FIXME: Adicionar referencia a imagem
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.5]{tcc/figures/exemplo-qrcode.png}
     \caption{Exemplo de um QRCode}
-    \legend{Fonte: O Autor.}
+    \includegraphics[scale=0.5]{tcc/figures/exemplo-qrcode.png}
+    \legend{Fonte: O Autor (2020).}
     \label{fig-exemplo-qrcode}
 \end{figure}
 
 \section{O que é CAPTCHA?}
 \label{secao-captcha-definicao}
 
-O CAPTCHA\cite{captchaWikipedia} é um acrônimo, em inglês, para "Completely Automated Public Turing Test to Tell Computers and Humans Apart", que pode ser traduzido como "Teste de Turing público completamente automatizado para distinção entre computadores e humanos", que nada mais é do que um desafio cognitivo para o impedimento de uso de ferramentas automáticas em sistemas. O uso de algumas dessas ferramentas podem fazer que em determinados casos, quando utilizados com abuso e/ou má-fé, levem a um consumo elevado dos recursos de alguns serviços, consequentemente, podem prejudicar a experiência de outros usuários desses mesmos serviços.
+O CAPTCHA\cite{captchaWikipedia} é um acrônimo, em inglês, para ``Completely Automated Public Turing Test to Tell Computers and Humans Apart'', que pode ser traduzido como ``Teste de Turing público completamente automatizado para distinção entre computadores e humanos'', que nada mais é do que um desafio cognitivo para o impedimento de uso de ferramentas automáticas em sistemas. O uso de algumas dessas ferramentas podem fazer que em determinados casos, quando utilizados com abuso e/ou má-fé, levem a um consumo elevado dos recursos de alguns serviços, consequentemente, podem prejudicar a experiência de outros usuários desses mesmos serviços.
 
-As versões mais simples do CAPTCHA consiste em uma imagem com uma frase (podendo ter sentido ou não) ou um conjunto de caracteres alfanuméricos\cite{captchaTecmundo}, e um campo de entrada de texto para que o usuário digitasse o conteúdo contido nessa imagem, caso o mesmo digitasse corretamente, o teste estaria concluído com êxito, fazendo com que a funcionalidade requisitada, protegida por esse teste, fosse liberada.
+As versões mais simples do CAPTCHA consistem em uma imagem com uma frase (podendo ter sentido ou não) (\autoref{fig-exemplo-captcha-simples}) ou um conjunto de caracteres alfanuméricos \cite{captchaTecmundo} (\autoref{fig-exemplo-captcha-alfanumerico}), e um campo de entrada de texto para que o usuário digitasse o conteúdo contido nessa imagem. Caso o mesmo digitasse corretamente, o teste estaria concluído com êxito, fazendo com que a funcionalidade requisitada, protegida por esse teste, fosse liberada.
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.5]{tcc/figures/captcha/captcha-frase.jpg}
     \caption{Exemplo de um CAPTCHA simples}
+    \includegraphics[scale=0.5]{tcc/figures/captcha/captcha-frase.jpg}
     \legend{Fonte: Wikipedia\cite{captchaWikipedia}}
     \label{fig-exemplo-captcha-simples}
 \end{figure}
@@ -352,24 +354,24 @@ As versões mais simples do CAPTCHA consiste em uma imagem com uma frase (podend
 % FIXME: Adicionar referencia a imagem
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.5]{tcc/figures/captcha/captcha-alfanumerico.png}
     \caption{Exemplo de um CAPTCHA simples com texto alfanumérico}
+    \includegraphics[scale=0.5]{tcc/figures/captcha/captcha-alfanumerico.png}
     \legend{Fonte: Wikipedia\cite{captchaWikipedia}}
     \label{fig-exemplo-captcha-alfanumerico}
 \end{figure}
 
-Esse tipo de teste pode ser burlado por algumas ferramentas automáticas uma vez que existe a possibilidade de efetuar a detecção de texto em uma imagem, tal técnica é conhecida como OCR ("Optical Character Recognition", em português: "Reconhecedor Ótico de Caracteres").\cite{captchaExame}
+Esse tipo de teste pode ser burlado por algumas ferramentas automáticas uma vez que existe a possibilidade de efetuar a detecção de texto em uma imagem. Tal técnica é conhecida como OCR (``Optical Character Recognition'', em português: ``Reconhecedor Ótico de Caracteres'').\cite{captchaExame}
 
-Atualmente, existem versões mais modernas desses testes que exigem que o usuário clique em uma imagem aleatória, o que dificulta o trabalho de ferramentas fraudadoras desses testes.\cite{captchaExame}
+Atualmente, existem versões mais modernas (\autoref{fig-exemplo-captcha-moderno}) desses testes que exigem que o usuário clique em uma imagem aleatória, o que dificulta o trabalho de ferramentas fraudadoras desses testes.\cite{captchaExame}
 
 % FIXME: Ajustar a imagem
 % FIXME: Adicionar referencia a imagem
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.15]{tcc/figures/captcha/recaptcha-post-g1.jpg}
     \caption{Exemplo de um CAPTCHA moderno}
+    \includegraphics[scale=0.15]{tcc/figures/captcha/recaptcha-post-g1.jpg}
     \legend{Fonte: G1\cite{captchaG1}}
-    \label{fig-exemplo-captcha-alfanumerico}
+    \label{fig-exemplo-captcha-moderno}
 \end{figure}
 
 \section{A Nota Fiscal de Consumidor Eletrônica}\label{secNfce}
@@ -382,8 +384,8 @@ Com a publicação do Decreto nº 44.785 em 12 de maio de 2014, a NFC-e foi inst
 % FIXME: Adicionar referencia a imagem
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.5]{modelo_nota_fiscal}
     \caption{Exemplo de uma NFC-e}
+    \includegraphics[scale=0.5]{modelo_nota_fiscal}
     \legend{Fonte: Secretaria de Fazenda - RJ}
     \label{modeloNfce}
 \end{figure}
@@ -396,6 +398,8 @@ A verificação de autenticidade pode ser efetuada através de um site disponibi
 
 \section{Aplicativos semelhantes}
 
-Existem aplicativos disponíveis para download nas lojas das plataformas IOS e Android com uma proposta semelhante ao trabalho desenvolvido. Como exemplo, pode ser citado o \textbf{Menor Preço}\cite{menorPrecoApp}, que é desenvolvido e mantido pelo Governo do Estado do Paraná. Através desse aplicativo, é possível consultar os preços de qualquer estabelecimento dos estados do Paraná, Espirito Santo e Pernambuco, no entanto, as informações das compras são obtidas diretamente das secretarias de fazenda de cada estado, não sendo necessário o usuário efetuar o cadastro de suas notas. Existem ainda outros aplicativos com esse mesmo funcionamento para outros locais como o \textbf{Melhor Preço Amazonas}\cite{melhorPrecoAmazonasApp} e o \textbf{Meus Preços (São Paulo)}\cite{meusPrecosApp}.
+Existem aplicativos disponíveis para download nas lojas das plataformas iOS e Android com uma proposta semelhante ao trabalho desenvolvido. Como exemplo, pode ser citado o \textbf{Menor Preço}\cite{menorPrecoApp}, que é desenvolvido e mantido pelo Governo do Estado do Paraná. Através desse aplicativo, é possível consultar os preços de qualquer estabelecimento dos estados do Paraná, Espirito Santo e Pernambuco, no entanto, as informações das compras são obtidas diretamente das secretarias de fazenda de cada estado, não sendo necessário o usuário efetuar o cadastro de suas notas. Existem ainda outros aplicativos com esse mesmo funcionamento para outros locais como o \textbf{Melhor Preço Amazonas}\cite{melhorPrecoAmazonasApp} e o \textbf{Meus Preços (São Paulo)}\cite{meusPrecosApp}.
 
 Outro aplicativo que possui abrangência nacional e que o funcionamento se assemelha ao desenvolvido nesse projeto é o \textbf{Pinngo}\cite{pinngoApp}, onde sua base de dados é feita através da contribuição dos usuários.
+
+A principal diferença do aplicativo desenvolvido para os aplicativos semelhantes é que os usuários podem efetuar suas contribuições sem a necessidade de se cadastrar na aplicação assim como consultar os registros referentes aos produtos. Ou seja, devido a ausência de cadastros, tem-se a garantias que os dados são adicionados de forma totalmente anônima, o que preserva a privacidade de seus usuários.

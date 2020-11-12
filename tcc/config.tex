@@ -181,13 +181,17 @@ local} %Título do trabalho
 \addtocontents{toc}{%
 	\protect\renewcommand{\protect\cftchapterleader}{%-- switch it on here
 		\normalsize\normalfont\protect\cftdotfill{\protect\cftdotsep}}}
-\renewcommand*{\cftchapterfont}{\normalfont\fontseries{b}} %\fontseries{b}
+\renewcommand{\cftchapterpresnum}{\normalfont} % Numeração do capítulo não ficar em negrito
+\renewcommand{\cftchapterpagefont}{\normalfont} % Páginas do capítulo não ficar em negrito
+\renewcommand*{\cftchapterfont}{\normalfont\bfseries} % Título do capítulo em negrito
 \renewcommand{\chapnumfont}{\normalfont\normalsize}
 \renewcommand*{\cftsectionfont}{\normalfont} %\fontseries{b}
 \renewcommand*{\cftsubsectionfont}{\normalfont}
 \renewcommand*{\cftsubsubsectionfont}{\normalfont}
 \renewcommand*{\cftsubsubsubsectionfont}{\normalfont}
 \renewcommand*{\cftparagraphfont}{\normalfont} %\itshape
+
+
 
 %% Forca underline na secao terciaria
 \newcommand{\tmpsubsection}[1]{}

@@ -58,7 +58,7 @@
 \usepackage{minted}
 
 \include{config}		%Define as configurações do arquivo
-
+  
 \begin{document}
     
 	%Capa
@@ -79,12 +79,19 @@
 	\include{epigrafe}
 	\include{resumo}
 	\include{abstract}
+	
+	%Lista de Figuras
+	\renewcommand*\listfigurename{Lista de Figuras}
 	\listoffigures*
 	\cleardoublepage
+	
 	\listoftables*
 	\cleardoublepage
 	%\include{abreviaturas}
 	\include{siglas}
+	
+	%Sumário
+	\pdfbookmark[0]{\contentsname}{toc}
 	\tableofcontents*
 	\cleardoublepage
 	

@@ -29,7 +29,7 @@ Já para reprodução com o QRCode, é possível obter o conteúdo diretamente s
 
 A análise dos dados é feita com o auxílio da ferramenta Cheerio\cite{cheerio}, que é um módulo baseado no jQuery, um Framework Web bastante popular do JavaScript\cite{stackOverflowRanking}, para utilização com o Node.js. Com o conteúdo da página, é possível obter cada informação individualmente, logo é possível saber quais produtos foram comprados como também o preço unitário e a quantidade comprada de cada produto. Além disso, também é possível armazenar os dados do local da compra como o nome do estabelecimento e o seu endereço. Por fim, dados gerais da compra também podem ser recuperados como a data e a hora em que foi realizada.
 
-A recuperação da informação contida página é possível pois o conteúdo é construído com a linguagem HTML e através dos elementos que compõe a página, é possível identificá-los e efetuar a separação da informação.
+A recuperação da informação contida na página é possível pois o conteúdo é construído com a linguagem HTML e através dos elementos que compõe a página, é possível identificá-los e efetuar a separação da informação.
 
 \section{Armazenamento das informações}
 \label{armazenamentoInfo}
@@ -42,7 +42,7 @@ A recuperação da informação contida página é possível pois o conteúdo é
 % https://www.monografias.ufop.br/bitstream/35400000/1963/6/MONOGRAFIA_An%C3%A1liseProjetosBanco.pdf
 Com os dados provenientes da NFC-e já processados, ou seja, analisados e separados, esse conteúdo resultante é armazenado em um banco de dados para que a informação seja disponibilizada posteriormente para consultas a partir da aplicação.
 
-Esse conteúdo é armazenado em um banco de dados e o tipo utilizado pela aplicação é o MongoDB, que é um banco de dados não-relacional onde os dados são armazenados em formato de documento. Como a aplicação está sendo feita em JavaScript, foi optado em utilizar esse banco devido à conveniência resultante do uso junto ao Json.
+Esse conteúdo é armazenado em um banco de dados e o tipo utilizado pela aplicação é o MongoDB, que é um banco de dados não-relacional onde os dados são armazenados em formato de documento. Como a aplicação está sendo feita em JavaScript, foi optado em utilizar esse banco devido à conveniência resultante do uso junto ao Json.\cite{mongoDBDefinition}
 
 Além disso, esse tipo de banco é altamente escalável, isto é, caso seja necessário mais espaço para o armazenamento dos dados, o conteúdo pode ser distribuído em diversas máquinas sem afetar o desempenho geral da aplicação.
 
@@ -77,7 +77,7 @@ Abaixo, temos um exemplo de uma nota fiscal real no formato que se encontra arma
 
 Os dados são disponibilizados com o auxílio do servidor principal da aplicação no qual possui uma conexão com o servidor em que se encontra o banco de dados. Através do Framework Express é possível criar de uma forma flexível uma API, que permite a comunicação com outras aplicações. Com isso, é disponibilizada uma URL que permite a consulta dos produtos salvos na base de dados.
 
-A consulta é feita através do nome do produto, e esse nome pode estar acentuado corretamento, erroneamente ou até mesmo sem acentos, que os mesmos dados serão retornados. Os dados retornados contêm o nome do produto da forma que consta na nota fiscal, o nome do estabelecimento no qual a compra foi efetuada, a data e a hora da compra. Para cada produto compatível com a consulta, é retornado o último registro salvo para cada estabelecimento para que o usuário sempre possa ter o preço mais recente.
+A consulta é feita através do nome do produto, e esse nome pode estar acentuado corretamente, erroneamente ou até mesmo sem acentos, que os mesmos dados serão retornados. Os dados retornados contêm o nome do produto da forma que consta na nota fiscal, o nome do estabelecimento no qual a compra foi efetuada, a data e a hora da compra. Para cada produto compatível com a consulta, é retornado o último registro salvo para cada estabelecimento para que o usuário sempre possa ter o preço mais recente.
 
 Vale ressaltar que é possível refinar a cidade em que a consulta deverá ser feita, assim como retornar os registros de todas as cidades disponíveis.
 
@@ -95,11 +95,11 @@ Conforme descrito nas seções \ref{obtencaoInformacoes} e \ref{armazenamentoInf
 
 \subsection{Backend}
 
-Como todo processamento dos dados é feito em meio externo ao telefone móvel do usuário, logo, a utilização de um servidor é necessária e com isso será necessário a utilização de máquinas para poder executar o código desenvolvido para esse propósito. Um computador pessoal de baixo custo atende esse requisito, no entanto, a medida que o uso do aplicativo tornar-se mais frequente e a base de clientes for aumentando, uma máquina com mais recursos será imprescindível.
+Como todo processamento dos dados é feito em meio externo ao telefone móvel do usuário, logo, a utilização de um servidor é necessária e com isso será necessário a utilização de máquinas para poder executar o código desenvolvido para esse propósito. Um computador pessoal de baixo custo atende esse requisito, no entanto, à medida que o uso do aplicativo tornar-se mais frequente e a base de clientes for aumentando, uma máquina com mais recursos será imprescindível.
 
 O uso de uma máquina física para esses propósitos é uma solução viável, no entanto, existem serviços que fornecem recursos de hospedagem a um custo acessível e caso elegível, e em alguns casos até mesmo de forma gratuita.
 
-Uma das principais vantagens do uso de serviços de hospedagem é que o serviço não será interrompido caso haja queda de energia ou até mesmo ficar sem conexão com a internet. Um dos serviços mais populares que oferecem tais recursos de hospedagem é o Heroku\cite{heroku}, que fornece desde uma máquina simples gratuita até serviços mais robustos focados para o uso de alto fluxo de dados como ocorre em grandes corporações.
+Uma das principais vantagens do uso de serviços de hospedagem é que o serviço não será interrompido caso haja queda de energia ou até mesmo seja perdida a conexão com a internet. Um dos serviços mais populares que oferecem tais recursos de hospedagem é o Heroku\cite{heroku}, que fornece desde uma máquina simples gratuita até serviços mais robustos focados para o uso de alto fluxo de dados como ocorre em grandes corporações.
 
 Durante os primeiros meses de desenvolvimento, foi feito o uso do plano gratuito para testes, no entanto, caso não houvesse nenhuma iteração com a API desenvolvida durante um período de 30 minutos, a mesma ficaria inativa. Diante desse fato, a solicitação de adição de notas tornava-se mais lenta pois além do tempo de processamento dos dados, o tempo de inicialização aumentava a latência em que a resposta era retornada ao usuário. Todavia, a iteração ainda poderia ser feita normalmente.
 
@@ -112,7 +112,7 @@ Outras empresas que poderiam ser utilizadas seriam a DigitalOcean, Locaweb, Host
 
 \subsection{Banco de dados}
 
-Assim como o processamento dos dados, o armazenamento dos dados também é feito em meio externo ao celular do usuário, para isso é feito o uso de serviços em nuvem. Durante o desenvolvimento foi utilizado o serviço MongoDB Atlas Cloud através do plano gratuito, com isso é fornecido uma máquina com capacidade de armazenamento de 512mb e com a memória RAM compartilhada entre outros usuários, isto é, vários bancos são executados em uma mesma máquina.
+Assim como o processamento dos dados, o armazenamento dos dados também é feito em meio externo ao celular do usuário, para isso é feito o uso de serviços em nuvem. Durante o desenvolvimento foi utilizado o serviço MongoDB Atlas Cloud através do plano gratuito. Com isso é fornecida uma máquina com capacidade de armazenamento de 512mb e com a memória RAM compartilhada entre outros usuários, isto é, vários bancos são executados em uma mesma máquina.
 
 Caso seja necessário o uso de uma máquina dedicada ou com maior capacidade, essa mesma empresa fornece outros planos pagos para aplicações que necessitem de maior desempenho ou armazenamento.
 
@@ -120,18 +120,15 @@ Como alternativa ao serviço utilizado, algumas empresas que possuem planos com 
 
 \section{Desenvolvimento do aplicativo}\label{desenvApp}
 
-O desenvolvimento do aplicativo é feito utilizando uma tecnologia de desenvolvimento multiplataforma com código nativo, para isso foi utilizado o React Native. Com isso, é possível desenvolver um único aplicativo e publicar para as duas plataformas mais populares, isto é, o IOS e o Android.
+O desenvolvimento do aplicativo foi feito utilizando uma tecnologia de desenvolvimento multiplataforma com código nativo, para isso foi utilizado o React Native. Com isso, é possível desenvolver um único aplicativo e publicar para as duas plataformas mais populares, isto é, o iOS e o Android\cite{reactNativeAbout}. Sendo feito dessa forma, houve uma otimização no tempo de desenvolvimento.
 
-Com isso foi feito o desenvolvimento de único aplicativo que pode ser utilizado nas duas plataformas mencionadas acima. Sendo feito dessa forma, houve uma otimização no tempo de desenvolvimento.
-
-A justificativa para a escolha do uso do React Native, primeiramente é pelo fato de permitir um desenvolvimento multiplataforma com código nativo, em acréscimo, estava melhor colocado no ranking elaborado pelo StackOverflow, presente na \autoref{tab-stack-overflow-framework-tools}, quando comparado com seus concorrentes diretos. Além disso, caso futuramente seja disponibilizado as mesmas funcionalidades presentes no aplicativo para um website, isso poderá ser feito sem muitas complicações, sendo necessária poucas alterações.
+A justificativa para a escolha do uso do React Native, primeiramente é pelo fato de permitir um desenvolvimento multiplataforma com código nativo, em acréscimo, estava melhor colocado no ranking elaborado pelo StackOverflow, presente na \autoref{tab-stack-overflow-framework-tools}, quando comparado com seus concorrentes diretos. Além disso, caso futuramente sejam disponibilizado as mesmas funcionalidades presentes no aplicativo para um website, isso poderá ser feito sem muitas complicações, sendo necessárias poucas alterações.
 
 \subsection{Expo}
 
-%% FIXME:  Add ref https://docs.expo.io/versions/v36.0.0/; https://docs.expo.io/versions/latest/sdk/overview/
-O Expo é um Framework e uma plataforma para aplicações de React. Com isso, acaba por ser um conjunto de ferramentas e serviços, criados em torno do React Native e das plataformas nativas, que permite ao programador desenvolver e distribuir sua aplicação entre os sistemas móveis facilmente a partir do mesmo código desenvolvido em JavaScript.
+O Expo é um Framework e uma plataforma para aplicações de React. Com isso, acaba por ser um conjunto de ferramentas e serviços, criados em torno do React Native e das plataformas nativas, que permite ao programador desenvolver e distribuir sua aplicação entre os sistemas móveis facilmente a partir do mesmo código desenvolvido em JavaScript.\cite{expo}
 
-Além disso, o Expo proporciona uma abstração dos recursos de aparelhos móveis sem a necessidade de implementação de código nativo. Os recursos são tais como os contatos telefônicos, a câmera, acesso ao GPS do celular e outros. Com isso, é possível recuperar a informação proveniente desses recursos através do próprio código em JavaScript. Sendo assim, foi optado em utilizar essa ferramenta de forma a acelerar o desenvolvimento do aplicativo.
+Além disso, o Expo proporciona uma abstração dos recursos de aparelhos móveis sem a necessidade de implementação de código nativo. Os recursos são tais como os contatos telefônicos, a câmera, acesso ao GPS do celular e outros. Com isso, é possível recuperar a informação proveniente desses recursos através do próprio código em JavaScript. Sendo assim, foi optado em utilizar essa ferramenta de forma a acelerar o desenvolvimento do aplicativo.\cite{expoOverview}
 
 Como também é necessário o acesso à câmera para a leitura de QRCodes, tal ferramenta tornou-se indispensável, pois, por ser uma abstração de código nativo, é possível disponibilizar essa funcionalidade para ambas as plataformas sem complicações.
 
